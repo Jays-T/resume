@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Title</title>
+  </head>
+
+  <body>
+    <div class="sidebar">
+            <span class="highlight">Projects</span>
+            <span class="highlight">Resume</span>
+            <span class="highlight">CV</span>
+            <span class="highlight">About</span>
+        <div class="progress-cont">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </div>
+
+
+
+
+    <section class="main-content">
+      <div class="container">
+      <div class="row">
+        <div class="col-1">
+
+        </div>
+        <div class="col-11">
+          <h1>Scroll Bar</h1>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+            <div class="col-12" id="Projects">
+            <span class="highlight">Projects</span>
+            </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+            <div class="col-12" id="Resume">
+            <span class="highlight">Resume</span>
+            </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+            <div class="col-12" id="CV">
+            <span class="highlight">CV</span>
+            </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+            <div class="col-12" id="About">
+            <span class="highlight">About</span>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+      window.onscroll = function () {
+        progressBar();
+        highlight();
+      };
+
+      function progressBar() {
+        var winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        var height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 50;
+        document.getElementById("myBar").style.height = scrolled + "%";
+      }
+
+      function highlight(){
+        var scroll = $(window).scrollTop();
+        var height = $(window).height();
+
+      $(".highlight").each(function(){
+        var pos = $(this).offset().top;
+        if (scroll+height >= pos) {
+          $(this).addClass("active");
+        } 
+        console.log(pos);
+        console.log(scroll);
+        });
+    } 
+    </script>
+  </body>
+</html>

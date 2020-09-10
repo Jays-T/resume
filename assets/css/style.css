@@ -1,0 +1,100 @@
+body, .card {
+    background-color: rgb(38, 32, 39);
+    color: #faebd7;
+    font-size: 16px;
+
+}
+
+.col-11 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content {
+    margin-left: 70px;
+    padding: 1px 16px;
+    min-height: 3000px;
+}
+
+/* Progress Bar */
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 70px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.progress-cont {
+  width: 1px;
+  margin-top: 25%;
+  height: 50vh;
+  margin-left: 50%;
+  background-color: #322a33;
+
+}
+
+.progress-bar {
+  height: 0%;
+  max-height: 50vh;
+  position: absolute;
+  background: antiquewhite;
+  width: 1px;
+}
+
+/* Section highlight on scroll */
+
+.highlight{
+    display:block;
+    width: max-content;
+    color: #322a33; 
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.highlight.active{
+   animation-name: fadeInBgColor;
+}
+
+@keyframes fadeInBgColor {
+    0% {
+        
+        /* -webkit-box-shadow: 0px 0px 1px 0px rgba(215, 233, 250, 0);
+        -moz-box-shadow: 0px 0px 1px 0px rgba(250, 215, 235, 0);
+        box-shadow: 0px 0px 1px 0px rgba(250, 215, 235, 0); */
+    }
+    100% {
+        color: #faebd7;
+        /* -webkit-box-shadow: 0px 0px 4px 0.3px rgba(250, 215, 235, 0.3);
+        -moz-box-shadow: 0px 0px 4px 0.3px rgba(250, 215, 235, 0.3);
+        box-shadow: 0px 0px 4px 0.3px rgba(250, 215, 235, 0.3); */
+    }
+}
+
+/* Footer Sticky */
+
+.footer-sticky {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer {
+  position: sticky;
+  padding-top: 7rem;
+  bottom: 0;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.content-anchor {
+    margin-top: auto;    
+}  
