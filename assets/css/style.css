@@ -1,20 +1,96 @@
-body, .card {
-    background-color: rgb(38, 32, 39);
+body {
+    background: rgb(44,20,51);
+    background: linear-gradient(127deg, rgba(44,20,51,1) 0%, rgba(38,32,40,1) 30%, rgba(96,77,99,1) 100%);
     color: #faebd7;
     font-size: 16px;
-
-}
-
-.col-11 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .main-content {
     margin-left: 70px;
-    padding: 1px 16px;
-    min-height: 3000px;
+    min-height: 500vh;
+}
+
+canvas {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  max-height: 100vh;
+  max-width: 80vw;
+  transform: translate(-50%, -50%);
+}
+
+/* Navbar */
+
+.navbar {
+opacity:0;
+background: rgb(44,20,51);
+background: linear-gradient(127deg, rgba(44,20,51,1) 0%, rgba(38,32,40,1) 30%, rgba(96,77,99,1) 100%)
+}
+
+.navbar-item {
+    color: #faebd7;
+}
+
+/* Hero Text */
+
+.hero-headline {
+    position: fixed;
+    top: 48vh;
+    left: 25vw;
+    overflow: hidden;
+}
+
+.hero-links-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    justify-content: flex-end;
+}
+
+.hero-links {
+    padding-left: 5px;
+}
+/* Cards */
+
+.card {
+    background: none;
+    top: 35vh;
+    margin-bottom: 48px;
+    min-height: 400px;
+}
+
+/* Animated Arrows */
+
+.arrow {
+	width: 45px;
+	height: 35px;
+	background: antiquewhite;
+  clip-path: polygon(5% 0, 100% 50%, 5% 100%, 0% 100%, 75% 50%, 0% 0%);
+  animation: clips 8s ease infinite;
+}
+
+@keyframes clips {
+    20% {
+clip-path: polygon(0% 0, 50% 75%, 100% 0%, 100% 5%, 50% 100%, 0% 5%);
+opacity: 0.8;
+  } 30% {
+clip-path: polygon(0% 0, 50% 75%, 100% 0%, 100% 5%, 50% 100%, 0% 5%);
+opacity: 0;
+  } 70% {
+clip-path: polygon(5% 0, 100% 50%, 5% 100%, 0% 100%, 75% 50%, 0% 0%);
+opacity: 0;
+  } 90% {
+opacity: 1;
+  }
+}
+
+.hero-link-arrow {
+  width: 18px;
+  height: 12px;
+  margin-left: 4px;
+  padding: 4px;
+  background: antiquewhite;
+  clip-path: polygon(5% 0, 100% 50%, 5% 100%, 0% 100%, 75% 50%, 0% 0%);
 }
 
 /* Progress Bar */
@@ -22,6 +98,7 @@ body, .card {
 .sidebar {
   margin: 0;
   padding: 0;
+  top: 70px;
   width: 70px;
   position: fixed;
   height: 100%;
@@ -35,6 +112,18 @@ body, .card {
   margin-left: 50%;
   background-color: #322a33;
 
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border: 1px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .progress-bar {
