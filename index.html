@@ -20,51 +20,66 @@
 
   <body>
     <section name="landing-background">
-      <div class="container">
-        <div class="row hero-headline">
-          <div class="col-1"></div>
-          <div class="col-11">
-            <h3>Angry Cat Development and Design</h3>
-          </div>
-          
-          <div class="col-12">
-            <div class="ul hero-links-wrap">
-                
-                    <span class="li hero-links">CV </span>
-                    <span class="hero-link-arrow"></span>
-                
-                
-                    <span class="li hero-links">LinkedIn </span>
-                    <span class="hero-link-arrow"></span>
-                
-                
-            </div>
-          </div>
-          <span class="arrow"></span>
+      <!-- <div class="container"> -->
+      <div class="row hero-headline">
+        <div class="col-1"></div>
+        <div class="col-11">
+          <h3>Angry Cat Development and Design</h3>
         </div>
+
+        <div class="col-12">
+          <div class="ul hero-links-wrap">
+            <span class="li hero-links">CV </span>
+            <span class="hero-link-arrow"></span>
+
+            <span class="li hero-links">LinkedIn </span>
+            <span class="hero-link-arrow"></span>
+          </div>
+        </div>
+        <span class="arrow"></span>
       </div>
+      <!-- </div> -->
     </section>
-    <section name="sidebar-and-navbar">
-      <div class="container">
+    <section class="sidebar-and-navbar">
+
         <div class="row">
-          <div class="col-12">
-            <nav class="navbar fixed-top">
-              <a class="navbar-item" href="#">Angry Cat Development and Design - by Jays-T</a>
+          <div class="col-1">
+            <!-- <nav class="navbar fixed-top">
+              <a class="navbar-item" href="#"
+                >Angry Cat Development and Design - by Jays-T</a
+              >
+            </nav> -->
+            <!-- A vertical navbar -->
+            <nav class="side-navbar fixed-top">
+              <!-- Links -->
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link 1</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link 2</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link 3</a>
+                </li>
+              </ul>
             </nav>
           </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="sidebar">
-          <span class="highlight">Projects</span>
-          <div class="progress-cont">
-            <div class="progress-bar" id="myBar"></div>
+          <div class="col-2">
+            <div class="sidebar">
+              <span class="highlight">Projects</span>
+              <div class="progress-cont">
+                <div class="progress-bar" id="myBar"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-9">
           </div>
         </div>
-      </div>
+
     </section>
     <section class="main-content">
-<div class="container">
+      <!-- <div class="container">
       <div class="card text-center">
         <div class="card-header">
           Featured
@@ -97,25 +112,10 @@
           2 days ago
         </div>
       </div>
-</div>
+</div> -->
     </section>
-    <div class="canvas">
-      <div class="card text-center">
-        <div class="card-header">
-          Featured
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">
-            With supporting text below as a natural lead-in to additional
-            content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-        <div class="card-footer text-muted">
-          2 days ago
-        </div>
-      </div>
+    <div class="footer">
+        Le Footer
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -144,7 +144,7 @@
           var pos = $(this).offset().top;
           if (scroll + height >= pos) {
             $(this).addClass("active");
-          }else{
+          } else {
             $(this).removeClass("active");
           }
           console.log(pos);
@@ -163,12 +163,12 @@
             (document.documentElement && document.documentElement.scrollTop) ||
             document.body.scrollTop;
           if (top > 40)
-            $(".navbar").stop().animate({
+            $(".side-navbar").stop().animate({
               opacity: "0.6",
               top: "0",
             });
           else
-            $(".navbar").stop().animate({
+            $(".side-navbar").stop().animate({
               opacity: "0",
             });
         }

@@ -1,5 +1,4 @@
 body {
-    background: rgb(44,20,51);
     background: linear-gradient(127deg, rgba(44,20,51,1) 0%, rgba(38,32,40,1) 30%, rgba(96,77,99,1) 100%);
     color: #faebd7;
     font-size: 16px;
@@ -23,12 +22,24 @@ canvas {
 
 .navbar {
 opacity:0;
-background: rgb(44,20,51);
 background: linear-gradient(127deg, rgba(44,20,51,1) 0%, rgba(38,32,40,1) 30%, rgba(96,77,99,1) 100%)
 }
 
 .navbar-item {
     color: #faebd7;
+}
+
+/* Footer */
+
+.footer {
+  position: fixed;
+  width: 100%;
+  margin: auto;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 /* Hero Text */
