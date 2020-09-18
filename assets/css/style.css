@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(127deg, rgba(44,20,51,1) 0%, rgba(38,32,40,1) 30%, rgba(96,77,99,1) 100%);
+    background: #2c1433;
     color: #faebd7;
     font-size: 16px;
 }
@@ -19,20 +19,21 @@ canvas {
 }
 
 /* Navbar */
-
+/* 
 .navbar {
 opacity:0;
-background: linear-gradient(127deg, rgba(44,20,51,1) 0%, rgba(38,32,40,1) 30%, rgba(96,77,99,1) 100%)
+background: linear-gradient(127deg, rgba(44,20,51,1) 0%, rgba(38,32,40,1) 30%, rgba(96,77,99,1) 100%);
 }
 
 .navbar-item {
     color: #faebd7;
-}
+} */
 
 /* Footer */
 
 .footer {
   position: fixed;
+  background: linear-gradient(#2c1433 50%,#faebd7 50%);
   width: 100vw;
   margin: auto;
   left: 0;
@@ -43,29 +44,24 @@ background: linear-gradient(127deg, rgba(44,20,51,1) 0%, rgba(38,32,40,1) 30%, r
   overflow: hidden;
 }
 
-#content {
-  z-index: 9999;
-  margin-left: 70px;
-}
-
 #navbarContainer{
   width: 400px;
   min-width: 400px;
-  height: 30vh;
-  background-color: #ffcc80;
+  height: 120px;
+  background-color: #2c1433;
   border-radius: 20px;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  /* box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); */
 }
 
 #navbar{
   width: 100%;
   height: 60px;
-  background-color: #fff;
+  background-color: #faebd7;
   position: absolute;
 }
 
@@ -78,7 +74,7 @@ background: linear-gradient(127deg, rgba(44,20,51,1) 0%, rgba(38,32,40,1) 30%, r
 }
 
 .bubble{
-  background-color: #fff;
+  background-color: #faebd7;
   width: 50px;
   height: 50px;
   bottom: 85px;
@@ -89,13 +85,13 @@ background: linear-gradient(127deg, rgba(44,20,51,1) 0%, rgba(38,32,40,1) 30%, r
   justify-content: center;
   align-items: center;
 }
-/* .icon{
+.icon{
   opacity: 0;
-} */
+}
 
 #bubble1{
   transform: translateY(0%);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
   > span{
     opacity: 0.7;
   }
@@ -109,14 +105,14 @@ background: linear-gradient(127deg, rgba(44,20,51,1) 0%, rgba(38,32,40,1) 30%, r
   bottom: 60px;
 }
 #bg{
-  background-color: #ffcc80;
+  background-color: #2c1433;
   width: 120%;
   height: 100%;
   margin-left: -10%;
 }
 #bgBubble{
   position: absolute;
-  background-color: #ffcc80;
+  background-color: #2c1433;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -158,6 +154,11 @@ background: linear-gradient(127deg, rgba(44,20,51,1) 0%, rgba(38,32,40,1) 30%, r
 .content{
   display: none;
   opacity: 0;
+}
+
+
+.fas {
+    color: #322a33;
 }
 
 
