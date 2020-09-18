@@ -1,0 +1,100 @@
+body {
+    background: #2c1433;
+    color: #faebd7;
+    font-size: 16px;
+    min-height: 500vh;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: minmax(150px, 18%) 1fr;
+}
+
+.two {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* Animated Arrows */
+
+.arrow {
+	width: 45px;
+	height: 35px;
+	background: antiquewhite;
+  clip-path: polygon(5% 0, 100% 50%, 5% 100%, 0% 100%, 75% 50%, 0% 0%);
+  animation: clips 8s ease infinite;
+}
+
+@keyframes clips {
+    20% {
+clip-path: polygon(0% 0, 50% 75%, 100% 0%, 100% 5%, 50% 100%, 0% 5%);
+opacity: 0.8;
+  } 30% {
+clip-path: polygon(0% 0, 50% 75%, 100% 0%, 100% 5%, 50% 100%, 0% 5%);
+opacity: 0;
+  } 70% {
+clip-path: polygon(5% 0, 100% 50%, 5% 100%, 0% 100%, 75% 50%, 0% 0%);
+opacity: 0;
+  } 90% {
+opacity: 1;
+  }
+}
+
+.hero-link-arrow {
+  width: 18px;
+  height: 12px;
+  margin-left: 4px;
+  padding: 4px;
+  background: antiquewhite;
+  clip-path: polygon(5% 0, 100% 50%, 5% 100%, 0% 100%, 75% 50%, 0% 0%);
+}
+
+/* Side Navbar */
+
+.side-navbar {
+    position: fixed;
+    top: 30%;
+    left: 4rem;
+    opacity: 0;
+}
+/* Progress Bar */
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  top: 70px;
+  width: 70px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.progress-cont {
+  width: 1px;
+  margin-top: 25%;
+  height: 50vh;
+  margin-left: 50%;
+  background-color: #322a33;
+
+}
+
+/* .highlight::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border: 1px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+} */
+
+.progress-bar {
+  height: 0%;
+  max-height: 50vh;
+  position: absolute;
+  background: antiquewhite;
+  width: 1px;
+}
