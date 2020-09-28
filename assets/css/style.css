@@ -110,6 +110,11 @@ body {
 }
 .icon {
   opacity: 0;
+  margin: 0;
+  position: absolute;
+  top: 62%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 #bubble1 {
@@ -248,6 +253,16 @@ body {
   top: 45%;
   left: 1.8rem;
   opacity: 0;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.nav-item {
+  padding: 1.2rem 0;
 }
 /* Progress Bar */
 

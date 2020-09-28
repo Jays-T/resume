@@ -58,7 +58,7 @@
           <nav class="side-navbar fixed-top">
             <!-- Links -->
             <ul class="navbar-nav">
-              <li class="nav-item">
+              <li class="nav-brand-logo">
                 <img src="assets/images/angry_cat_70x70.png" />
               </li>
               <li class="nav-item ml-1">
@@ -100,9 +100,9 @@
     <section class="main-content">
     </section>
     <section name="footer">
-      <div class="footer-logo">
+      <!-- <div class="footer-logo">
         <img class="img-fluid mute" src="assets/images/angry_cat.png" />
-      </div>
+      </div> -->
       <div class="footer">
         <div id="navbarContainer">
           <div id="navbar">
@@ -187,13 +187,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+    
     <script>
+
+
       window.onscroll = function () {
         progressBar();
         highlight();
       };
       /* Fill progress bar */
-
+        
       function progressBar() {
         let winScroll =
           document.body.scrollTop || document.documentElement.scrollTop;
