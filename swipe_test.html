@@ -1,0 +1,423 @@
+<html class="ui-mobile">
+  <head>
+    <base
+      href="https://demos.jquerymobile.com/1.4.5/swipe-page/buenosaires.html"
+    />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no"
+    />
+    <title>New York</title>
+    <link
+      rel="stylesheet"
+      href="../css/themes/default/jquery.mobile-1.4.5.min.css"
+    />
+    <!-- <link rel="stylesheet" href="../_assets/css/jqm-demos.css" /> -->
+    <link rel="stylesheet" href="swipe-page.css" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <script src="../js/jquery.js"></script>
+    <script src="../_assets/js/index.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="swipe-page.js"></script>
+  </head>
+  <body class="ui-mobile-viewport ui-overlay-b" style="">
+    <div
+      id="header"
+      data-role="header"
+      data-id="header"
+      data-position="fixed"
+      data-fullscreen="true"
+      data-tap-toggle="false"
+      role="banner"
+      class="ui-header ui-header-fullscreen ui-bar-b ui-header-fixed slidedown"
+    >
+      <h1 class="ui-title" role="heading" aria-level="1">New York</h1>
+      <a
+        href="./"
+        data-ajax="false"
+        data-direction="reverse"
+        data-icon="delete"
+        data-iconpos="notext"
+        data-shadow="false"
+        data-icon-shadow="false"
+        class="ui-btn-left ui-link ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all"
+        data-role="button"
+        role="button"
+        >Back</a
+      >
+    </div>
+    <!-- /header -->
+
+    <div
+      data-role="page"
+      id="newyork"
+      class="demo-page ui-page ui-page-theme-b ui-page-header-fullscreen ui-page-footer-fullscreen ui-page-active"
+      data-title="Angry Cat One"
+      data-dom-cache="true"
+      data-theme="b"
+      data-next="buenosaires"
+      data-url="newyork"
+      tabindex="0"
+      style="min-height: 900px"
+    >
+      <div role="main" class="ui-content">
+        <div style="display: none" id="trivia-newyork-placeholder">
+          <!-- placeholder for trivia-newyork -->
+        </div>
+      </div>
+      <!-- /content -->
+
+      <div
+        class="ui-screen-hidden ui-popup-screen ui-overlay-inherit"
+        id="trivia-newyork-screen"
+      ></div>
+      <div
+        class="ui-popup-container ui-popup-hidden ui-popup-truncate"
+        id="trivia-newyork-popup"
+      >
+        <div
+          id="trivia-newyork"
+          class="trivia ui-content ui-popup ui-body-a ui-overlay-shadow ui-corner-all"
+          data-role="popup"
+          data-position-to="window"
+          data-tolerance="50,30,30,30"
+          data-theme="a"
+        >
+          <a
+            href="#"
+            data-rel="back"
+            class="ui-btn ui-btn-right ui-btn-b ui-btn-icon-notext ui-icon-delete ui-corner-all"
+            >Close</a
+          >
+          <p>
+            Although many legends exist about the origin of New York City's
+            nickname, the Big Apple, most historians agree that it can be traced
+            back to a writer who covered horse racing in the 1920s. In The
+            Morning Telegraph, he wrote that stable hands often referred to New
+            York as the Big Apple, meaning that any thoroughbred that raced in
+            New York had reached the pinnacle of racing.
+            <small>source:&nbsp;nylady.hubpages.com</small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- /page -->
+
+    <!-- /footer -->
+
+    <div class="ui-loader ui-corner-all ui-body-a ui-loader-default">
+      <span class="ui-icon-loading"></span>
+      <h1>loading</h1>
+    </div>
+    <div
+      data-role="page"
+      id="buenosaires"
+      class="demo-page ui-page ui-page-theme-b"
+      data-title="Angry Cat Two"
+      data-dom-cache="true"
+      data-theme="b"
+      data-prev="newyork"
+      data-next="paris"
+      data-url="/1.4.5/swipe-page/buenosaires.html"
+      data-external-page="true"
+      tabindex="0"
+      style="min-height: 900px"
+    >
+      <div role="main" class="ui-content">
+        <div style="display: none" id="trivia-buenosaires-placeholder">
+          <!-- placeholder for trivia-buenosaires -->
+        </div>
+      </div>
+      <!-- /content -->
+
+      <div
+        class="ui-screen-hidden ui-popup-screen ui-overlay-inherit"
+        id="trivia-buenosaires-screen"
+      ></div>
+      <div
+        class="ui-popup-container ui-popup-hidden ui-popup-truncate"
+        id="trivia-buenosaires-popup"
+      >
+        <div
+          id="trivia-buenosaires"
+          class="trivia ui-content ui-popup ui-body-a ui-overlay-shadow ui-corner-all"
+          data-role="popup"
+          data-position-to="window"
+          data-tolerance="50,30,30,30"
+          data-theme="a"
+        >
+          <a
+            href="#"
+            data-rel="back"
+            class="ui-btn ui-btn-right ui-btn-b ui-btn-icon-notext ui-icon-delete ui-corner-all"
+            >Close</a
+          >
+          <p>
+            At 140 meters (16 lanes), Avenida 9 de Julio in Buenos Aires is the
+            world’s widest avenue. Its name honors Argentina’s birthdate. (July
+            9, 1816). The avenue runs roughly one kilometer to the west of the
+            Río de la Plata waterfront, from the Retiro district in the north to
+            Constitución station in the south.
+            <small>source:&nbsp;inautonews.com</small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      data-role="page"
+      id="paris"
+      class="demo-page ui-page ui-page-theme-b"
+      data-title="Angry Cat Three"
+      data-dom-cache="true"
+      data-theme="b"
+      data-prev="buenosaires"
+      data-next="capetown"
+      data-url="/1.4.5/swipe-page/paris.html"
+      data-external-page="true"
+      tabindex="0"
+      style="min-height: 900px"
+    >
+      <div role="main" class="ui-content">
+        <div style="display: none" id="trivia-paris-placeholder">
+          <!-- placeholder for trivia-paris -->
+        </div>
+      </div>
+      <!-- /content -->
+
+      <div
+        class="ui-screen-hidden ui-popup-screen ui-overlay-inherit"
+        id="trivia-paris-screen"
+      ></div>
+      <div
+        class="ui-popup-container ui-popup-hidden ui-popup-truncate"
+        id="trivia-paris-popup"
+      >
+        <div
+          id="trivia-paris"
+          class="trivia ui-content ui-popup ui-body-a ui-overlay-shadow ui-corner-all"
+          data-role="popup"
+          data-position-to="window"
+          data-tolerance="50,30,30,30"
+          data-theme="a"
+        >
+          <a
+            href="#"
+            data-rel="back"
+            class="ui-btn ui-btn-right ui-btn-b ui-btn-icon-notext ui-icon-delete ui-corner-all"
+            >Close</a
+          >
+          <p>
+            Each year, 44 million tourists visit Paris and the surrounding Ile
+            de France region. Paris is year after year the most visited city in
+            the world. <small>source:&nbsp;parisdigest.com</small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      data-role="page"
+      id="capetown"
+      class="demo-page ui-page ui-page-theme-b"
+      data-title="Angry Cat Four"
+      data-dom-cache="true"
+      data-theme="b"
+      data-prev="paris"
+      data-next="seoul"
+      data-url="/1.4.5/swipe-page/capetown.html"
+      data-external-page="true"
+      tabindex="0"
+      style="min-height: 900px"
+    >
+      <div role="main" class="ui-content">
+        <div style="display: none" id="trivia-capetown-placeholder">
+          <!-- placeholder for trivia-capetown -->
+        </div>
+      </div>
+      <!-- /content -->
+
+      <div
+        class="ui-screen-hidden ui-popup-screen ui-overlay-inherit"
+        id="trivia-capetown-screen"
+      ></div>
+      <div
+        class="ui-popup-container ui-popup-hidden ui-popup-truncate"
+        id="trivia-capetown-popup"
+      >
+        <div
+          id="trivia-capetown"
+          class="trivia ui-content ui-popup ui-body-a ui-overlay-shadow ui-corner-all"
+          data-role="popup"
+          data-position-to="window"
+          data-tolerance="50,30,30,30"
+          data-theme="a"
+        >
+          <a
+            href="#"
+            data-rel="back"
+            class="ui-btn ui-btn-right ui-btn-b ui-btn-icon-notext ui-icon-delete ui-corner-all"
+            >Close</a
+          >
+          <p>
+            Although it’s the youngest official language in the world, Afrikaans
+            is most widely spoken and is home language for 40% of the Cape's
+            population. The remainder of the population speaks either Xhosa or
+            English as a home language.
+            <small>source:&nbsp;gotravel24.com</small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      data-role="page"
+      id="seoul"
+      class="demo-page ui-page ui-page-theme-b"
+      data-title="Seoul"
+      data-dom-cache="true"
+      data-theme="b"
+      data-prev="capetown"
+      data-next="sydney"
+      data-url="/1.4.5/swipe-page/seoul.html"
+      data-external-page="true"
+      tabindex="0"
+      style="min-height: 900px"
+    >
+      <div role="main" class="ui-content">
+        <div style="display: none" id="trivia-seoul-placeholder">
+          <!-- placeholder for trivia-seoul -->
+        </div>
+      </div>
+      <!-- /content -->
+
+      <div
+        class="ui-screen-hidden ui-popup-screen ui-overlay-inherit"
+        id="trivia-seoul-screen"
+      ></div>
+      <div
+        class="ui-popup-container ui-popup-hidden ui-popup-truncate"
+        id="trivia-seoul-popup"
+      >
+        <div
+          id="trivia-seoul"
+          class="trivia ui-content ui-popup ui-body-a ui-overlay-shadow ui-corner-all"
+          data-role="popup"
+          data-position-to="window"
+          data-tolerance="50,30,30,30"
+          data-theme="a"
+        >
+          <a
+            href="#"
+            data-rel="back"
+            class="ui-btn ui-btn-right ui-btn-b ui-btn-icon-notext ui-icon-delete ui-corner-all"
+            >Close</a
+          >
+          <p>
+            Seoul, officially the Seoul Special City, is the capital and largest
+            city of South Korea. With a population of over 10 million, it is one
+            of the world's largest cities. The Seoul National Capital Area,
+            which includes the Incheon metropolis and most of Gyeonggi province,
+            has 24.5 million inhabitants.
+            <small>source:&nbsp;bezbrige.com</small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      data-role="page"
+      id="sydney"
+      class="demo-page ui-page ui-page-theme-b"
+      data-title="Sydney"
+      data-dom-cache="true"
+      data-theme="b"
+      data-prev="seoul"
+      data-url="/1.4.5/swipe-page/sydney.html"
+      data-external-page="true"
+      tabindex="0"
+      style="min-height: 900px"
+    >
+      <div role="main" class="ui-content">
+        <div style="display: none" id="trivia-sydney-placeholder">
+          <!-- placeholder for trivia-sydney -->
+        </div>
+      </div>
+      <!-- /content -->
+
+      <div
+        class="ui-screen-hidden ui-popup-screen ui-overlay-inherit"
+        id="trivia-sydney-screen"
+      ></div>
+      <div
+        class="ui-popup-container ui-popup-hidden ui-popup-truncate"
+        id="trivia-sydney-popup"
+      >
+        <div
+          id="trivia-sydney"
+          class="trivia ui-content ui-popup ui-body-a ui-overlay-shadow ui-corner-all"
+          data-role="popup"
+          data-position-to="window"
+          data-tolerance="50,30,30,30"
+          data-theme="a"
+        >
+          <a
+            href="#"
+            data-rel="back"
+            class="ui-btn ui-btn-right ui-btn-b ui-btn-icon-notext ui-icon-delete ui-corner-all"
+            >Close</a
+          >
+          <p>
+            The Sydney Opera House provides 45,000 square metres (11 acres) of
+            usable office space out of 18,000 square metres (4.5 acres) of land.
+            It is 183 metres (600 feet) tall and about 120 metres (388 feet)
+            wide at its widest point. It is supported on 580 concrete piers sunk
+            up to 25 metres below sea level. It has about 1000 rooms. It has
+            five theatres, five rehearsal studios, two main halls, four
+            restaurants, six bars and numerous souvenir shops.
+            <small>source:&nbsp;sheppardsoftware.com</small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      id="footer"
+      data-id="footer"
+      data-position="fixed"
+      data-fullscreen="true"
+      data-tap-toggle="false"
+      role="contentinfo"
+      class="ui-footer ui-footer-fullscreen ui-bar-b ui-footer-fixed slideup"
+    >
+      <div
+        data-role="controlgroup"
+        class="control ui-btn-left ui-controlgroup ui-controlgroup-horizontal ui-corner-all ui-mini"
+        data-type="horizontal"
+        data-mini="true"
+      >
+        <div class="ui-controlgroup-controls">
+          <a
+            href="#"
+            class="prev ui-btn ui-btn-icon-notext ui-icon-carat-l ui-state-disabled ui-first-child"
+            >Previous</a
+          >
+          <a
+            href="#"
+            class="next ui-btn ui-btn-icon-notext ui-icon-carat-r ui-last-child"
+            >Next</a
+          >
+        </div>
+      </div>
+
+      <a
+        href="#trivia-newyork"
+        id="trivia-button"
+        data-rel="popup"
+        class="trivia-btn ui-btn-right ui-btn ui-icon-info ui-btn-icon-left ui-corner-all ui-mini"
+        data-role="button"
+        aria-haspopup="true"
+        aria-owns="trivia-newyork"
+        aria-expanded="false"
+        role="button"
+        >Trivia</a
+      >
+    </div>
+  </body>
+</html>
