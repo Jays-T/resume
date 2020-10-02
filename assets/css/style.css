@@ -13,15 +13,15 @@ body {
 /* Loading Drawing */
 
 .overlay {
-  background: #0e0d0d;
+  background: #0a0a0a;
   position: fixed;
   display: flex;
   min-height: 100vh;
   width: 100vw;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
-  animation: fadeOut 6s forwards;
+  z-index: 9998;
+  animation: fadeOut 9.6s forwards;
 }
 
 @keyframes fadeOut {
@@ -54,6 +54,100 @@ svg .draw {
   }
   100% {
     stroke-dashoffset: 53765.1015625;
+  }
+}
+
+.headline {
+  position: relative;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  max-height: 100vh;
+  background: transparent;
+  z-index: 9999;
+}
+
+.headline-flash {
+  position: absolute;
+}
+
+.marg-r {
+  margin-right: 1.5rem;
+}
+
+.marg-l {
+  margin-left: 1.5rem;
+}
+
+.headline-flash span {
+  font-size: 5rem;
+  color: transparent;
+  font-weight: 500;
+  animation: flashLetters 1s forwards;
+}
+
+.headline-flash span:nth-child(1) {
+  animation-delay: 4s;
+}
+.headline-flash span:nth-child(2) {
+  animation-delay: 4.2s;
+}
+.headline-flash span:nth-child(3) {
+  animation-delay: 4.4s;
+}
+.headline-flash span:nth-child(4) {
+  animation-delay: 4.6s;
+}
+.headline-flash span:nth-child(5) {
+  animation-delay: 4.8s;
+}
+.headline-flash span:nth-child(6) {
+  animation-delay: 5.2s;
+}
+.headline-flash span:nth-child(7) {
+  animation-delay: 5.4s;
+}
+.headline-flash span:nth-child(8) {
+  animation-delay: 5.6s;
+}
+.headline-flash span:nth-child(9) {
+  animation-delay: 6s;
+}
+.headline-flash span:nth-child(10) {
+  animation-delay: 6.2s;
+}
+.headline-flash span:nth-child(11) {
+  animation-delay: 6.4s;
+}
+.headline-flash span:nth-child(12) {
+  animation-delay: 6.6s;
+}
+.headline-flash span:nth-child(13) {
+  animation-delay: 6.8s;
+}
+.headline-flash span:nth-child(14) {
+  animation-delay: 7s;
+}
+
+@keyframes flashLetters {
+  0%, 75%
+  {
+    color: transparent;
+    text-shadow: none;
+  }
+  80%
+  {
+    color: rgb(218, 165, 32);
+    text-shadow: 0 0 10px rgb(218, 165, 32),
+                 0 0 20px rgb(218, 165, 32),
+                 0 0 40px rgb(218, 165, 32),
+                 0 0 80px rgb(218, 165, 32),
+                 0 0 120px rgb(218, 165, 32),
+                 0 0 160px rgb(218, 165, 32);
+  }
+  100% 
+  {
+    color: #333;
   }
 }
 
