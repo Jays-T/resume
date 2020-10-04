@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     z-index: 9998;
-    animation: fadeOut 9.6s forwards;
+    animation: fadeOut 11.6s forwards;
   }
   
   @keyframes fadeOut {
@@ -33,10 +33,14 @@
     stroke: rgb(218, 165, 32);
     stroke-dasharray: 53765.1015625;
     stroke-dashoffset: 53765.1015625;
-    animation: drawCat 6s forwards;
+    animation: drawCat 8s forwards;
   }
   
   @keyframes drawCat {
+    15%
+    {
+      stroke-dashoffset: 53765.1015625;
+    }
     40%
     {
       
@@ -87,19 +91,19 @@
   }
   
   .headline-flash span:nth-child(1) {
-    animation-delay: 4s;
+    animation-delay: 6s;
   }
   .headline-flash span:nth-child(2) {
-    animation-delay: 4.2s;
+    animation-delay: 6.2s;
   }
   .headline-flash span:nth-child(3) {
-    animation-delay: 4.4s;
+    animation-delay: 6.4s;
   }
   .headline-flash span:nth-child(4) {
-    animation-delay: 4.6s;
+    animation-delay: 6.6s;
   }
   .headline-flash span:nth-child(5) {
-    animation-delay: 4.8s;
+    animation-delay: 6.8s;
   }
   
   .cat span {
@@ -107,13 +111,13 @@
   }
   
   .headline-flash .cat span:nth-child(1) {
-    animation-delay: 5.2s;
+    animation-delay: 7.2s;
   }
   .headline-flash .cat span:nth-child(2) {
-    animation-delay: 5.4s;
+    animation-delay: 7.4s;
   }
   .headline-flash .cat span:nth-child(3) {
-    animation-delay: 5.6s;
+    animation-delay: 7.6s;
   }
   
   .design span {
@@ -121,22 +125,22 @@
   }
   
   .headline-flash .design span:nth-child(1) {
-    animation-delay: 6s;
+    animation-delay: 8s;
   }
   .headline-flash .design span:nth-child(2) {
-    animation-delay: 6.2s;
+    animation-delay: 8.2s;
   }
   .headline-flash .design span:nth-child(3) {
-    animation-delay: 6.4s;
+    animation-delay: 8.4s;
   }
   .headline-flash .design span:nth-child(4) {
-    animation-delay: 6.6s;
+    animation-delay: 8.6s;
   }
   .headline-flash .design span:nth-child(5) {
-    animation-delay: 6.8s;
+    animation-delay: 8.8s;
   }
   .headline-flash .design span:nth-child(6) {
-    animation-delay: 7s;
+    animation-delay: 9s;
   }
   
   @keyframes flashLetters {
