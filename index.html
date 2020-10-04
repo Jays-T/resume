@@ -18,15 +18,28 @@
       href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="assets/css/overlay_animation.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Angry Cat Development and Design</title>
   </head>
 
   <body>
+    <svg id="paper-background">
+
+      <filter id='roughpaper' x='0%' y='0%' width='100%' height="100%">
+  
+          <feTurbulence type="fractalNoise" baseFrequency='0.64' result='noise' numOctaves="12" />
+  
+          <feDiffuseLighting in='noise' lighting-color='#27122e' surfaceScale='2'>
+              <feDistantLight azimuth='45' elevation='60' />
+  </feDiffuseLighting>
+  
+  </filter>
+  
+      <rect x="0" y="0" width="100%" height="100%" filter="url(#roughpaper)" fill="none">
+  </svg>
   <!-- Loading Overlay + Cat Drawing SVG -->
     <div class="overlay">
-      
-
       <svg
         id="the_cat"
         data-name="the_cat"
@@ -159,10 +172,11 @@
         </h2>
       <!-- </div> -->
     </div>
-<!-- End Overlay + Cat Draw -->
+  <!-- End Overlay + Cat Draw -->
     
 
-    <section name="landing-background" class="container">
+    <section name="landing-background" >
+      
       <div class="row hero-headline">
         <div class="col-10">
           <h3>Angry Cat Development and Design</h3>
@@ -232,11 +246,9 @@
         </div>
       </div>
     </section>
-    <section class="main-content"></section>
-    <section name="footer">
-      <!-- <div class="footer-logo">
-        <img class="img-fluid mute" src="assets/images/angry_cat.png" />
-      </div> -->
+    <section class="main-content">
+    </section>
+    <!-- <section name="footer">
       <div class="footer">
         <div id="navbarContainer">
           <div id="navbar">
@@ -313,7 +325,9 @@
           </defs>
         </svg>
       </div>
-    </section>
+    </section> -->
+    <!-- End Footer -->
+
     <script
       src="https://kit.fontawesome.com/cb5c413284.js"
       crossorigin="anonymous"
@@ -321,143 +335,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+    <script src="assets/js/footer_animate.js"></script>
+    <script src="assets/js/scroll_animations.js"></script>
 
-    <script>
+  
 
-      /*	NAVIGATION AND NAVIGATION VISIBLE ON SCROLL */
-      $(window).on("load", function () {
-        mainNav();
-        
-      });      
-      
-      $(window).scroll(function () {
-          mainNav();
-        });
-        function mainNav() {
-          var top =
-            (document.documentElement && document.documentElement.scrollTop) ||
-            document.body.scrollTop;
-          if (top > 40)
-            $(".side-navbar").stop().animate({
-              opacity: "0.6",
-              top: "25%",
-            });
-          else
-            $(".side-navbar").stop().animate({
-              opacity: "0",
-              top: "45%",
-            });
-        }
-        
-      window.onscroll = function () {
-        progressBar();
-        highlight();
-      };
-      /* Fill progress bar */
-
-      function progressBar() {
-        let winScroll =
-          document.body.scrollTop || document.documentElement.scrollTop;
-        let height =
-          document.documentElement.scrollHeight -
-          document.documentElement.clientHeight;
-        let scrolled = (winScroll / height) * 50;
-        document.getElementById("myBar").style.height = scrolled + "%";
-      }
-
-      /* Fade in Highlight on scroll */
-
-      function highlight() {
-        let scroll = $(window).scrollTop();
-        let height = $(window).height();
-
-        $(".highlight").each(function () {
-          var pos = $(this).offset().top;
-          if (scroll + height >= pos) {
-            $(this).addClass("active");
-          } else {
-            $(this).removeClass("active");
-          }
-          console.log(pos);
-          console.log(scroll);
-        });
-      }
-
-
-    </script>
-    <script>
-      /* Footer Functions */
-      function move(id, position, color) {
-        var tl = gsap.timeline();
-        tl.to(
-          "#bgBubble",
-          { duration: 0.15, bottom: "-30px", ease: "ease-out" },
-          0
-        )
-          .to(
-            "#bubble1",
-            { duration: 0.1, y: "120%", boxShadow: "none", ease: "ease-out" },
-            0
-          )
-          .to(
-            "#bubble2",
-            { duration: 0.1, y: "120%", boxShadow: "none", ease: "ease-out" },
-            0
-          )
-          .to(
-            "#bubble3",
-            { duration: 0.1, y: "120%", boxShadow: "none", ease: "ease-out" },
-            0
-          )
-          .to(
-            "#bubble4",
-            { duration: 0.1, y: "120%", boxShadow: "none", ease: "ease-out" },
-            0
-          )
-          .to(".icon", { duration: 0.05, opacity: 0, ease: "ease-out" }, 0)
-          .to(
-            "#bgBubble",
-            { duration: 0.2, left: position, ease: "ease-in-out" },
-            0.1
-          )
-          .to(
-            "#bgBubble",
-            { duration: 0.15, bottom: "-50px", ease: "ease-out" },
-            "-=0.2"
-          )
-          .to(
-            `#bubble${id}`,
-            {
-              duration: 0.15,
-              y: "0%",
-              opacity: 1,
-              boxShadow:
-                "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
-              ease: "ease-out",
-            },
-            "-=0.1"
-          )
-          .to(
-            `#bubble${id}> span`,
-            { duration: 0.15, y: "0%", opacity: 0.7, ease: "ease-out" },
-            "-=0.1"
-          )
-          .to(
-            "#navbarContainer",
-            { duration: 0.3, backgroundColor: color, ease: "ease-in-out" },
-            0
-          )
-          .to(
-            "#bg",
-            { duration: 0.3, backgroundColor: color, ease: "ease-in-out" },
-            0
-          )
-          .to(
-            "#bgBubble",
-            { duration: 0.3, backgroundColor: color, ease: "ease-in-out" },
-            0
-          );
-      }
-    </script>
   </body>
 </html>
