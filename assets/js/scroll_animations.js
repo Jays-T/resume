@@ -61,7 +61,7 @@ function highlight()
     } else {
       $(this).removeClass("active");
     }
-    console.log(pos);
-    console.log(scroll);
+    // console.log(pos);
+    // console.log(scroll);
   });
 }

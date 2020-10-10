@@ -211,11 +211,47 @@ body {
 /* Cards */
 
 .card {
-  background: none;
+  background: #53256350;
   top: 90vh;
   margin-bottom: 48px;
-  min-height: 400px;
-  /* z-index: -5; */
+  min-height: 80vh;
+  border: 2px solid #7b3b9170;
+  border-radius: 5px;
+  box-shadow: 
+    inset 3px 3px 15px #1d0d2270,
+    inset -3px -3px 5px #7b3b9150,
+    inset 3px 3px 15px #1d0d2270,
+    inset -3px -3px 5px #7b3b9150;
+}
+
+/* .card-body {
+  transform-style: preserve-3d;
+} */
+
+.card-img-top {
+  /* margin: 0 -24% 0 24%; */
+  border-radius: 5px;
+  box-shadow: -3px -3px 5px #7b3b9170, 
+  3px 3px 15px #1d0d2270;
+
+}
+
+.three-d-header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  /* margin: 0 0 0 -8%; */
+  
+}
+
+.three-d-header-text h1{
+  border-radius: 5px;
+  background-color: rgb(39, 18, 46);
+  box-shadow: -3px -3px 5px #7b3b9170, 
+  3px 3px 15px #1d0d2270;
+  font-size: 8vw;
 }
 
 .img-size-handle {
