@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/overlay_animation.css" />
+    <link rel="stylesheet" href="assets/css/contrastparity.css" />
+    <title>Contrast Parity</title>
+  </head>
+
+  <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <span class="pos-abs">One</span>
+            <span class="pos-abs hide">Two</span>
+          </div>
+          <div class="card-body"></div>
+          <div class="card-footer">
+            <button id="switch" class="btn" onclick="switchDemo()"><i class="fas fa-asterisk"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-4"></div>
+      <div class="col-4"></div>
+    </div>
+    <!-- <div class="logo">
+      <div>
+        <span class="left">CONT</span>
+        <span class="right">RAST</span>
+
+        <span class="left">PAR</span>
+        <span class="right">ITY</span>
+      </div>
+    </div> -->
+  </div>
+
+    <script
+      src="https://kit.fontawesome.com/cb5c413284.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+    <!-- <script src="assets/js/footer_animate.js"></script>
+    <script src="assets/js/scroll_animations.js"></script>
+    <script type="text/javascript" src="assets/js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelector(".project"), {
+        max: 25,
+        speed: 400
+      });
+      
+      //It also supports NodeList
+      VanillaTilt.init(document.querySelectorAll(".project"));
+    </script> -->
+    <script>
+
+    function switchDemo()
+    {
+      $(".pos-abs").toggleClass("hide");
+    };
+    </script>
+
+  </body>
+</html>

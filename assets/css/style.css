@@ -211,17 +211,21 @@ body {
 /* Cards */
 
 .card {
-  background: #53256350;
+  background: #53256310;
   top: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 48px;
   min-height: 80vh;
-  border: 2px solid #7b3b9170;
+  border: 2px solid #1d0d2230;
   border-radius: 5px;
   box-shadow: 
     inset 3px 3px 15px #1d0d2270,
-    inset -3px -3px 5px #7b3b9150,
+    inset -3px -3px 5px #7b3b9140,
     inset 3px 3px 15px #1d0d2270,
-    inset -3px -3px 5px #7b3b9150;
+    inset -3px -3px 5px #7b3b9140;
 }
 
 /* .card-body {
@@ -231,6 +235,8 @@ body {
 .card-img-top {
   /* margin: 0 -24% 0 24%; */
   border-radius: 5px;
+  min-width: 425px;
+  height: 375px;
   box-shadow: -3px -3px 5px #7b3b9170, 
   3px 3px 15px #1d0d2270;
 

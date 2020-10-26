@@ -1,0 +1,112 @@
+* {
+    margin: 8px;
+    padding: 0;
+}
+
+body {
+    
+    background: #5b7181;
+}
+/* 
+.container {
+  min-width: 92vw;
+  min-height: 92vh;
+  border: 14px solid #4b6979;
+        box-shadow: -6px -6px 12px #92a9b970,
+        inset 6px 6px 12px #232f3870,
+        inset -6px -6px 12px #92a9b970,
+        6px 6px 12px #232f3870;
+} */
+
+.card {
+  width: 300px;
+  height: 600px;
+  border: 7px solid #4b6979;
+  border-radius: 8px;
+  background: transparent;
+  text-align: center;
+  box-shadow: -6px -6px 12px #92a9b970,
+  inset 6px 6px 12px #232f3870,
+  inset -6px -6px 12px #92a9b970,
+  6px 6px 12px #232f3870;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 50px;
+    text-align: center;
+    width:1000px;
+    height: 1000px;
+    border: 3px solid #5b7181;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: none;
+    animation: neumorph 2s forwards;
+  }
+
+  @keyframes neumorph {
+      0% {
+
+      }
+      75% {
+        border: 3px solid #4b6979;
+        box-shadow: -2px -2px 3px #92a9b970,
+        inset 2px 2px 3px #232f3870,
+        inset -2px -2px 3px #92a9b970,
+        2px 2px 3px #232f3870;
+      }
+      100% {
+        border: 14px solid #4b6979;
+        box-shadow: -6px -6px 12px #92a9b970,
+        inset 6px 6px 12px #232f3870,
+        inset -6px -6px 12px #92a9b970,
+        6px 6px 12px #232f3870;
+      }
+  }
+
+div > .btn {
+  height: 200px;
+  width: 200px;
+  border: 6px solid #5b7181;
+  box-shadow: -6px -6px 12px #92a9b970,
+        inset 6px 6px 12px #232f3870,
+        inset -6px -6px 12px #92a9b970,
+        6px 6px 12px #232f3870;
+  border-radius: 50%;
+  pointer-events: all;
+}
+
+div > .btn,
+div > span {
+      font-size: 4rem;
+      font-family: Baloo, sans-serif;
+      font-weight: 500;
+      color: #5b7181;
+      text-shadow: none;
+      animation: textmorph 4s forwards;
+    
+  }
+
+  @keyframes textmorph {
+    0% {
+
+    }
+    50% {
+
+    }
+    100% {
+        text-shadow: 3px 3px 6px #232f38,
+        -3px -3px 6px #92a9b9;
+    }
+}
+
+.hide {
+  display: none;
+}
+
+.strange {
+  color: red;
+}

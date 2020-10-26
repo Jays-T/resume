@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+    background: #5b7181;
+}
+
+.container
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 50px;
+    text-align: center;
+    width:1000px;
+    height: 1000px;
+    border: 14px solid #5b7181;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: none;
+    animation: neumorph 2s forwards;
+  }
+
+  @keyframes neumorph {
+      0% {
+
+      }
+      100% {
+        border: 14px solid #4b6979;
+        box-shadow: -6px -6px 12px #92a9b970,
+        inset 6px 6px 12px #232f3870,
+        inset -6px -6px 12px #92a9b970,
+        6px 6px 12px #232f3870;
+      }
+  }
+  
+
+
+ div > span {
+      font-size: 10rem;
+      font-family: Baloo, sans-serif;
+      font-weight: 500;
+      color: #5b7181;
+      text-shadow: none;
+      animation: textmorph 4s forwards;
+    
+  }
+
+  @keyframes textmorph {
+    0% {
+
+    }
+    50% {
+
+    }
+    100% {
+        text-shadow: 6px 6px 12px #232f38,
+        -6px -6px 12px #92a9b9;
+    }
+}
