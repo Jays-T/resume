@@ -1,4 +1,22 @@
 /* Loading Drawing */
+.fade-out-loader {
+  animation: fadeOutLoader 3s forwards;
+}
+
+@keyframes fadeOutLoader {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+/* End Loader Animation */
 
 .overlay {
     position: fixed;
@@ -29,8 +47,7 @@
 
   svg .loading-draw {
     stroke-width: .65rem;
-    stroke: rgb(41, 35, 20);
-    /* stroke-dasharray: 3943.119384765625; */
+    stroke: rgb(59, 49, 23);
     stroke-dasharray: 100;
     animation: loading-cat 2.6s ease-in-out infinite;
   }
@@ -66,6 +83,7 @@
     }
   }
   
+  /* Draw main cat Animation */
   svg .draw {
     stroke-width: .75rem;
     stroke: rgb(218, 165, 32);
@@ -75,9 +93,16 @@
   }
   
   @keyframes drawCat {
+    0% {
+      opacity: 0;
+    }
     15%
     {
+      opacity: .6;
       stroke-dashoffset: 53765.1015625;
+    }
+    25% {
+      opacity: 1;
     }
     40%
     {
