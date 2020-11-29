@@ -1,0 +1,31 @@
+#home-landing {
+    background: purple;
+  }
+  
+  #about {
+    background-image: url('../images/paper-background_650x650.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  #gallery {
+    background: palegoldenrod;
+  }
+  
+  #get-involved {
+    background: black;
+  }
+  
+  .welcome {
+    background: black;
+    color: #fafafa;
+    text-align: center;
+  }
+  
+  .nav-bg-dark {
+    background: greenyellow;
+  }
+  
+  .p {
+    background: grey;
+  }
