@@ -89,7 +89,7 @@
     stroke: rgb(218, 165, 32);
     stroke-dasharray: 53765.1015625;
     stroke-dashoffset: 53765.1015625;
-    animation: drawCat 8s forwards;
+    animation: drawCat 8.8s forwards;
   }
   
   @keyframes drawCat {
@@ -153,16 +153,16 @@
   }
   
   .headline-flash span:nth-child(1) {
-    animation-delay: 6s;
+    animation-delay: 6.8s;
   }
   .headline-flash span:nth-child(2) {
-    animation-delay: 6.2s;
+    animation-delay: 6.8s;
   }
   .headline-flash span:nth-child(3) {
-    animation-delay: 6.4s;
+    animation-delay: 6.8s;
   }
   .headline-flash span:nth-child(4) {
-    animation-delay: 6.6s;
+    animation-delay: 6.8s;
   }
   .headline-flash span:nth-child(5) {
     animation-delay: 6.8s;
@@ -173,10 +173,10 @@
   }
   
   .headline-flash .cat span:nth-child(1) {
-    animation-delay: 7.2s;
+    animation-delay: 7.6s;
   }
   .headline-flash .cat span:nth-child(2) {
-    animation-delay: 7.4s;
+    animation-delay: 7.6s;
   }
   .headline-flash .cat span:nth-child(3) {
     animation-delay: 7.6s;
