@@ -11,9 +11,9 @@ body {
 }
 
 #test-content {
-  position: absolute;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   align-items: inherit;
   height: 100vh;
   width: 100vw;
@@ -46,13 +46,11 @@ body {
   pointer-events: all;
 }
 
-#test-content div {
+#test-content {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: 50vw;
-  height: 50vh;
 }
 
 #test-content div:nth-child(1) {

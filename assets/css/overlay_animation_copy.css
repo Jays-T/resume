@@ -26,7 +26,7 @@
     justify-content: center;
     align-items: center;
     z-index: 9998;
-    animation: fadeOut 11.6s forwards;
+    animation: fadeOut 6s forwards;
   }
   
   @keyframes fadeOut {
@@ -84,12 +84,13 @@
   }
   
   /* Draw main cat Animation */
+
   svg .draw {
     stroke-width: .75rem;
     stroke: rgb(218, 165, 32);
     stroke-dasharray: 53765.1015625;
     stroke-dashoffset: 53765.1015625;
-    animation: drawCat 8.8s forwards;
+    animation: drawCat 9.8s forwards;
   }
   
   @keyframes drawCat {
@@ -111,6 +112,29 @@
     80% 
     {
       stroke-dashoffset: 53765.1015625;
+    }
+  }
+
+  svg .draw-two {
+    stroke-width: .75rem;
+    stroke-dasharray: 53765.1015625;
+    stroke-dashoffset: 0;
+    opacity: .6;
+    stroke: rgb(51, 51, 51);
+    animation: greyCatFadeIn 2s ease-in;
+  }
+
+  svg .draw-two:hover {
+    stroke-width: 1.75rem;
+    stroke: rgba(218, 165, 32, .2);
+  }
+
+  @keyframes greyCatFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: .6;
     }
   }
   
@@ -153,19 +177,19 @@
   }
   
   .headline-flash span:nth-child(1) {
-    animation-delay: 6.8s;
+    animation-delay: .8s;
   }
   .headline-flash span:nth-child(2) {
-    animation-delay: 6.8s;
+    animation-delay: .8s;
   }
   .headline-flash span:nth-child(3) {
-    animation-delay: 6.8s;
+    animation-delay: .8s;
   }
   .headline-flash span:nth-child(4) {
-    animation-delay: 6.8s;
+    animation-delay: .8s;
   }
   .headline-flash span:nth-child(5) {
-    animation-delay: 6.8s;
+    animation-delay: .8s;
   }
   
   .cat span {
@@ -173,13 +197,13 @@
   }
   
   .headline-flash .cat span:nth-child(1) {
-    animation-delay: 7.6s;
+    animation-delay: 1.6s;
   }
   .headline-flash .cat span:nth-child(2) {
-    animation-delay: 7.6s;
+    animation-delay: 1.6s;
   }
   .headline-flash .cat span:nth-child(3) {
-    animation-delay: 7.6s;
+    animation-delay: 1.6s;
   }
   
   .design span {
@@ -187,22 +211,22 @@
   }
   
   .headline-flash .design span:nth-child(1) {
-    animation-delay: 8s;
+    animation-delay: 2s;
   }
   .headline-flash .design span:nth-child(2) {
-    animation-delay: 8.2s;
+    animation-delay: 2.2s;
   }
   .headline-flash .design span:nth-child(3) {
-    animation-delay: 8.4s;
+    animation-delay: 2.4s;
   }
   .headline-flash .design span:nth-child(4) {
-    animation-delay: 8.6s;
+    animation-delay: 2.6s;
   }
   .headline-flash .design span:nth-child(5) {
-    animation-delay: 8.8s;
+    animation-delay: 2.8s;
   }
   .headline-flash .design span:nth-child(6) {
-    animation-delay: 9s;
+    animation-delay: 3s;
   }
   
   @keyframes flashLetters {
