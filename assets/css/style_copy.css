@@ -7,10 +7,11 @@ body {
   color: rgba(218, 165, 32, 0.9);
   font-size: 16px;
   font-family: "Baloo Tammudu 2", sans-serif;
-  overflow: hidden;
+  
 }
 
 #test-content {
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,15 +43,8 @@ body {
   z-index: 9999;
   background: rgba(14, 1, 8, 0.6);
   min-width: 100vw;
-  min-height: 100vh;
+  min-height: 500vh;
   pointer-events: all;
-}
-
-#test-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
 }
 
 #test-content div:nth-child(1) {

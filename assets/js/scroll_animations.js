@@ -41,8 +41,15 @@ function progressBar()
   let height =
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
-  let scrolled = (winScroll / height) * 50;
+  let scrolled = (winScroll / height) * 52;
+  let catScroll = (winScroll / height) * 53765.1015625;
+
+  let theCat = document.getElementById("cat_path");
+  let catLength = theCat.getTotalLength();
+
   document.getElementById("myBar").style.height = scrolled + "%";
+
+  theCat.style.strokeDashoffset = catScroll;
 }
 
 /* Fade in Highlight on scroll */
