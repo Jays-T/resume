@@ -7,7 +7,7 @@ body {
   color: rgba(218, 165, 32, 0.9);
   font-size: 16px;
   font-family: "Baloo Tammudu 2", sans-serif;
-  
+  overflow-x: hidden;
 }
 
 #test-content {
