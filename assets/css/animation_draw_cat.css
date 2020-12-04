@@ -23,7 +23,7 @@ svg .draw {
       opacity: 1;
       stroke: rgb(218, 165, 32);
     }
-    26%
+    29%
     {
       stroke: rgba(218, 165, 32, .2);
     }
@@ -31,16 +31,19 @@ svg .draw {
     {
       stroke-dashoffset: 0;
     }
-    53%
+    48%
     {
       stroke: rgba(218, 165, 32, .2);
     }
-    54%
+    51%
     {
-      stroke-dashoffset: 0;
       stroke: rgb(218, 165, 32);
     }
-    75% 
+    52%
+    {
+      stroke-dashoffset: 0;
+    }
+    70% 
     {
       stroke-dashoffset: 53765.1015625;
     }
