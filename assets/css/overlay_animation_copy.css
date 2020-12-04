@@ -1,4 +1,44 @@
-/* Loading Drawing */
+/* Loader Animation */
+
+svg .loading-draw {
+  stroke-width: .65rem;
+  stroke: rgb(59, 49, 23);
+  stroke-dasharray: 100;
+  animation: loading-cat 2.6s ease-in-out infinite;
+}
+
+@keyframes loading-cat {
+   0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 400;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.loading-text {
+  font-size: 1.45rem;
+  padding: .7rem;
+  color: rgb(218, 165, 32);
+  animation: text-loading 3s ease-in-out infinite;
+  opacity: .1;
+}
+
+@keyframes text-loading {
+  0% {
+    opacity: .1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .1;
+  }
+}
+
 .fade-out-loader {
   animation: fadeOutLoader 3s forwards;
 }
@@ -26,7 +66,7 @@
     justify-content: center;
     align-items: center;
     z-index: 9998;
-    animation: fadeOut 6s forwards;
+    animation: fadeOut 3.6s forwards;
   }
   
   @keyframes fadeOut {
@@ -44,94 +84,6 @@
       z-index: -1;
     }
   }
-
-  svg .loading-draw {
-    stroke-width: .65rem;
-    stroke: rgb(59, 49, 23);
-    stroke-dasharray: 100;
-    animation: loading-cat 2.6s ease-in-out infinite;
-  }
-
-  @keyframes loading-cat {
-     0% {
-      stroke-dashoffset: 0;
-    }
-    50% {
-      stroke-dashoffset: 400;
-    }
-    100% {
-      stroke-dashoffset: 0;
-    }
-  }
-
-  .loading-text {
-    font-size: 3.45rem;
-    color: rgb(218, 165, 32);
-    animation: text-loading 3s ease-in-out infinite;
-    opacity: .1;
-  }
-
-  @keyframes text-loading {
-    0% {
-      opacity: .1;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: .1;
-    }
-  }
-  
-  /* Draw main cat Animation */
-
-  svg .draw {
-    stroke-width: .75rem;
-    stroke: rgb(218, 165, 32);
-    stroke-dasharray: 53765.1015625;
-    stroke-dashoffset: 53765.1015625;
-    animation: drawCat 9.8s forwards;
-  }
-  
-  @keyframes drawCat {
-    0% {
-      opacity: 0;
-    }
-    15%
-    {
-      opacity: .6;
-      stroke-dashoffset: 53765.1015625;
-    }
-    25% {
-      opacity: 1;
-    }
-    40%
-    {
-      stroke-dashoffset: 0;
-    }
-    80% 
-    {
-      stroke-dashoffset: 53765.1015625;
-    }
-  }
-
-  svg .draw-two {
-    stroke-width: 1.75rem;
-    stroke-dasharray: 53765.1015625;
-    stroke-dashoffset: 0;
-    opacity: .6;
-    stroke: rgba(218, 165, 32, .2);
-    animation: greyCatFadeIn 2s ease-in;
-  }
-
-  @keyframes greyCatFadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: .6;
-    }
-  }
   
   .headline {
     position: relative;
@@ -147,19 +99,11 @@
     position: absolute;
   }
   
-  /* .marg-r {
-    margin-right: 1.5rem;
-  }
-  
-  .marg-l {
-    margin-left: 1.5rem;
-  } */
-  
   .headline-flash span {
     font-size: 5rem;
     color: transparent;
     font-weight: 500;
-    animation: flashLetters 1s forwards;
+    animation: flashLetters .8s forwards;
   }
   
   .angry,
@@ -171,57 +115,45 @@
     align-items: center;
   }
   
-  .headline-flash span:nth-child(1) {
-    animation-delay: .8s;
-  }
-  .headline-flash span:nth-child(2) {
-    animation-delay: .8s;
-  }
-  .headline-flash span:nth-child(3) {
-    animation-delay: .8s;
-  }
-  .headline-flash span:nth-child(4) {
-    animation-delay: .8s;
-  }
+  .headline-flash span:nth-child(1),
+  .headline-flash span:nth-child(2),
+  .headline-flash span:nth-child(3),
+  .headline-flash span:nth-child(4),
   .headline-flash span:nth-child(5) {
-    animation-delay: .8s;
+    animation-delay: .4s;
   }
   
   .cat span {
-    animation: flashLetters 1s forwards;
+    animation: flashLetters .8s forwards;
   }
   
-  .headline-flash .cat span:nth-child(1) {
-    animation-delay: 1.6s;
-  }
-  .headline-flash .cat span:nth-child(2) {
-    animation-delay: 1.6s;
-  }
+  .headline-flash .cat span:nth-child(1),
+  .headline-flash .cat span:nth-child(2),
   .headline-flash .cat span:nth-child(3) {
-    animation-delay: 1.6s;
+    animation-delay: .8s;
   }
   
   .design span {
-    animation: flashLetters 1s forwards;
+    animation: flashLetters .8s forwards;
   }
   
   .headline-flash .design span:nth-child(1) {
-    animation-delay: 2s;
+    animation-delay: 1s;
   }
   .headline-flash .design span:nth-child(2) {
-    animation-delay: 2.2s;
+    animation-delay: 1.2s;
   }
   .headline-flash .design span:nth-child(3) {
-    animation-delay: 2.4s;
+    animation-delay: 1.4s;
   }
   .headline-flash .design span:nth-child(4) {
-    animation-delay: 2.6s;
+    animation-delay: 1.6s;
   }
   .headline-flash .design span:nth-child(5) {
-    animation-delay: 2.8s;
+    animation-delay: 1.8s;
   }
   .headline-flash .design span:nth-child(6) {
-    animation-delay: 3s;
+    animation-delay: 2s;
   }
   
   @keyframes flashLetters {
@@ -243,5 +175,11 @@
     100% 
     {
       color: #333;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .loading-text {
+      font-size: 3.45rem;
     }
   }
