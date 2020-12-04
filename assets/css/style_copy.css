@@ -458,7 +458,7 @@ div > .card-body {
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  max-width: 95%;
+  max-width: 98%;
 }
 
 div > .card-body > span {
