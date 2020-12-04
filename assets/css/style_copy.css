@@ -278,14 +278,8 @@ body .container {
 }
 /* Cards */
 
-.projects .card {
-  background: transparent;
-  top: 40vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 80vh;
+.projects {
+  top: 60vh;
 }
 
 /* .card-body {
@@ -459,36 +453,42 @@ body .container {
   }
 }
 
+div > .card-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  max-width: 95%;
+}
+
 div > .card-body > span {
   z-index: 2;
-  padding: 14px 14px;
+  padding: 4px;
+  margin: 11px;
   background: transparent;
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 2.4rem;
   color: rgb(39, 18, 46);
   text-shadow: none;
-  opacity: .4;
-  animation: iconmorph .8s ease forwards;
-
-}
-
-@keyframes iconmorph {
-0% {
-
-}
-95% {
-
-}
-100% {
-    text-shadow: 3px 3px 6px rgb(24, 11, 29),
+  opacity: .1;
+  text-shadow: 3px 3px 6px rgb(24, 11, 29),
     -1px -2px 3px rgba(250, 215, 235, 0.7);
-}
+
 }
 
 div > .card-body > span > .html-css-bootstrap {
   color: rgb(39, 18, 46);
   opacity: 1 !important;
-  font-size: 12rem;
-  text-shadow: 3px 3px 6px rgb(41, 19, 49),
-    -3px -3px 6px rgba(250, 215, 235, 0.7);
+  text-shadow: 4px 4px 6px rgb(24, 10, 29),
+    -3px -3px 2px rgba(250, 215, 235, 0.7);
+}
+
+@media screen and (min-width: 1920px) {
+  div > .card-body {
+    max-width: 90%;
+  }
+  div > .card-body > span {
+    padding: 8px;
+    margin: 22px;
+  }
 }
