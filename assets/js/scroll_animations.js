@@ -11,18 +11,18 @@ $(window).scroll(function ()
   });
   function mainNav() 
   {
-    var top =
+    let top =
       (document.documentElement && document.documentElement.scrollTop) ||
       document.body.scrollTop;
     if (top > 40)
       $(".side-navbar").stop().animate({
         opacity: "0.6",
-        top: "25%",
+        top: "0",
       });
     else
       $(".side-navbar").stop().animate({
         opacity: "0",
-        top: "45%",
+        top: "5%",
       });
   }
   
@@ -30,6 +30,7 @@ window.onscroll = function ()
 {
   progressBar();
   highlight();
+  skillsAnimate();
 };
 
 /* Fill progress bar */
@@ -42,6 +43,7 @@ function progressBar()
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
   let scrolled = (winScroll / height) * 52;
+  const totalCat = 53765.1015625;
   let catScroll = (winScroll / height) * 53765.1015625;
 
   let theCat = document.getElementById("cat_path");
@@ -49,7 +51,7 @@ function progressBar()
 
   document.getElementById("myBar").style.height = scrolled + "%";
 
-  theCat.style.strokeDashoffset = catScroll;
+  theCat.style.strokeDashoffset = totalCat - catScroll;
 }
 
 /* Fade in Highlight on scroll */
