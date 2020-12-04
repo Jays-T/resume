@@ -26,32 +26,55 @@
   <body>
   <div class="container">
     <div class="row">
-      <div class="col-4">
+      <div class="col-12">
         <div class="card">
           <div class="card-header">
-            <span class="pos-abs">One</span>
-            <span class="pos-abs hide">Two</span>
+            <span class="pos-abs">Projects             
+            </span>
           </div>
-          <div class="card-body"></div>
+          <div class="card-body">
+            <p>
+            <span class="pos-abs">
+              <i class="fas fa-code"></i><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fab fa-js-square"></i>
+              : Everyday Gourmet</span>
+            </p>
+            <p>
+            <span class="pos-abs">
+              <i class="fas fa-code"></i><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fab fa-js-square"></i><i class="fab fa-python"></i>
+              : The Band Room</span>
+            </p>
+          </div>
           <div class="card-footer">
-            <button id="switch" class="btn" onclick="switchDemo()"><i class="fas fa-asterisk"></i></button>
+            <a id="switch" class="btn" onclick="switchDemo()"><i class="fas fa-exchange-alt"></i></a>
+          </div>
+        </div>
+        <div class="card hide">
+          <div class="card-header">
+            <span class="pos-abs hide">Skills</span>
+          </div>
+          <div class="card-body">
+            <span class="pos-abs hide"><i class="fas fa-code"></i></span>
+            <span class="pos-abs hide"><i class="fab fa-python"></i></span>
+            <span class="pos-abs hide"><i class="far fa-file-code"></i></span>
+            <span class="pos-abs hide"><i class="fab fa-css3-alt"></i></span>
+            <span class="pos-abs hide"><i class="fab fa-html5"></i></span>
+            <span class="pos-abs hide"><i class="fas fa-file-code"></i></span>
+            <span class="pos-abs hide"><i class="fab fa-git"></i></span>
+            <span class="pos-abs hide"><i class="fab fa-css3"></i></span>
+            <span class="pos-abs hide"><i class="fab fa-digital-ocean"></i></span>
+            <span class="pos-abs hide"><i class="fab fa-github"></i></span>
+            <span class="pos-abs hide"><i class="fas fa-digital-tachograph"></i></span>
+            <span class="pos-abs hide"><i class="fas fa-code-branch"></i></span>
+            <span class="pos-abs hide"><i class="fab fa-git-alt"></i></span>
+            <span class="pos-abs hide"><i class="fab fa-bootstrap"></i></span>
+          </div>
+          <div class="card-footer">
+            <a id="switch" class="btn" onclick="switchDemo()"><i class="fas fa-exchange-alt"></i></a>
           </div>
         </div>
       </div>
-      <div class="col-4"></div>
-      <div class="col-4"></div>
     </div>
-    <!-- <div class="logo">
-      <div>
-        <span class="left">CONT</span>
-        <span class="right">RAST</span>
-
-        <span class="left">PAR</span>
-        <span class="right">ITY</span>
-      </div>
-    </div> -->
   </div>
-
     <script
       src="https://kit.fontawesome.com/cb5c413284.js"
       crossorigin="anonymous"
@@ -76,6 +99,7 @@
     function switchDemo()
     {
       $(".pos-abs").toggleClass("hide");
+      $(".card").toggleClass("hide");
     };
     </script>
 
