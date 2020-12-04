@@ -4,8 +4,11 @@
 }
 
 body {
-    
     background: #5b7181;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: Baloo, sans-serif;
+    font-weight: 500;
 }
 /* 
 .container {
@@ -19,58 +22,48 @@ body {
 } */
 
 .card {
-  width: 300px;
-  height: 600px;
-  border: 7px solid #4b6979;
-  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0;
   background: transparent;
   text-align: center;
-  box-shadow: -6px -6px 12px #92a9b970,
-  inset 6px 6px 12px #232f3870,
-  inset -6px -6px 12px #92a9b970,
-  6px 6px 12px #232f3870;
+  box-shadow: none;
+  animation: cardmorph .4s ease forwards;
 }
 
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    margin-left: 50px;
-    text-align: center;
-    width:1000px;
-    height: 1000px;
-    border: 3px solid #5b7181;
-    border-radius: 50%;
-    background: transparent;
-    box-shadow: none;
-    animation: neumorph 2s forwards;
-  }
+@keyframes cardmorph {
+  0% {
 
-  @keyframes neumorph {
-      0% {
-
-      }
-      75% {
-        border: 3px solid #4b6979;
-        box-shadow: -2px -2px 3px #92a9b970,
-        inset 2px 2px 3px #232f3870,
-        inset -2px -2px 3px #92a9b970,
-        2px 2px 3px #232f3870;
-      }
-      100% {
-        border: 14px solid #4b6979;
-        box-shadow: -6px -6px 12px #92a9b970,
-        inset 6px 6px 12px #232f3870,
-        inset -6px -6px 12px #92a9b970,
-        6px 6px 12px #232f3870;
-      }
   }
+  95% {
+
+  }
+  100% {
+    border: 2px solid #4b6979;
+    border-radius: 5px;
+    box-shadow: -6px -6px 12px #92a9b970,
+    inset 6px 6px 12px #232f3870,
+    inset -6px -6px 12px #92a9b970,
+    6px 6px 12px #232f3870;
+  }
+}
+
+.card .card-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 div > .btn {
-  height: 200px;
-  width: 200px;
-  border: 6px solid #5b7181;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  height: 105px;
+  width: 105px;
+  border: 2px solid #5b7181;
   box-shadow: -6px -6px 12px #92a9b970,
         inset 6px 6px 12px #232f3870,
         inset -6px -6px 12px #92a9b970,
@@ -80,21 +73,20 @@ div > .btn {
 }
 
 div > .btn,
-div > span {
-      font-size: 4rem;
-      font-family: Baloo, sans-serif;
-      font-weight: 500;
+div > span > i,
+div > p > span > i {
+  font-size: 2.6rem;
       color: #5b7181;
       text-shadow: none;
-      animation: textmorph 4s forwards;
+      animation: iconmorph .8s ease forwards;
     
   }
 
-  @keyframes textmorph {
+  @keyframes iconmorph {
     0% {
 
     }
-    50% {
+    95% {
 
     }
     100% {
@@ -105,8 +97,4 @@ div > span {
 
 .hide {
   display: none;
-}
-
-.strange {
-  color: red;
 }
