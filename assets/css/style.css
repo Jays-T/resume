@@ -50,7 +50,6 @@ body {
   background: transparent;
   position: fixed;
   padding-top: 1.8rem;
-  left: 1.8rem;
   overflow: hidden;
 }
 
@@ -70,7 +69,6 @@ body {
   flex-direction: row;
   align-items: right;
   justify-content: flex-end;
-  margin-left: 8rem;
 }
 
 .hero-links {
@@ -308,7 +306,6 @@ body {
   width: 70px;
   border-radius: 5px;
   top: 45%;
-  left: 1.8rem;
   opacity: 0;
 }
 

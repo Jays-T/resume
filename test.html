@@ -14,131 +14,67 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/contrastparity.css" />
+    <link rel="stylesheet" href="assets/css/skills_dashboard.css" />
     <title>Angry Cat Development and Design</title>
   </head>
 
   <body>
-    <div class="main-content">
-      <div class="card">
-        <div class="card-header text-center">Featured Project</div>
-        <div class="card-body text-center">
-          <h5 class="card-title">Project Name</h5>
-            <div class="row project">
-              <div class="col-6">
-                <img
-            class="card-img-top img-fluid img-size-handle"
-            src="assets/images/paper-background_650x650.png"
-            alt="Angry Cat"
-          />
-              </div>
-              <div class="col-6 three-d-header-text">
-                <h1>Angry Cat Design</h1>
-              </div>
-            </div>
+    <div class="container">
+      <div class="row">
+        <!-- User dashboard/menu -->
+      <div id="user-dashboard" class="col-6 col-md-2 p-1 user-panel">
+        <div id="dashboard-toggle" class="custom-menu">
+          <button type="button" id="sidebar-collapse" class="btn">
+          <i class="fa fa-bars"></i>
+          <span class="sr-only">Toggle Menu</span>
+          </button>
+        </div>
+      <div class="text-center">
+        <span class="mt-2">Angry Cat Design</span>
+      </div>
+      <div class="card hide">
+        <div class="card-header">
+          <span class="pos-abs hide">Skills</span>
+        </div>
+        <div class="card-body">
+          <span class="pos-abs hide"><i class="fas fa-code"></i></span>
+          <span class="pos-abs hide"><i class="fab fa-python"></i></span>
+          <span class="pos-abs hide"><i class="far fa-file-code"></i></span>
+          <span class="pos-abs hide"><i class="fab fa-css3-alt"></i></span>
+          <span class="pos-abs hide"><i class="fab fa-html5"></i></span>
+          <span class="pos-abs hide"><i class="fas fa-file-code"></i></span>
+          <span class="pos-abs hide"><i class="fab fa-git"></i></span>
+          <span class="pos-abs hide"><i class="fab fa-css3"></i></span>
+          <span class="pos-abs hide"><i class="fab fa-digital-ocean"></i></span>
+          <span class="pos-abs hide"><i class="fab fa-github"></i></span>
+          <span class="pos-abs hide"><i class="fas fa-digital-tachograph"></i></span>
+          <span class="pos-abs hide"><i class="fas fa-code-branch"></i></span>
+          <span class="pos-abs hide"><i class="fab fa-git-alt"></i></span>
+          <span class="pos-abs hide"><i class="fab fa-bootstrap"></i></span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a id="switch" class="btn" onclick="switchDemo()"><i class="fas fa-exchange-alt"></i></a>
+      </div>
 
-          <p class="card-text">Project Description</p>
-          <a href="#" class="btn btn-primary">Live Demo</a>
-        </div>
-        <div class="card-footer text-muted text-center">
-          <img src="assets/images/angry_cat_40x40.png" /> Angry Cat Design
-        </div>
+      </div>
       </div>
     </div>
-
-    <section name="footer">
-      <div class="footer">
-        <div id="navbarContainer">
-          <div id="navbar">
-            <div id="bubbleWrapper">
-              <div id="bubble1" class="bubble">
-                <span class="icon"><i class="fas fa-battery-quarter"></i></span>
-              </div>
-              <div id="bubble2" class="bubble">
-                <span class="icon"><i class="fas fa-battery-half"></i></span>
-              </div>
-              <div id="bubble3" class="bubble">
-                <span class="icon"
-                  ><i class="fas fa-battery-three-quarters"></i
-                ></span>
-              </div>
-              <div id="bubble4" class="bubble">
-                <span class="icon"><i class="fas fa-battery-full"></i></span>
-              </div>
-            </div>
-            <div id="menuWrapper">
-              <div
-                id="menu1"
-                class="menuElement"
-                onclick="move('1', '50px', '#2c1433')"
-              >
-                <i class="fas fa-battery-quarter"></i>
-              </div>
-              <div
-                id="menu2"
-                class="menuElement"
-                onclick="move('2', '150px', '#2c1433')"
-              >
-                <i class="fas fa-battery-half"></i>
-              </div>
-              <div
-                id="menu3"
-                class="menuElement"
-                onclick="move('3', '250px', '#2c1433')"
-              >
-                <i class="fas fa-battery-three-quarters"></i>
-              </div>
-              <div
-                id="menu4"
-                class="menuElement"
-                onclick="move('4', '350px', '#2c1433')"
-              >
-                <i class="fas fa-battery-full"></i>
-              </div>
-            </div>
-          </div>
-          <div id="bgWrapper">
-            <div id="bg"></div>
-            <div id="bgBubble"></div>
-          </div>
-        </div>
-
-        <svg width="0" height="0">
-          <defs>
-            <filter id="goo">
-              <feGaussianBlur
-                in="SourceGraphic"
-                stdDeviation="20"
-                result="blur"
-                id="blurFilter"
-              />
-              <feColorMatrix
-                in="blur"
-                mode="matrix"
-                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -15"
-                result="goo"
-              />
-              <feComposite in="SourceGraphic" in2="goo" operator="atop" />
-            </filter>
-          </defs>
-        </svg>
-      </div>
-    </section> 
 
     <script src="https://kit.fontawesome.com/cb5c413284.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
-    <script type="text/javascript" src="assets/js/vanilla-tilt.js"></script>
-    <script type="text/javascript">
-      VanillaTilt.init(document.querySelector(".project"), {
-        max: 45,
-        speed: 400
-      });
-      
-      //It also supports NodeList
-      VanillaTilt.init(document.querySelectorAll(".project"));
+    <script src="assets/js/profile.js"></script>
+    <script>
+      function switchDemo()
+    {
+      $(".pos-abs").toggleClass("hide");
+      $(".card").toggleClass("hide");
+    };
     </script>
+    
     <!-- <script>
       window.onscroll = function () {
         progressBar();
