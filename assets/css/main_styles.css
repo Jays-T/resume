@@ -1,0 +1,97 @@
+* 
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Tammudu 2", sans-serif;
+}
+body 
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background: rgb(39, 18, 46);
+    padding-bottom: 200px;
+    overflow-x: hidden;
+    color: rgba(250, 235, 215, .6);
+}
+body:before 
+{
+    content: 'WOLOLO';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-size: 16em;
+    transform: translate(-50%, -50%);
+}
+.scrolling 
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.scrolling .main-content 
+{
+    min-width: 86vw;
+    max-width: 96vw;
+}
+.scrolling h2 
+{
+    left: 6px;
+    font-size: 2em;
+}
+.scrolling:nth-child(even) h2 
+{
+    margin-left: 152px;
+}
+.scrolling .container 
+{
+    position: relative;
+    max-width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.scrolling:nth-child(even) .container 
+{
+    flex-direction: row-reverse;
+}
+.scrolling .container .img-container 
+{
+    position: relative;
+    width: 96%;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0 25px 35px rgba(0,0,0,0,.1);
+}
+.scrolling .container .img-container img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.scrolling .container .content 
+{
+    position: absolute;
+    right: 0;
+    margin-top: 200px;
+    margin-bottom: 20px;
+    padding: 40px;
+    background-color: rgba(15, 15, 15, .7);
+    z-index: 1;
+    max-width: 70%;
+    color: antiquewhite;
+    box-shadow: 0 25px 35px rgba(0,0,0,0,.1);
+    border-bottom: 12px solid rgba(218, 165, 32, 0.3);
+}
+.scrolling:nth-child(even) .container .content 
+{
+    left: 0;
+}
