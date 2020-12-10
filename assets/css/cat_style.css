@@ -1,0 +1,18 @@
+/* */
+section header 
+{
+    padding-top: 15%;
+    position: fixed;
+    min-width: 86vw;
+    max-width: 96vw;
+    top: 30%;
+    left: 50%;
+    font-size: 16em;
+    transform: translate(-50%, -50%);
+}
+section header svg
+{
+    max-width: 100%;
+    max-height: 100%;
+    stroke-width: .75rem;
+}
