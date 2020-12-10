@@ -30,27 +30,39 @@ window.onscroll = function ()
 {
   progressBar();
   highlight();
-  skillsAnimate();
 };
 
-/* Fill progress bar */
+/* Fill progress bar and draw cat according to amount scrolled */
 
 function progressBar() 
 {
+  // get scroll + height
   let winScroll =
     document.body.scrollTop || document.documentElement.scrollTop;
   let height =
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
+
+  // Calculate scroll for progress bar
   let scrolled = (winScroll / height) * 52;
+
+  // Declare cat stroke offset
   const totalCat = 53765.1015625;
+
+  // Calculate scroll for cat drawing
   let catScroll = (winScroll / height) * 53765.1015625;
 
+  // Store cat length
   let theCat = document.getElementById("cat_path");
-  let catLength = theCat.getTotalLength();
 
+  // Below commented out code allows to get total cat draw length if needed
+  // let catLength = theCat.getTotalLength();
+  // console.log(catLength);
+
+  // Draw progress bar in equal relation to percent scrolled
   document.getElementById("myBar").style.height = scrolled + "%";
 
+  // Draw cat in equal relation to percent scrolled
   theCat.style.strokeDashoffset = totalCat - catScroll;
 }
 
