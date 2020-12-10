@@ -9,6 +9,7 @@ body {
   font-family: "Baloo Tammudu 2", sans-serif;
   overflow-x: hidden;
   width: 100vw;
+  background: rgb(39, 18, 46);
 }
 
 body .container {
@@ -39,12 +40,17 @@ body .container {
 }
 
 .projects {
+  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* z-index: 9999; */
   width: 100%;
   min-height: 375vh;
+}
+
+.projects .card {
+  margin-bottom: 22vh;
 }
 
 .content-reveal {

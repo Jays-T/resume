@@ -55,7 +55,7 @@ body {
   align-items: center;
 }
 
-div > .btn {
+div > .button {
   padding: 0;
   display: flex;
   justify-content: center;
@@ -70,9 +70,10 @@ div > .btn {
         6px 6px 12px #232f3870;
   border-radius: 50%;
   pointer-events: all;
+  cursor: pointer;
 }
 
-div > .btn,
+div > .button,
 div > span > i,
 div > p > span > i {
   font-size: 2.6rem;
