@@ -1,5 +1,5 @@
 /* */
-section header 
+section .cat-svg 
 {
     position: fixed;
     display: flex;
@@ -11,9 +11,47 @@ section header
     top: 50%;
     transform: translate(-50%, -50%);
 }
-section header svg
+section .cat-svg svg
 {
     max-width: 100%;
     max-height: 100%;
     stroke-width: .75rem;
+}
+section header 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 90%;
+    left: 31%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    z-index: 10000;
+    pointer-events: all;
+    transition: 1s ease-in-out;
+}
+section .hidden header
+{
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+}
+section header .social-media a
+{
+    color: rebeccapurple;
+    text-decoration: none;
+}
+@media screen and (min-width: 1366px)
+{
+    section header 
+    {
+        top: 50%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+        font-size: 1.8rem;
+    } 
 }
