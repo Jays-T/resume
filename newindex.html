@@ -35,6 +35,7 @@
 
         <link rel="stylesheet" href="assets/css/jarallax.css">
         <link rel="stylesheet" href="assets/css/parallax_style.css">
+        <link rel="stylesheet" href="assets/css/slides.css">
         <link rel="stylesheet" href="assets/css/cat_style.css">
         <link
           rel="stylesheet"
@@ -49,10 +50,46 @@
     </head>
 <body>
 <section>
+  <!-- <div class="slide-container">
     <header include-html="cat.html">
     </header>
+  </div> -->
+
 </section>
-<section class="scrolling">
+<section>
+  <div class="slide-container">
+    <div class="slide slide-one">
+      <div class="slide-content">
+        <h2>HELLO<img src="assets/images/cat_avatar.png" alt="Cat with sunglasses"></h2>
+        
+        <p>
+          Hi there, my name is John Traas but most people call me Jays.
+                  I'm a developer, UI designer and musician. 
+        </p>
+      </div>
+    </div>
+    <div class="slide slide-two">
+      <div class="slide-content">
+        <h2>SKILLS<img src="assets/images/cat_avatar.png" alt="Cat with sunglasses"></h2>
+        <p>
+          A web developer that doesn't use Lorem ipsum dolor sit amet?
+                 What an oddity!
+        </p>
+      </div>
+    </div>
+    <div class="slide slide-three">
+      <div class="slide-content">
+        <h2>PROJECTS<img src="assets/images/cat_avatar.png" alt="Cat with sunglasses"></h2>
+        <p>
+          A web developer that doesn't use Lorem ipsum dolor sit amet?
+                 What an oddity!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- <div class="commented-out-scrolling-section">
+  <section class="scrolling">
     <div class="main-content">
         <h2 data-jarallax-element="36 -25">01 | HELLO</h2>
         <div class="container">
@@ -127,10 +164,20 @@
       </div>
   </div>
 </section>
-    
+</div> -->
+
+
 </body>
 <script>
   includeHTML();
+</script>
+
+<script>
+  let slideSwitch = document.querySelectorAll('.slide');
+
+  slideSwitch.forEach(popup => popup.addEventListener('click', () =>{
+    popup.classList.toggle('active')
+  }));
 </script>
 
 <script>
