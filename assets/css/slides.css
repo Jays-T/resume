@@ -1,5 +1,6 @@
 #particles-js,
-#particles-js-one
+#particles-js-one,
+#particles-js-two
 {
     position: absolute;
     min-width: 100vw;
@@ -239,7 +240,7 @@
 .slide-container .slide.slide-one::after 
 {
     left: 91vw;
-    color: rgba(87, 64, 7, 0.9);
+    color: rgba(148, 109, 9, 0.8);
     animation: pulse 12s forwards infinite;
 }
 .slide-container .slide.slide-two
@@ -249,7 +250,7 @@
 .slide-container .slide.slide-two::after 
 {
     left: 94vw;
-    color: rgba(87, 64, 7, 0.9);
+    color: rgba(148, 109, 9, 0.8);
     animation: pulse 12s forwards infinite;
 }
 .slide-container .slide.slide-three
@@ -259,24 +260,28 @@
 .slide-container .slide.slide-three::after 
 {
     left: 97vw;
-    color: rgba(66, 48, 2, 0.9);
+    color: rgba(148, 109, 9, 0.8);
     animation: pulse 12s forwards infinite;
 }
 @keyframes pulse 
     {
-        15%
+        22%
         {
-            color: rgba(87, 64, 7, 0.9);
+            color: rgba(148, 109, 9, .8);
+            text-shadow: none;
         }
         25%
         {
-            color: rgb(218, 165, 32);
+            color: rgb1(218, 165, 32, 1);
+            text-shadow: 0 0 2px rgb(255, 183, 0),
+                   0 0 4px rgb(255, 183, 0),
+                   0 0 6px rgb(255, 183, 0);
         }
-        35%
+        28%
         {
-            color: rgba(87, 64, 7, 0.9);
+            color: rgba(148, 109, 9, .8);
+            text-shadow: none;
         }
-
     }
 .slide-container .slide.slide-two::after
 {
@@ -309,6 +314,7 @@
     left: 80vw;
     transition-delay: .2s;
     color: rgb(218, 165, 32) !important; /* Important used here to override pulse animation while active but not disrupt timing on pulse animation*/
+    text-shadow: none !important;
 }
 .slide-container .slide-content p
     {

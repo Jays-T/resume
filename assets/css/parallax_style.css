@@ -11,7 +11,7 @@ body
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    background: rgb(18, 1, 14);
+    background: rgb(16, 1, 14);
     padding-bottom: 200px;
     overflow: hidden;
     color: rgba(250, 235, 215, .6);

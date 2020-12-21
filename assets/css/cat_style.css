@@ -42,8 +42,14 @@ section .hidden header
 }
 section header .social-media a
 {
-    color: rebeccapurple;
+    color: rgb(53, 10, 95);
     text-decoration: none;
+    transition: .3s ease-in-out;
+}
+section header .social-media a:hover
+{
+    color: rgb(102, 51, 153);
+    opacity: .8;
 }
 @media screen and (min-width: 1366px)
 {
