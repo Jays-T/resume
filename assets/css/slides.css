@@ -310,7 +310,6 @@
 .slide-container .slide.active.slide-two::after,
 .slide-container .slide.active.slide-three::after
 {
-    width: 75px;
     left: 80vw;
     transition-delay: .2s;
     color: rgb(218, 165, 32) !important; /* Important used here to override pulse animation while active but not disrupt timing on pulse animation*/
