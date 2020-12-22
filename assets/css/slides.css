@@ -1,3 +1,35 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/* Scrollable Projects Tab */
+.content-scroll
+{
+    position: absolute;
+    height: calc(100% - 57.4vh);
+    overflow-x: hidden;
+}
+/* Custom Scroll Bar */
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+background: rgb(16, 1, 14);
+-webkit-box-shadow: inset 0 0 5px rgb(39, 18, 46);
+        box-shadow: inset 0 0 5px rgb(39, 18, 46);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: rgb(218, 165, 32);
+-webkit-box-shadow: inset 0 0 5px rgb(39, 18, 46);
+        box-shadow: inset 0 0 5px rgb(39, 18, 46);
+}
+/* Particles animation */
 #particles-js,
 #particles-js-one,
 #particles-js-two
@@ -8,6 +40,7 @@
     background: transparent;
     opacity: .8;
 }
+/* Main Content Sliders */
 .slide-container 
 {
     position: fixed;
@@ -15,6 +48,18 @@
     left: 0;
     width: 100%;
     height: 100vh;
+    z-index: 0;
+}
+.hide-slides
+{
+    visibility: hidden;
+    transition: visibility 0s ease-in 0.33s;
+}
+.show-slides
+{
+    visibility: visible;
+    transition: visibility 0s ease-in 0.33s;
+    transition-delay: 0s;
 }
 .slide-container .slide 
 {
@@ -22,16 +67,26 @@
     width: 100%;
     height: 100vh;
     cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
 }
+/* SLIDE ONE */
 .slide-container .slide.slide-one
 {
     opacity: .5;
     background: rgba(14, 1, 8, 0.4);
-    clip-path: polygon(74% 0, 61% 0, 61% 100%, 74% 100%);
+    -webkit-clip-path: polygon(74% 0, 61% 0, 61% 100%, 74% 100%);
+            clip-path: polygon(74% 0, 61% 0, 61% 100%, 74% 100%);
 }
 .slide-container .slide.slide-one::after {
     content: 'INFO';
@@ -41,15 +96,22 @@
     left: 62.2vw;
     position: absolute;
     color: rgb(218, 165, 32);
-    text-orientation: upright;
-    writing-mode: vertical-lr;
+    -webkit-text-orientation: upright;
+            text-orientation: upright;
+    -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: tb-lr;
+            writing-mode: vertical-lr;
+    -webkit-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
 }
+/* SLIDE TWO */
 .slide-container .slide.slide-two
 {
     opacity: .7;
     background: rgba(14, 1, 8, 0.6);
-    clip-path: polygon(87% 0, 74% 0, 74% 100%, 87% 100%);
+    -webkit-clip-path: polygon(87% 0, 74% 0, 74% 100%, 87% 100%);
+            clip-path: polygon(87% 0, 74% 0, 74% 100%, 87% 100%);
 }
 .slide-container .slide.slide-two::after {
     content: 'SKILLS';
@@ -59,15 +121,22 @@
     left: 75.4vw;
     position: absolute;
     color: rgb(218, 165, 32);
-    text-orientation: upright;
-    writing-mode: vertical-lr;
+    -webkit-text-orientation: upright;
+            text-orientation: upright;
+    -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: tb-lr;
+            writing-mode: vertical-lr;
+    -webkit-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
 }
+/* SLIDE THREE */
 .slide-container .slide.slide-three
 {
     opacity: .9;
     background: rgba(14, 1, 8, 0.8);
-    clip-path: polygon(100% 0, 87% 0, 87% 100%, 100% 100%);
+    -webkit-clip-path: polygon(100% 0, 87% 0, 87% 100%, 100% 100%);
+            clip-path: polygon(100% 0, 87% 0, 87% 100%, 100% 100%);
 
 }
 .slide-container .slide.slide-three::after {
@@ -78,54 +147,85 @@
     left: 88.2vw;
     position: absolute;
     color: rgb(218, 165, 32);
-    text-orientation: upright;
-    writing-mode: vertical-lr;
+    -webkit-text-orientation: upright;
+            text-orientation: upright;
+    -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: tb-lr;
+            writing-mode: vertical-lr;
+    -webkit-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
 }
+/* Sliders Pseudo Elements Styling */
 .slide-container .slide.active.slide-one::after,
 .slide-container .slide.active.slide-two::after,
 .slide-container .slide.active.slide-three::after
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 100%;
-    background: rgba(66, 48, 2, 0.902);
+    background: rgba(48, 35, 1, 0.902);
     left: 90vw;
+    -webkit-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
 }
+/* Sliders Active State */
 .slide-container .slide.active
 {
     opacity: 1;
     background: rgba(14, 1, 8, 1);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     z-index: 1000;
 }
+/* Content within Sliders Tabs */
 .slide-container .slide .slide-content
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-right: 10%;
     max-width: 100vw;
     padding: 6px;
     z-index: 10;
     opacity: 0;
     color: antiquewhite;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
     font-size: .86rem;
 }
 .slide-container .slide.active .slide-content
 {
     opacity: 1;
-    transition-delay: .5s;
+    -webkit-transition-delay: .5s;
+         -o-transition-delay: .5s;
+            transition-delay: .5s;
 }
 .slide-container .slide-content img
 {
     height: 225px;
     width: 225px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 .slide-container .slide-content p
 {
@@ -133,13 +233,17 @@
     margin-top: 20%;
     padding: 6px;
     max-width: 85%;
+    -webkit-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
 }
 .slide-container .slide.active .slide-content p
 {
     opacity: 1;
     margin-top: 0;
-    transition-delay: .5s;
+    -webkit-transition-delay: .5s;
+         -o-transition-delay: .5s;
+            transition-delay: .5s;
 }
 .slide-switch
 {
@@ -235,34 +339,60 @@
     }
     .slide-container .slide.slide-one
 {
-    clip-path: polygon(94% 0, 91% 0, 91% 100%, 94% 100%);
+    -webkit-clip-path: polygon(94% 0, 91% 0, 91% 100%, 94% 100%);
+            clip-path: polygon(94% 0, 91% 0, 91% 100%, 94% 100%);
 }
 .slide-container .slide.slide-one::after 
 {
     left: 91vw;
     color: rgba(148, 109, 9, 0.8);
-    animation: pulse 12s forwards infinite;
+    -webkit-animation: pulse 12s forwards infinite;
+            animation: pulse 12s forwards infinite;
 }
 .slide-container .slide.slide-two
 {
-    clip-path: polygon(97% 0, 94% 0, 94% 100%, 97% 100%);
+    -webkit-clip-path: polygon(97% 0, 94% 0, 94% 100%, 97% 100%);
+            clip-path: polygon(97% 0, 94% 0, 94% 100%, 97% 100%);
 }
 .slide-container .slide.slide-two::after 
 {
     left: 94vw;
     color: rgba(148, 109, 9, 0.8);
-    animation: pulse 12s forwards infinite;
+    -webkit-animation: pulse 12s forwards infinite;
+            animation: pulse 12s forwards infinite;
 }
 .slide-container .slide.slide-three
 {
-    clip-path: polygon(100% 0, 97% 0, 97% 100%, 100% 100%);
+    -webkit-clip-path: polygon(100% 0, 97% 0, 97% 100%, 100% 100%);
+            clip-path: polygon(100% 0, 97% 0, 97% 100%, 100% 100%);
 }
 .slide-container .slide.slide-three::after 
 {
     left: 97vw;
     color: rgba(148, 109, 9, 0.8);
-    animation: pulse 12s forwards infinite;
+    -webkit-animation: pulse 12s forwards infinite;
+            animation: pulse 12s forwards infinite;
 }
+@-webkit-keyframes pulse 
+    {
+        22%
+        {
+            color: rgba(148, 109, 9, .8);
+            text-shadow: none;
+        }
+        25%
+        {
+            color: rgb1(218, 165, 32, 1);
+            text-shadow: 0 0 2px rgb(255, 183, 0),
+                   0 0 4px rgb(255, 183, 0),
+                   0 0 6px rgb(255, 183, 0);
+        }
+        28%
+        {
+            color: rgba(148, 109, 9, .8);
+            text-shadow: none;
+        }
+    }
 @keyframes pulse 
     {
         22%
@@ -285,17 +415,20 @@
     }
 .slide-container .slide.slide-two::after
 {
-    animation-delay: 4s;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
 }
 .slide-container .slide.slide-three::after
 {
-    animation-delay: 8s;
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s;
 }
 .slide-container .slide.active
 {
     opacity: 1;
     background: rgba(14, 1, 8, 1);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     z-index: 1000;
 }
 .slide-container .slide.slide-one:hover::after,
@@ -311,7 +444,9 @@
 .slide-container .slide.active.slide-three::after
 {
     left: 80vw;
-    transition-delay: .2s;
+    -webkit-transition-delay: .2s;
+         -o-transition-delay: .2s;
+            transition-delay: .2s;
     color: rgb(218, 165, 32) !important; /* Important used here to override pulse animation while active but not disrupt timing on pulse animation*/
     text-shadow: none !important;
 }

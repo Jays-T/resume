@@ -1,16 +1,32 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 * 
 {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-family: "Baloo Tammudu 2", sans-serif;
 }
 body 
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background: rgb(16, 1, 14);
     padding-bottom: 200px;
     overflow: hidden;
@@ -18,18 +34,27 @@ body
 }
 .scrolling 
 {
-    top: 70vh;
+
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     min-height: 100vh;
 }
 .scrolling .main-content 
 {
-    min-width: 86vw;
-    max-width: 96vw;
+    min-width: 56vw;
+    max-width: 76vw;
     cursor: pointer;
 }
 .scrolling h2 
@@ -45,13 +70,22 @@ body
 {
     position: relative;
     max-width: 98%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .scrolling:nth-child(even) .container 
 {
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
 }
 .scrolling .container .img-container 
 {
@@ -59,7 +93,8 @@ body
     width: 96%;
     height: 400px;
     overflow: hidden;
-    box-shadow: 0 25px 35px rgba(0,0,0,0,.1);
+    -webkit-box-shadow: 0 25px 35px rgba(0,0,0,0,.1);
+            box-shadow: 0 25px 35px rgba(0,0,0,0,.1);
 }
 .scrolling .container .img-container img
 {
@@ -69,7 +104,8 @@ body
     opacity: .6;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 .scrolling .container .img-container:hover img 
 {
@@ -86,7 +122,8 @@ body
     z-index: 1;
     max-width: 70%;
     color: antiquewhite;
-    box-shadow: 0 25px 35px rgba(0,0,0,0,.1);
+    -webkit-box-shadow: 0 25px 35px rgba(0,0,0,0,.1);
+            box-shadow: 0 25px 35px rgba(0,0,0,0,.1);
     border-bottom: 12px solid rgba(218, 165, 32, 0.3);
     opacity: 1;
 }

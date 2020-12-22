@@ -1,15 +1,30 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* */
 section .cat-svg 
 {
     position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100vw;
     height: 100%;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 section .cat-svg svg
 {
@@ -19,19 +34,32 @@ section .cat-svg svg
 }
 section header 
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
     top: 90%;
     left: 31%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     opacity: 1;
     font-size: 1.4rem;
     line-height: 1.8;
     z-index: 10000;
     pointer-events: all;
+    -webkit-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
 }
 section .hidden header
@@ -44,7 +72,10 @@ section header .social-media a
 {
     color: rgb(53, 10, 95);
     text-decoration: none;
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
+    z-index: 1;
 }
 section header .social-media a:hover
 {
@@ -57,7 +88,9 @@ section header .social-media a:hover
     {
         top: 50%;
         left: 15%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
         font-size: 1.8rem;
     } 
 }

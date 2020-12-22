@@ -37,6 +37,9 @@
         <link rel="stylesheet" href="assets/css/parallax_style.css">
         <link rel="stylesheet" href="assets/css/slides.css">
         <link rel="stylesheet" href="assets/css/cat_style.css">
+        <link rel="stylesheet" href="assets/css/animation_draw_cat.css" />
+    <link rel="stylesheet" href="assets/css/overlay_animation_copy.css" />
+    <link rel="stylesheet" href="assets/css/style_copy.css" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
@@ -49,6 +52,10 @@
         <title>Full Stack Developer Portfolio | John Traas</title>
     </head>
 <body>
+<section>
+  <div class="container cat-svg" include-html="cat.html">
+  </div>
+</section>
 <section id="particles-js">
 </section>
 <section id="particles-js-one">
@@ -56,7 +63,7 @@
 <section id="particles-js-two">
 </section>
 <section>
-  <div id="headline-and-social">
+  <div id="headline-and-social" class="hide-slides">
     <header>
       <div class="headline">
         <span>ANGRY CAT DESIGN</span>
@@ -67,16 +74,23 @@
       </div>
     </header>
   </div>
-  <!-- <div class="cat-svg" include-html="cat.html"> -->
-  </div>
+
 </section>
 <section>
-  <div class="slide-container">
+  <div id="slides" class="slide-container hide-slides">
+    <!-- <div class="sidebar-and-navbar scroll-fill">
+      <div class="sidebar">
+        <div class="progress-cont">
+          <div class="progress-bar" id="myBar">
+          </div>
+        </div>
+      </div>
+    </div> -->
     <div class="slide slide-one">
       <div class="slide-content">
-        <img src="assets/images/cat_avatar.png" alt="Cat with sunglasses">
+        <img src="assets/images/John Portrait1.jpg" alt="portrait of developer John Traas">
         <p>
-          Hi there, my name is John Traas but most people call me Jays.
+          Hi there, my name is John but most people call me Jays.
           <br>
           I'm a developer, UI designer and musician. I have a great affinity 
           for all things UI/UX and design related. The logic of back-end fascinates me. 
@@ -89,20 +103,35 @@
     </div>
     <div class="slide slide-two">
       <div class="slide-content">
+        <div class="content-scroll">
         <img src="assets/images/cat_avatar.png" alt="Cat with sunglasses">
+        <span class="content-text"><i class="fas fa-code html-css-bootstrap"></i></span>
+          <span class="content-text"><i class="fab fa-html5 html-css-bootstrap"></i></span>
+          <span class="content-text"><i class="fab fa-python html-css-bootstrap"></i></span>
+          <span class="content-text"><i class="fab fa-js-square html-css-bootstrap"></i></span>
+          <span class="content-text"><i class="fab fa-git html-css-bootstrap"></i></span>
+          <span class="content-text"><i class="fab fa-css3-alt html-css-bootstrap"></i></span>
+          <span class="content-text"><i class="fab fa-digital-ocean html-css-bootstrap"></i></span>
+          <span class="content-text"><i class="fab fa-github html-css-bootstrap"></i></span>
+          <span class="content-text"><i class="fas fa-code-branch html-css-bootstrap"></i></span>
+          <span class="content-text"><i class="fab fa-git-alt html-css-bootstrap"></i></span>
+          <span class="content-text"><i class="fab fa-bootstrap html-css-bootstrap"></i></span>
         <p>
           A web developer that doesn't use Lorem ipsum dolor sit amet?
                  What an oddity!
         </p>
+        </div>
       </div>
     </div>
     <div class="slide slide-three">
       <div class="slide-content">
-        <img src="assets/images/cat_avatar.png" alt="Cat with sunglasses">
-        <p>
-          A web developer that doesn't use Lorem ipsum dolor sit amet?
-                 What an oddity!
-        </p>
+        <div class="content-scroll">
+          <img src="assets/images/cat_avatar.png" alt="Cat with sunglasses">
+          <p>
+            A web developer that doesn't use Lorem ipsum dolor sit amet?
+                   What an oddity!
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -189,6 +218,10 @@
 </body>
 <script>
   includeHTML();
+  window.onclick = e => {
+    console.log(e.target);  // to get the element
+    console.log(e.target.tagName);  // to get the element tag name alone
+} 
 </script>
 <script src="assets/js/particles.js"></script>
 <script src="assets/js/app.js"></script>
@@ -205,15 +238,16 @@
   }));
 </script>
 
-<!-- <script>
+<script>
 
     window.addEventListener('load', () => {
     
       document.getElementById('loader').classList.add('fade-out-loader');
       setTimeout(startCat, 2940);
-      setTimeout(revealContent, 1800);
+      setTimeout(revealCat, 1800);
       setTimeout(startText, 4650);
-      setTimeout(greyCat, 10200);
+      // setTimeout(greyCat, 10200);
+      setTimeout(revealContent, 10200);
     });
     
     function startText() {
@@ -229,20 +263,30 @@
     mainCatAnim.classList.add('draw');
     }
     
-    function greyCat() {
-      const greyCatAnim = document.getElementById('cat_path');
+    // function greyCat() {
+    //   const greyCatAnim = document.getElementById('cat_path');
     
-      greyCatAnim.classList.remove('draw');
-      greyCatAnim.classList.add('draw-two');
-    }
+    //   greyCatAnim.classList.remove('draw');
+    //   greyCatAnim.classList.add('draw-two');
+    // }
     
     function revealContent() {
-      const content = document.getElementById('test-content');
-    
-      content.classList.remove('hidden');
-      content.classList.add('content-reveal');
+      const content = document.getElementById('slides');
+      const headlineSocial = document.getElementById('headline-and-social');
+      console.log(content);
+      content.classList.remove('hide-slides');
+      headlineSocial.classList.remove('hide-slides');
+      content.classList.add('show-slides');
+      headlineSocial.classList.add('show-slides');
     }
-</script> -->
+
+    function revealCat() {
+      const cat = document.getElementById('draw-content');
+    
+      cat.classList.remove('hidden');
+      cat.classList.add('content-reveal');
+    }
+</script>
 <script
       src="https://kit.fontawesome.com/cb5c413284.js"
       crossorigin="anonymous"
