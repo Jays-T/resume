@@ -40,7 +40,7 @@ svg .loading-draw {
 }
 
 .fade-out-loader {
-  animation: fadeOutLoader 3s forwards;
+  animation: fadeOutLoader 5s forwards;
 }
 
 @keyframes fadeOutLoader {

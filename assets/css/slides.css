@@ -53,13 +53,12 @@ background: rgb(218, 165, 32);
 .hide-slides
 {
     visibility: hidden;
-    transition: visibility 0s ease-in 0.33s;
+    transition: visibility 0s, ease-in-out 0.33s;
 }
 .show-slides
 {
     visibility: visible;
-    transition: visibility 0s ease-in 0.33s;
-    transition-delay: 0s;
+    transition: visibility 0s ease-in-out 0.33s;
 }
 .slide-container .slide 
 {
@@ -87,6 +86,7 @@ background: rgb(218, 165, 32);
     background: rgba(14, 1, 8, 0.4);
     -webkit-clip-path: polygon(74% 0, 61% 0, 61% 100%, 74% 100%);
             clip-path: polygon(74% 0, 61% 0, 61% 100%, 74% 100%);
+    z-index: 10;
 }
 .slide-container .slide.slide-one::after {
     content: 'INFO';
@@ -104,6 +104,7 @@ background: rgb(218, 165, 32);
     -webkit-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
+    z-index: 30;
 }
 /* SLIDE TWO */
 .slide-container .slide.slide-two
@@ -112,6 +113,7 @@ background: rgb(218, 165, 32);
     background: rgba(14, 1, 8, 0.6);
     -webkit-clip-path: polygon(87% 0, 74% 0, 74% 100%, 87% 100%);
             clip-path: polygon(87% 0, 74% 0, 74% 100%, 87% 100%);
+    z-index: 10;
 }
 .slide-container .slide.slide-two::after {
     content: 'SKILLS';
@@ -129,6 +131,7 @@ background: rgb(218, 165, 32);
     -webkit-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
+    z-index: 30;
 }
 /* SLIDE THREE */
 .slide-container .slide.slide-three
@@ -137,6 +140,7 @@ background: rgb(218, 165, 32);
     background: rgba(14, 1, 8, 0.8);
     -webkit-clip-path: polygon(100% 0, 87% 0, 87% 100%, 100% 100%);
             clip-path: polygon(100% 0, 87% 0, 87% 100%, 100% 100%);
+    z-index: 10;
 
 }
 .slide-container .slide.slide-three::after {
@@ -155,6 +159,7 @@ background: rgb(218, 165, 32);
     -webkit-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
+    z-index: 30;
 }
 /* Sliders Pseudo Elements Styling */
 .slide-container .slide.active.slide-one::after,
@@ -184,8 +189,41 @@ background: rgb(218, 165, 32);
     background: rgba(14, 1, 8, 1);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    z-index: 1000;
 }
+/* UNDECIDED AS TO WHETHER OR NOT I'll KEEP A CLOSE/CHEVRON ON THE SLIDE */
+/* .close-slide
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.4rem;
+    font-weight: 100;
+    width: 25px;
+    height: 25px;
+    left: 85%;
+    top: 60%;
+    transform: translate(0, -60%);
+    visibility: hidden;
+    color:rgba(54, 44, 50, 0.8);
+    background: transparent;
+    -webkit-transition: 1s ease-in;
+    -o-transition: 1s ease-in;
+    transition: 1s ease-in;
+    cursor: pointer;
+}
+.slide-container .slide.active .close-slide
+{
+    z-index: 40;
+    visibility: visible;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.slide-container .close-slide:hover
+{
+    transform: translate(5px);
+    color: rgb(255, 183, 0);
+} */
 /* Content within Sliders Tabs */
 .slide-container .slide .slide-content
 {
@@ -245,13 +283,6 @@ background: rgb(218, 165, 32);
          -o-transition-delay: .5s;
             transition-delay: .5s;
 }
-.slide-switch
-{
-    cursor: pointer;
-    position: fixed;
-    z-index: 9999;
-}
-
 /* Media Queries */
 @media screen and (min-width: 540px) and (min-height: 720px)
 {
@@ -345,7 +376,7 @@ background: rgb(218, 165, 32);
 .slide-container .slide.slide-one::after 
 {
     left: 91vw;
-    color: rgba(148, 109, 9, 0.8);
+    color: rgba(218, 165, 32, 0.8);
     -webkit-animation: pulse 12s forwards infinite;
             animation: pulse 12s forwards infinite;
 }
@@ -357,7 +388,7 @@ background: rgb(218, 165, 32);
 .slide-container .slide.slide-two::after 
 {
     left: 94vw;
-    color: rgba(148, 109, 9, 0.8);
+    color: rgba(218, 165, 32, 0.8);
     -webkit-animation: pulse 12s forwards infinite;
             animation: pulse 12s forwards infinite;
 }
@@ -369,7 +400,7 @@ background: rgb(218, 165, 32);
 .slide-container .slide.slide-three::after 
 {
     left: 97vw;
-    color: rgba(148, 109, 9, 0.8);
+    color: rgba(218, 165, 32, 0.8);
     -webkit-animation: pulse 12s forwards infinite;
             animation: pulse 12s forwards infinite;
 }
@@ -377,7 +408,7 @@ background: rgb(218, 165, 32);
     {
         22%
         {
-            color: rgba(148, 109, 9, .8);
+            color: rgba(218, 165, 32, .8);
             text-shadow: none;
         }
         25%
@@ -389,7 +420,7 @@ background: rgb(218, 165, 32);
         }
         28%
         {
-            color: rgba(148, 109, 9, .8);
+            color: rgba(218, 165, 32, .8);
             text-shadow: none;
         }
     }
@@ -397,7 +428,7 @@ background: rgb(218, 165, 32);
     {
         22%
         {
-            color: rgba(148, 109, 9, .8);
+            color: rgba(218, 165, 32, .8);
             text-shadow: none;
         }
         25%
@@ -409,7 +440,7 @@ background: rgb(218, 165, 32);
         }
         28%
         {
-            color: rgba(148, 109, 9, .8);
+            color: rgba(218, 165, 32, .8);
             text-shadow: none;
         }
     }
@@ -429,7 +460,6 @@ background: rgb(218, 165, 32);
     background: rgba(14, 1, 8, 1);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    z-index: 1000;
 }
 .slide-container .slide.slide-one:hover::after,
 .slide-container .slide.slide-two:hover::after,
