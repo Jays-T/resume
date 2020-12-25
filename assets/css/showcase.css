@@ -34,7 +34,12 @@
     transform: rotateY(25deg);
     box-shadow:  8px 8px 12px var(--p-grey);
 }
-
+.showcase-wrapper .showcase a
+{
+    position: relative;
+    z-index: 100;
+    pointer-events: all;
+}
 .showcase-wrapper .showcase:nth-child(3) {
     transform: rotateY(0);
     width: 225px;
