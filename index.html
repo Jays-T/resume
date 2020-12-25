@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="assets/css/overlay_animation_copy.css" />
     <link rel="stylesheet" href="assets/css/style_copy.css" />
     <link rel="stylesheet" href="assets/css/skills.css" />
+    <link rel="stylesheet" href="assets/css/showcase.css" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
@@ -90,19 +91,24 @@
         <img src="assets/images/John Portrait1.jpg" alt="portrait of developer John Traas">
         <p>
           Hi there, my name is John but most people call me Jays.
+          I'm a developer, UI designer and musician. 
           <br>
-          I'm a developer, UI designer and musician. I have a great affinity 
+          Got a project in mind? Contact me and lets talk.
+          <br>
+          I have a great affinity 
           for all things UI/UX and design related. The logic of back-end fascinates me. 
-          I love exploring new technologies and learning and
-          I've been lucky enough to have traveled a large 
-          portion of the world while pursuing my passion 
-          for Music and Design in Tech.
+          I love exploring new technologies and learning new things. I've been lucky enough
+          to have traveled the world while pursuing my passion for music and design in tech.
+          I've lived in places such as Johannesburg South Africa, Istanbul Turkey, and Los Angeles.
+          <br>
+          I'm currently living in Landskrona in the south of Sweden.
         </p>
       </div>
     </div>
     <div class="slide slide-two">
       <div class="slide-content">
-        <div class="skills-progress">
+        <div class="skills" include-html="skills.html"></div>
+        <!-- <div class="skills-progress">
           <div style="--i:0"></div>
           <div style="--i:1"></div>
           <div style="--i:2"></div>
@@ -120,17 +126,14 @@
           <span class="content-text"><i class="fab fa-github github"></i></span>
           <span class="content-text"><i class="fas fa-code-branch code-branch"></i></span>
           <span class="content-text"><i class="fab fa-bootstrap bootstrap"></i></span>
-        </p>
+        </p> -->
       </div>
     </div>
     <div class="slide slide-three">
       <div class="slide-content">
         <div class="content-scroll">
-          <img src="assets/images/cat_avatar.png" alt="Cat with sunglasses">
-          <p>
-            A web developer that doesn't use Lorem ipsum dolor sit amet?
-                   What an oddity!
-          </p>
+          <div class="" include-html="showcase.html">
+          </div>
         </div>
       </div>
     </div>
@@ -157,6 +160,16 @@
     popup.classList.toggle('active');
     headerAndSocialSwitch.classList.toggle('hidden');
   }));
+
+  let activeSlide = Array.from(document.getElementsByClassName('active'));
+
+  activeSlide.forEach(element => element.addEventListener('click', () =>{
+    element.classList.toggle('active');
+  }));
+
+  function toggleActive(element){
+    
+  }
 </script>
 
 <script>

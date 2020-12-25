@@ -9,7 +9,9 @@
 .content-scroll
 {
     position: absolute;
+    min-height: 600px;
     height: calc(100% - 57.4vh);
+    width: 1200px;
     overflow-x: hidden;
 }
 /* Custom Scroll Bar */

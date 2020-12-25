@@ -16,6 +16,7 @@
     />
     <link rel="stylesheet" href="assets/css/contrastparity.css" />
     <link rel="stylesheet" href="assets/css/skills_dashboard.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Angry Cat Development and Design</title>
   </head>
 
@@ -49,6 +50,83 @@
 
       </div>
       </div>
+      <section name="footer">
+        <div class="footer">
+          <div id="navbarContainer">
+            <div id="navbar">
+              <div id="bubbleWrapper">
+                <div id="bubble1" class="bubble">
+                  <span class="icon"><i class="fas fa-battery-quarter"></i></span>
+                </div>
+                <div id="bubble2" class="bubble">
+                  <span class="icon"><i class="fas fa-battery-half"></i></span>
+                </div>
+                <div id="bubble3" class="bubble">
+                  <span class="icon"
+                    ><i class="fas fa-battery-three-quarters"></i
+                  ></span>
+                </div>
+                <div id="bubble4" class="bubble">
+                  <span class="icon"><i class="fas fa-battery-full"></i></span>
+                </div>
+              </div>
+              <div id="menuWrapper">
+                <div
+                  id="menu1"
+                  class="menuElement"
+                  onclick="move('1', '50px', '#2c1433')"
+                >
+                  <i class="fas fa-battery-quarter"></i>
+                </div>
+                <div
+                  id="menu2"
+                  class="menuElement"
+                  onclick="move('2', '150px', '#2c1433')"
+                >
+                  <i class="fas fa-battery-half"></i>
+                </div>
+                <div
+                  id="menu3"
+                  class="menuElement"
+                  onclick="move('3', '250px', '#2c1433')"
+                >
+                  <i class="fas fa-battery-three-quarters"></i>
+                </div>
+                <div
+                  id="menu4"
+                  class="menuElement"
+                  onclick="move('4', '350px', '#2c1433')"
+                >
+                  <i class="fas fa-battery-full"></i>
+                </div>
+              </div>
+            </div>
+            <div id="bgWrapper">
+              <div id="bg"></div>
+              <div id="bgBubble"></div>
+            </div>
+          </div>
+          <svg width="0" height="0">
+            <defs>
+              <filter id="goo">
+                <feGaussianBlur
+                  in="SourceGraphic"
+                  stdDeviation="20"
+                  result="blur"
+                  id="blurFilter"
+                />
+                <feColorMatrix
+                  in="blur"
+                  mode="matrix"
+                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -15"
+                  result="goo"
+                />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+      </section>
     </div>
 
     <script src="https://kit.fontawesome.com/cb5c413284.js" crossorigin="anonymous"></script>
@@ -64,7 +142,7 @@
     };
     </script>
     
-    <!-- <script>
+    <script>
       window.onscroll = function () {
         progressBar();
         highlight();
@@ -139,6 +217,6 @@
       .to("#bg", {duration: 0.3, backgroundColor: color, ease: "ease-in-out"}, 0)
       .to("#bgBubble", {duration: 0.3, backgroundColor: color, ease: "ease-in-out"}, 0)
   }
-    </script> -->
+    </script>
   </body>
 </html>

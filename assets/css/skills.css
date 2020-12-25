@@ -70,6 +70,26 @@
 .slide .slide-content .skills
 {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
     min-width: 60vw;
+    padding: 20px;
+}
+.slide-two .slide-content p
+{
+    width: 65%;
+
+    font-size: .6rem;
+    line-height: 10px;
+    background: url(../images/skills/python.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    overflow-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(14, 1, 8, .2);
+    
 }
