@@ -58,6 +58,10 @@
     align-items: center;
     max-height: 100vh;
     background: transparent;
+    
+  }
+  
+  .headline-cat {
     z-index: 9999;
   }
   
