@@ -78,7 +78,6 @@
 .slide-two .slide-content p
 {
     width: 65%;
-
     font-size: .6rem;
     line-height: 10px;
     background: url(../images/skills/python.png);
@@ -92,4 +91,18 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(14, 1, 8, .2);
     
+}
+.slide .slide-content .skills-overlay
+{
+    height: 60%;
+    width: 60%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.slide .slide-content .skills-overlay i
+{
+    font-size: 2.8rem;
 }
