@@ -232,10 +232,6 @@ body .container {
   }
 }
 
-.fas {
-  color: #322a33;
-}
-
 .thin-border {
   -webkit-box-shadow: 0px 0px 4px 0.3px rgba(250, 215, 235, 0.7);
   -moz-box-shadow: 0px 0px 4px 0.3px rgba(250, 215, 235, 0.7);
