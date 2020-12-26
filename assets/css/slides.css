@@ -50,7 +50,6 @@ background: rgb(218, 165, 32);
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: 0;
 }
 .hide-slides
 {
@@ -93,7 +92,6 @@ background: rgb(218, 165, 32);
     background: rgba(14, 1, 8, 0.4);
     -webkit-clip-path: polygon(74% 0, 61% 0, 61% 100%, 74% 100%);
             clip-path: polygon(74% 0, 61% 0, 61% 100%, 74% 100%);
-    z-index: 10;
 }
 .slide-container .slide.slide-one::after {
     content: 'INFO';
@@ -111,7 +109,10 @@ background: rgb(218, 165, 32);
     -webkit-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
-    z-index: 30;
+}
+.slide-container .slide.slide-one .slide-content img
+{
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
 }
 /* SLIDE TWO */
 .slide-container .slide.slide-two
@@ -120,7 +121,6 @@ background: rgb(218, 165, 32);
     background: rgba(14, 1, 8, 0.6);
     -webkit-clip-path: polygon(87% 0, 74% 0, 74% 100%, 87% 100%);
             clip-path: polygon(87% 0, 74% 0, 74% 100%, 87% 100%);
-    z-index: 10;
 }
 .slide-container .slide.slide-two::after {
     content: 'SKILLS';
@@ -138,7 +138,6 @@ background: rgb(218, 165, 32);
     -webkit-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
-    z-index: 30;
 }
 /* SLIDE THREE */
 .slide-container .slide.slide-three
@@ -147,8 +146,6 @@ background: rgb(218, 165, 32);
     background: rgba(14, 1, 8, 0.8);
     -webkit-clip-path: polygon(100% 0, 87% 0, 87% 100%, 100% 100%);
             clip-path: polygon(100% 0, 87% 0, 87% 100%, 100% 100%);
-    z-index: 10;
-
 }
 .slide-container .slide.slide-three::after {
     content: 'PROJECTS';
@@ -166,7 +163,6 @@ background: rgb(218, 165, 32);
     -webkit-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
-    z-index: 30;
 }
 /* Sliders Pseudo Elements Styling */
 .slide-container .slide.active.slide-one::after,
@@ -197,6 +193,7 @@ background: rgb(218, 165, 32);
     background: rgba(14, 1, 8, 1);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    z-index: 50;
 }
 /* UNDECIDED AS TO WHETHER OR NOT I'll KEEP A CLOSE/CHEVRON ON THE SLIDE */
 /* .close-slide
@@ -369,12 +366,23 @@ background: rgb(218, 165, 32);
 
 @media screen and (min-width: 1366px) 
 {
+    .slide-container
+    {
+        z-index: 0;
+    }
+    .slide-container .slide.slide-one,
+    .slide-container .slide.slide-two,
+    .slide-container .slide.slide-three 
+    {
+        z-index: 10;
+    }
     .slide-container .slide.slide-one::after,
     .slide-container .slide.slide-two::after,
     .slide-container .slide.slide-three::after 
     {
         font-size: 1.2rem;
         letter-spacing: 1.4rem;
+        z-index: 30;
     }
     .slide-container .slide.slide-one
 {
@@ -492,6 +500,6 @@ background: rgb(218, 165, 32);
     {
         width: 60%;
         height: 60%;
-        font-size: 1.8rem;
+        font-size: 1.1rem;
     }
 }
