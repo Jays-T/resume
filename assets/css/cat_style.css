@@ -63,6 +63,51 @@ section header
     transition: 1s ease-in-out;
     z-index: 10;
 }
+section header .headline .angry
+{
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transition: .3s ease-in-out;
+    animation: animateHeader 14s ease-in-out infinite;
+}
+section header .headline .jays
+{
+    position: absolute;
+    color: rgb(218, 165, 32);
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    transition: .3s ease-in-out;
+    animation: reverseAnimateHeader 14s ease-in-out infinite;
+}
+@keyframes animateHeader
+{
+    0%, 100%
+    {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    16%, 43%
+    {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+    64%
+    {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+@keyframes reverseAnimateHeader
+{
+    0%, 2%, 100%
+    {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+    22%, 43%
+    {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    58%
+    {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+}
 section header .social-media
 {
     top: 54px;

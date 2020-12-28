@@ -387,12 +387,10 @@ background: rgb(218, 165, 32);
         display: flex;
         align-items: center;
         margin: auto;
-        z-index: 0;
+        z-index: 10;
     }
     .scrollable-content .scrollable-content-toggle
     {
-        cursor: pointer;
-        
         background:rgba(218, 165, 32, .8);
         clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 52%, 50% 52%, 0 52%);
         position: absolute;
@@ -400,13 +398,40 @@ background: rgb(218, 165, 32);
         width: 40px;
         margin-top: -6px;
         transition: .3s ease-in-out;
-        z-index: 90;
+        animation: toggleWiggle 6s ease-in-out infinite;
     }
     .scrollable-content .scrollable-content-toggle i 
     {
+        cursor: pointer;
         padding: 2px;
         font-size: 2.6rem;
         color:rgb(16, 1, 14);
+    }
+    @keyframes toggleWiggle
+    {
+        0%
+        {
+            margin-top: -6px;
+            clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 52%, 50% 52%, 0 52%);
+        }
+        20%
+        {
+            margin-top: -48px;
+            clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+        }
+        25%
+        {
+            margin-top: 4px;
+            clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 52%, 50% 52%, 0 52%);
+        }
+        30%
+        {
+            margin-top: -6px;
+        }
+        100%
+        {
+            margin-top: -6px;
+        }
     }
     .scrollable-content p
     {
