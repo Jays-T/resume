@@ -47,7 +47,7 @@ section header
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: absolute;
+    position: fixed;
     top: 82%;
     left: 31%;
     -webkit-transform: translate(-50%, -50%);
@@ -61,6 +61,7 @@ section header
     -webkit-transition: 1s ease-in-out;
     -o-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
+    z-index: 10;
 }
 section header .social-media
 {
@@ -70,6 +71,7 @@ section header .social-media
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    z-index: 30;
 }
 section .hidden header
 {
@@ -80,6 +82,7 @@ section .hidden header
 section header .social-media a
 {
     color: rgb(53, 10, 95);
+    opacity: .4;
     text-decoration: none;
     -webkit-transition: .3s ease-in-out;
     -o-transition: .3s ease-in-out;
@@ -88,8 +91,11 @@ section header .social-media a
 }
 section header .social-media a:hover
 {
-    opacity: .6;
+    opacity: 1;
 }
+#skills-icons header .social-media .media-link-cv i,
+#skills-icons header .social-media .media-link-linkedin i,
+#skills-icons header .social-media .media-link-github i,
 #headline-and-social header .social-media .media-link-cv i,
 #headline-and-social header .social-media .media-link-linkedin i,
 #headline-and-social header .social-media .media-link-github i
@@ -97,12 +103,18 @@ section header .social-media a:hover
 {
     cursor: pointer;
     /* background: linear-gradient(0deg, #350a5f 0%, #350a5f 10%, #120110 10%,#120110 90%, #350a5f 90%, #350a5f 100%); */
-    background: linear-gradient(0deg, #350a5f 0%, #350a5f 10%, #120110 10%,#120110 79%, #350a5f 79%, #350a5f 100%);
+    background: linear-gradient(0deg, #350a5f 0%, #350a5f 9%, #120110 9%,#120110 93%, #350a5f 93%, #350a5f 100%);
     font-size: 3.8rem;
     margin-left: 4px;
     margin-right: 4px;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     transition: .3s ease-in-out;
+}
+#headline-and-social header .social-media .media-link-cv i,
+#headline-and-social header .social-media .media-link-linkedin i,
+#headline-and-social header .social-media .media-link-github i
+{
+    background: linear-gradient(0deg, #350a5f 0%, #350a5f 10%, #120110 10%,#120110 79%, #350a5f 79%, #350a5f 100%);
 }
 #headline-and-social header .social-media .media-link-github a:hover i
 {
@@ -121,6 +133,7 @@ section header .social-media a:hover
     clip-path: polygon(0 0, 50% 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
     /* background: linear-gradient(0deg, #350a5f 0%, #350a5f 10%, #120110 10%,#120110 77%, #350a5f 77%, #350a5f 100%); */
 }
+section #skills-icons header .social-media .cv-download,
 section #headline-and-social header .social-media .cv-download
 {
     top: -52px;
@@ -129,13 +142,19 @@ section #headline-and-social header .social-media .cv-download
     z-index: 70;
     pointer-events: all;
 }
+section #skills-icons header .social-media .media-link-cv .cv-download-icon,
 section #headline-and-social header .social-media .media-link-cv .cv-download-icon
 {
     position: relative;
-    top: 0;
+    top: 35px;
     left: 0;
     pointer-events: all;
     z-index: 80;
+}
+.cv-download-link
+{
+    position: relative;
+    top: -35px;
 }
 @media screen and (min-width: 1366px)
 {
