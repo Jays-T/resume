@@ -536,13 +536,13 @@ background: rgb(218, 165, 32);
     }
     .slide-container
     {
-        z-index: 0;
+        z-index: 20;
     }
     .slide-container .slide.slide-one,
     .slide-container .slide.slide-two,
     .slide-container .slide.slide-three 
     {
-        z-index: 10;
+        z-index: 40;
     }
     .slide-container .slide.slide-one::after,
     .slide-container .slide.slide-two::after,
@@ -550,7 +550,7 @@ background: rgb(218, 165, 32);
     {
         font-size: 1.2rem;
         letter-spacing: 1.4rem;
-        z-index: 30;
+        z-index: 50;
     }
     .slide-container .slide.slide-one
 {

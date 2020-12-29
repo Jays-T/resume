@@ -70,14 +70,19 @@
 .slide .slide-content .skills
 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 60vw;
+    width: 100vw;
+    height: 100vh;
     padding: 20px;
 }
-.slide-two .slide-content p
+.slide .slide-content .skills .skills-text-area
 {
-    width: 65%;
+    position: absolute;
+    width: 100%;
+    height: 88%;
+    padding: 4px;
     font-size: .6rem;
     line-height: 10px;
     background: url(../images/skills/python.png);
