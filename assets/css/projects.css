@@ -15,6 +15,7 @@
     justify-content: center;
     flex-wrap: wrap;
     transform-style: preserve-3d;
+    z-index: 0;
 
 }
 #projects .container .card
@@ -33,6 +34,7 @@
     transition: .5s;
     overflow: hidden;
     transform-style: preserve-3d;
+    z-index: 102;
 }
 #projects .container .card-content
 {
@@ -45,6 +47,7 @@
     align-items: center;
     color:rgba(218, 165, 32, .6);
     transition: .2s ease-in-out;
+    z-index: 102;
 }
 #projects .container:hover .card
 {

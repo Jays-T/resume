@@ -71,10 +71,22 @@ section header
     transition: 1s ease-in-out;
     z-index: 100;
 }
+section header .headline .angry,
+section header .headline .jays
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100%);
+    padding: 0 8px;
+    width: calc(100%);
+    border-radius: 2px;
+    background: rgb(18, 1, 16);
+}
 section header .headline .angry
 {
     position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 60%, 90% 70%, 10% 70%, 0 60%, 0 10%);
     transition: .3s ease-in-out;
     animation: animateHeader 14s ease-in-out infinite;
 }
@@ -90,30 +102,30 @@ section header .headline .jays
 {
     0%, 100%
     {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 60%, 90% 70%, 10% 70%, 0 60%, 0 10%);
     }
-    16%, 43%
+    16%, 46%
     {
-        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+        clip-path: polygon(0 0, 0 0, 0 10%, 0 60%, 0 70%, 0 70%, 0 60%, 0 10%);
     }
-    64%
+    72%
     {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 60%, 90% 70%, 10% 70%, 0 60%, 0 10%);
     }
 }
 @keyframes reverseAnimateHeader
 {
-    0%, 2%, 100%
+    0%, 100%
     {
-        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        clip-path: polygon(100% 0, 100% 0, 100% 10%, 100% 60%, 100% 70%, 100% 70%, 100% 60%, 100% 10%);
     }
-    22%, 43%
+    12.5%, 43%
     {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 60%, 90% 70%, 10% 70%, 0 60%, 0 10%);
     }
-    58%
+    64%
     {
-        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        clip-path: polygon(100% 0, 100% 0, 100% 10%, 100% 60%, 100% 70%, 100% 70%, 100% 60%, 100% 10%);
     }
 }
 section header .social-media
