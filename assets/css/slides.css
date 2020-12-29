@@ -360,7 +360,7 @@ background: rgb(218, 165, 32);
     .scrollable-content 
     {
         visibility: visible;
-        background: linear-gradient(90deg, rgb(161, 157, 144) 0%, rgb(161, 157, 144) 91%, transparent 91%, transparent 100%);
+        background: linear-gradient(90deg, rgb(161, 157, 144) 0%, rgb(161, 157, 144) 87%, rgb(161, 157, 144) 87%, rgb(18, 1, 16) 100%);
         display: flex;
         flex-direction: column;
         width: 100%;
