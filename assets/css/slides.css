@@ -373,7 +373,7 @@ background: rgb(218, 165, 32);
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin-top: 100vh;
+        margin-top: 101vh;
         pointer-events: all;
         z-index: 0;
         transition: .3s ease-in-out;
@@ -384,26 +384,30 @@ background: rgb(218, 165, 32);
     }
     .content-toggle-wrap
     {
+        position: sticky;
+        top: 51.4vh;
         display: flex;
         align-items: center;
+        width: 100vw;
         margin: auto;
         z-index: 10;
     }
     .scrollable-content .scrollable-content-toggle
     {
         background:rgba(218, 165, 32, .8);
-        clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 52%, 50% 52%, 0 52%);
+        clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 30%, 50% 60%, 0 30%);
         position: absolute;
-        height: 40px;
-        width: 40px;
-        margin-top: -6px;
+        height: 44px;
+        width: 44px;
+        left: 218px;
+
         transition: .3s ease-in-out;
         animation: toggleWiggle 6s ease-in-out infinite;
     }
     .scrollable-content .scrollable-content-toggle i 
     {
         cursor: pointer;
-        padding: 2px;
+        padding: 4px;
         font-size: 2.6rem;
         color:rgb(16, 1, 14);
     }
@@ -412,7 +416,7 @@ background: rgb(218, 165, 32);
         0%
         {
             margin-top: -6px;
-            clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 52%, 50% 52%, 0 52%);
+            clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 30%, 50% 60%, 0 30%);
         }
         20%
         {
@@ -422,7 +426,7 @@ background: rgb(218, 165, 32);
         25%
         {
             margin-top: 4px;
-            clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 52%, 50% 52%, 0 52%);
+            clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 30%, 50% 60%, 0 30%);
         }
         30%
         {
@@ -438,14 +442,34 @@ background: rgb(218, 165, 32);
         width: 40%;
         color:rgb(18, 1, 16);
         margin-top: 34px;
-        margin-left: 48%;
+        margin-left: 28%;
     }
     .scrollable-content .projects-icons
     {
-        position: relative;
+        position: sticky;
+        top: 41.5vh;
         display: flex;
         flex-direction: row;
-        margin-left: 32%;
+        margin-left: 144px;
+        transition: .6s ease-in-out;
+    }
+    .scrollable-content :nth-child(4)
+    {
+        position: sticky;
+        top: 47%;
+        margin-left: 114px;
+    }
+    .scrollable-content :nth-child(6)
+    {
+        position: sticky;
+        top: 47%;
+        margin-left: 174px;
+    }
+    .scrollable-content :nth-child(8)
+    {
+        position: sticky;
+        top: 52.35%;
+        margin-left: 13.2%;
     }
     .scrollable-content .projects-icons span
     {
@@ -460,8 +484,8 @@ background: rgb(218, 165, 32);
         font-size: 3.8rem;
         transition: .3s ease-in-out;
     }
-    .scrollable-content .projects-icons span .html5,
-    .scrollable-content .projects-icons span .css3
+    .scrollable-content .projects-icons span .left,
+    .scrollable-content .projects-icons span .right
     {
         
         position: relative;
@@ -469,14 +493,18 @@ background: rgb(218, 165, 32);
         left: 0;
         z-index: 1;
     }
-    /* .scrollable-content .projects-icons span .html5::before,
-    .scrollable-content .projects-icons span .css3::before
+    .scrollable-content .projects-icons span .html5,
+    .scrollable-content .projects-icons span .css3
     {
-        z-index: 0;
-        background: linear-gradient(90deg, rgb(18, 1, 16) 0%, rgb(18, 1, 16) 10%, 
-                                    rgb(231, 224, 206) 10%,rgb(231, 224, 206) 79%, 
-                                    rgb(18, 1, 16) 79%, rgb(18, 1, 16) 100%);
-    } */
+        width: 53.2px;
+    }
+    .scrollable-content .projects-icons span .html5::after,
+    .scrollable-content .projects-icons span .css3::after
+    {
+        width: 120%;
+        height: 100%;
+        background: rgb(18, 1, 16);
+    }
     .scrollable-content .projects-icons span .left
     {
         left: 31px;

@@ -13,6 +13,10 @@
             box-sizing: border-box;
     font-family: "Baloo Tammudu 2", sans-serif;
 }
+html
+{
+    scroll-behavior: smooth;
+}
 body 
 {
     display: -webkit-box;

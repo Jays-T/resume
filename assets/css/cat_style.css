@@ -6,6 +6,14 @@
 */
 
 /* */
+:root {
+    /* P = Primary | S = Secondary | T = Tertiary */
+    --p-background: rgb(18, 1, 16);
+    --p-text: rgba(250, 235, 215, .6);
+    --p-headline-text: rgb(218, 165, 32);
+    --p-social-media-links: rgb(53, 10, 95);
+    --s-social-media-links: #350a5f;
+}
 section .cat-svg 
 {
     position: fixed;
@@ -49,7 +57,7 @@ section header
             align-items: center;
     position: fixed;
     top: 82%;
-    left: 31%;
+    left: 140px;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -205,8 +213,8 @@ section #headline-and-social header .social-media .media-link-cv .cv-download-ic
 {
     section header 
     {
-        top: 50%;
-        left: 15%;
+        top: 50vh;
+        left: 240px;
         -webkit-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
