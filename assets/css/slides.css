@@ -460,7 +460,13 @@ background: rgb(218, 165, 32);
     {
         position: sticky;
         top: 52.35%;
-        margin-left: 13.2%;
+        margin-left: 92px;
+    }
+    .scrollable-content :nth-child(10)
+    {
+        position: sticky;
+        top: 52.35%;
+        margin-left: 204px;
     }
     .scrollable-content .projects-icons span
     {
