@@ -195,41 +195,6 @@ background: rgb(218, 165, 32);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     z-index: 50;
 }
-/* UNDECIDED AS TO WHETHER OR NOT I'll KEEP A CLOSE/CHEVRON ON THE SLIDE */
-/* .close-slide
-{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3.4rem;
-    font-weight: 100;
-    width: 25px;
-    height: 25px;
-    left: 85%;
-    top: 60%;
-    transform: translate(0, -60%);
-    visibility: hidden;
-    color:rgba(54, 44, 50, 0.8);
-    background: transparent;
-    -webkit-transition: 1s ease-in;
-    -o-transition: 1s ease-in;
-    transition: 1s ease-in;
-    cursor: pointer;
-}
-.slide-container .slide.active .close-slide
-{
-    z-index: 40;
-    visibility: visible;
-    top: 50%;
-    transform: translate(0, -50%);
-}
-.slide-container .close-slide:hover
-{
-    transform: translate(5px);
-    color: rgb(255, 183, 0);
-} */
-/* Content within Sliders Tabs */
 .slide-container .slide .slide-content
 {
     display: -webkit-box;
@@ -287,6 +252,26 @@ background: rgb(218, 165, 32);
     -webkit-transition-delay: .5s;
          -o-transition-delay: .5s;
             transition-delay: .5s;
+}
+.slide-container .slide.slide-one::before,
+.slide-container .slide.slide-two::before,
+.slide-container .slide.slide-three::before
+{
+    content: 'click anywhere to close';
+    position: absolute;
+    height: 30px;
+    bottom: -30px;
+    margin: auto;
+    color:rgba(218, 165, 32, .8);
+    transition: .8s ease-in-out;
+    background:rgb(16, 1, 14);
+    z-index: 101;
+} 
+.slide-container .slide.active.slide-one::before,
+.slide-container .slide.active.slide-two::before,
+.slide-container .slide.active.slide-three::before
+{
+    bottom: 0;
 }
 /* Media Queries */
 @media screen and (min-width: 540px) and (min-height: 720px)
@@ -366,6 +351,12 @@ background: rgb(218, 165, 32);
 
 @media screen and (min-width: 1366px) 
 {
+    .slide-container .slide.slide-one::before,
+    .slide-container .slide.slide-two::before,
+    .slide-container .slide.slide-three::before
+    {
+        right: 8%;
+    } 
     .scrollable-content 
     {
         visibility: visible;
