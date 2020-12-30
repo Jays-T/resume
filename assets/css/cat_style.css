@@ -5,7 +5,6 @@
 * Browsers: last 4 version
 */
 
-/* */
 :root {
     /* P = Primary | S = Secondary | T = Tertiary */
     --p-background: rgb(18, 1, 16);
@@ -86,7 +85,7 @@ section header .headline .jays
 section header .headline .angry
 {
     position: relative;
-    clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 60%, 90% 70%, 10% 70%, 0 60%, 0 10%);
+    clip-path: polygon(3% 0, 97% 0, 100% 10%, 100% 60%, 97% 70%, 3% 70%, 0 60%, 0 10%);
     transition: .3s ease-in-out;
     animation: animateHeader 14s ease-in-out infinite;
 }
@@ -102,7 +101,7 @@ section header .headline .jays
 {
     0%, 100%
     {
-        clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 60%, 90% 70%, 10% 70%, 0 60%, 0 10%);
+        clip-path: polygon(3% 0, 97% 0, 100% 10%, 100% 60%, 97% 70%, 3% 70%, 0 60%, 0 10%);
     }
     16%, 46%
     {
@@ -110,7 +109,7 @@ section header .headline .jays
     }
     64%
     {
-        clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 60%, 90% 70%, 10% 70%, 0 60%, 0 10%);
+        clip-path: polygon(3% 0, 97% 0, 100% 10%, 100% 60%, 97% 70%, 3% 70%, 0 60%, 0 10%);
     }
 }
 @keyframes reverseAnimateHeader
@@ -121,7 +120,7 @@ section header .headline .jays
     }
     16%, 46%
     {
-        clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 60%, 90% 70%, 10% 70%, 0 60%, 0 10%);
+        clip-path: polygon(3% 0, 97% 0, 100% 10%, 100% 60%, 97% 70%, 3% 70%, 0 60%, 0 10%);
     }
     64%
     {

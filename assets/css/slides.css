@@ -550,7 +550,7 @@ background: rgb(218, 165, 32);
     .slide-container .slide.slide-three::after 
     {
         font-size: 1.2rem;
-        letter-spacing: 1.4rem;
+        letter-spacing: .4rem;
         z-index: 50;
     }
     .slide-container .slide.slide-one
