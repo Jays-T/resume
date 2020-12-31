@@ -63,12 +63,11 @@ section header
     opacity: 1;
     font-size: 1.4rem;
     line-height: 1.8;
-    z-index: 10000;
     pointer-events: all;
     -webkit-transition: 1s ease-in-out;
     -o-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
-    z-index: 100;
+    z-index: 40;
 }
 section header .headline .angry,
 section header .headline .jays
@@ -146,16 +145,83 @@ section .hidden header
 section header .social-media a
 {
     color: rgb(53, 10, 95);
-    opacity: .4;
+    opacity: .8;
     text-decoration: none;
     -webkit-transition: .3s ease-in-out;
     -o-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
-    z-index: 1;
+    z-index: 1;   
 }
 section header .social-media a:hover
 {
     opacity: 1;
+}
+section header .social-media a:hover::before
+{
+    left: 110%;
+    clip-path: polygon(100% 0, 90% 0, 90% 100%, 100% 100%);
+}
+section .group
+{
+    position: absolute;
+    left: 100%;
+    top: -20px;
+    z-index: 9999;
+}
+section .group .example 
+{
+    opacity: 1;
+    position: relative;
+	width: 75px;
+	height: 75px;
+    cursor: pointer;
+}
+section .group .example .exCPlogo
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease-in-out;
+    display: inline-block;
+    background: url(../images/angry_cat.svg) center center, #000000;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+svg .cat_animation_path
+{
+    stroke-width: 2px;
+    stroke: #3b3117;
+    stroke-dasharray: 1; 
+    stroke-dashoffset: 0; 
+}
+section .group .example .exCPlogo 
+{
+    opacity: 1;
+    background-color: transparent;
+    -webkit-clip-path: polygon( 100% 0, 50% 50%, 50% 50%, 50% 50%, 0 100%, 100% 100%, 100% 0, 50% 50%, 50% 50%, 50% 50%, 0 100%, 0 0, 100% 0, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 0 100%, 100% 100%, 100% 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 0 100%, 0 100%, 0 0, 0 0, 0 0, 0 0, 50% 50%);
+    clip-path: polygon( 100% 0, 50% 50%, 50% 50%, 50% 50%, 0 100%, 100% 100%, 100% 0, 50% 50%, 50% 50%, 50% 50%, 0 100%, 0 0, 100% 0, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 0 100%, 100% 100%, 100% 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 0 100%, 0 100%, 0 0, 0 0, 0 0, 0 0, 50% 50%);
+    -webkit-animation: exampleCP 14s infinite;
+    animation: exampleCP 14s infinite;
+}
+@keyframes exampleCP
+{
+    0%, 100%
+    {
+        opacity: 1;
+        background-color: transparent;
+        -webkit-clip-path: polygon( 100% 0, 50% 50%, 50% 50%, 50% 50%, 0 100%, 100% 100%, 100% 0, 50% 50%, 50% 50%, 50% 50%, 0 100%, 0 0, 100% 0, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 0 100%, 100% 100%, 100% 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 0 100%, 0 100%, 0 0, 0 0, 0 0, 0 0, 50% 50%);
+        clip-path: polygon( 100% 0, 50% 50%, 50% 50%, 50% 50%, 0 100%, 100% 100%, 100% 0, 50% 50%, 50% 50%, 50% 50%, 0 100%, 0 0, 100% 0, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 0 100%, 100% 100%, 100% 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 0 100%, 0 100%, 0 0, 0 0, 0 0, 0 0, 50% 50%);
+        
+    }
+    16%, 46%
+    {
+        opacity: .8;
+        -webkit-clip-path: polygon( 50% 0, 50% 5%, 93% 35%, 50% 65%, 50% 70%, 100% 35%, 50% 0, 50% 5%, 7% 35%, 50% 65%, 50% 70%, 0 35%, 50% 0, 50% 30%, 52% 31%, 52% 6%, 50% 5%, 48% 6%, 48% 31%, 50% 30%, 50% 35%, 93% 65%, 52% 94%, 52% 66%, 50% 70%, 50% 100%, 100% 65%, 100% 35%, 96% 37%, 96% 62%, 50% 30%, 50% 35%, 7% 65%, 48% 94%, 48% 66%, 50% 70%, 50% 95%, 50% 100%, 0 65%, 0% 35%, 4% 37%, 4% 62%, 50% 30%);
+        clip-path: polygon( 50% 0, 50% 5%, 93% 35%, 50% 65%, 50% 70%, 100% 35%, 50% 0, 50% 5%, 7% 35%, 50% 65%, 50% 70%, 0 35%, 50% 0, 50% 30%, 52% 31%, 52% 6%, 50% 5%, 48% 6%, 48% 31%, 50% 30%, 50% 35%, 93% 65%, 52% 94%, 52% 66%, 50% 70%, 50% 100%, 100% 65%, 100% 35%, 96% 37%, 96% 62%, 50% 30%, 50% 35%, 7% 65%, 48% 94%, 48% 66%, 50% 70%, 50% 95%, 50% 100%, 0 65%, 0% 35%, 4% 37%, 4% 62%, 50% 30%);
+        transform: translateY(-18px);
+        transform: translateX(-48px);
+        background: #000000;
+    }
 }
 #skills-icons header .social-media .media-link-cv i,
 #skills-icons header .social-media .media-link-linkedin i,
