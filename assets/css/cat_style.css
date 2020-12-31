@@ -119,7 +119,7 @@ section header .headline .jays
     }
     16%, 46%
     {
-        clip-path: polygon(3% 0, 97% 0, 100% 10%, 100% 60%, 97% 70%, 3% 70%, 0 60%, 0 10%);
+        clip-path: polygon(23% 0, 77% 0, 80% 10%, 80% 60%, 77% 70%, 23% 70%, 20% 60%, 20% 10%);
     }
     64%
     {
@@ -144,7 +144,7 @@ section .hidden header
 }
 section header .social-media a
 {
-    color: rgb(53, 10, 95);
+    color: #350a5f;
     opacity: .8;
     text-decoration: none;
     -webkit-transition: .3s ease-in-out;
@@ -186,13 +186,6 @@ section .group .example .exCPlogo
     background: url(../images/angry_cat.svg) center center, #000000;
     -webkit-background-size: cover;
     background-size: cover;
-}
-svg .cat_animation_path
-{
-    stroke-width: 2px;
-    stroke: #3b3117;
-    stroke-dasharray: 1; 
-    stroke-dashoffset: 0; 
 }
 section .group .example .exCPlogo 
 {
