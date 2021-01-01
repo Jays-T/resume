@@ -215,7 +215,19 @@ section .group .example .exCPlogo
         transform: translateX(-48px);
         background-color: #faebd770;
     }
+    46%, 60%
+    {
+        transform: translateX(-278px);
+    }
     46%, 70%
+    {
+        opacity: 0;
+    }
+    70%, 71%
+    {
+        transform: translateX(-58px);
+    }
+    70%, 77%
     {
         opacity: 0;
     }

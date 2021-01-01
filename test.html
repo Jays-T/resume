@@ -92,12 +92,103 @@ body
   background-color: black;
 }
     </style>
+    <style>
+.loading-animation
+{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 70px;
+}
+.loader-inner
+{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.loader-inner span
+{
+  position: absolute;
+  transition: .3s ease-in-out;
+}
+.loader-inner .loading-top
+{
+  transform: translate(45%, -50%);
+  animation: loading-one 3s ease-in infinite;
+}
+.loader-inner .loading-right
+{
+  transform: translate(100%, 25px);
+  animation: loading-two 3s ease-in infinite;
+}
+.loader-inner .loading-left
+{
+  transform: translate(0, 25px);
+  animation: loading-three 3s ease-in infinite;
+}
+@keyframes loading-one
+{
+  0%
+  {
+    transform: translate(45%, -50%);
+  }
+  33%
+  {
+    transform: translate(95%, 21px);
+  }
+  66%
+  {
+    transform: translate(2%, 21px);
+  }
+}
+@keyframes loading-two
+{
+  0%
+  {
+    transform: translate(100%, 25px);
+  }
+  33%
+  {
+    transform: translate(0, 25px);
+  }
+  66%
+  {
+    transform: translate(45%, -50%);
+  }
+}
+@keyframes loading-three
+{
+  0%
+  {
+    transform: translate(0, 25px);
+  }
+  33%
+  {
+    transform: translate(45%, -50%);
+  }
+  66%
+  {
+    transform: translate(100%, 25px);infinite   }
+}
+
+    </style>
   </head>
 
   <body>
-    <div class="group">
+    <!-- <div class="group">
       <div class="example exCPlogo"></div>
-    </div>
+    </div> -->
+
+    <span class="loading-animation">
+      <span class="loader-inner">
+      <span class="loading-top"><i class="fab fa-python"></i></span>
+      <span class="loading-right"><i class="fab fa-html5"></i></span>
+      <span class="loading-left"><i class="fab fa-css3-alt"></i></span>
+      </span>
+    </span>
+
     <div class="container">
       <div class="row">
         <!-- User dashboard/menu -->
