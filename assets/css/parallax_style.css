@@ -33,7 +33,7 @@ body
             align-items: center;
     background: rgb(18, 1, 16);
     overflow-x: hidden;
-    color: rgba(250, 235, 215, .6);
+    color: rgba(247, 236, 223, 0.6);
 }
 .scrolling 
 {

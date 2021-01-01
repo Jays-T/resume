@@ -8,7 +8,7 @@
 :root {
     /* P = Primary | S = Secondary | T = Tertiary */
     --p-background: rgb(18, 1, 16);
-    --p-text: rgba(250, 235, 215, .6);
+    --p-text: rgba(247, 236, 223, 0.6);
     --p-headline-text: rgb(218, 165, 32);
     --p-social-media-links: rgb(53, 10, 95);
     --s-social-media-links: #350a5f;
