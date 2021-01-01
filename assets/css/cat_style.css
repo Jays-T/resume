@@ -219,7 +219,7 @@ section .group .example .exCPlogo
     {
         transform: translateX(-278px);
     }
-    48%, 70%
+    56%, 70%
     {
         opacity: 0;
     }
