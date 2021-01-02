@@ -21,9 +21,25 @@
     <link rel="stylesheet" href="assets/css/overlay_animation.css" />
     <link rel="stylesheet" href="assets/css/contrastparity.css" />
     <title>Contrast Parity</title>
+    <style>
+      .test-clip
+      {
+        background: center center #000000;
+        height: calc(100%);
+
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        clip-path: polygon(3% 0, 97% 0, 100% 13%, 100% 59%, 97% 71%, 3% 71%, 0 59%, 0 13%);
+      }
+    </style>
   </head>
 
   <body>
+    <div class="test-clip">
+      WOLOLO
+    </div>
   <div class="container">
     <div class="row">
       <div class="col-12">
