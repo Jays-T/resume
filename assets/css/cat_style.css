@@ -75,6 +75,7 @@ section header .headline .jays
     display: flex;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
     height: calc(100%);
     padding: 0 8px;
     width: calc(100%);
@@ -84,7 +85,7 @@ section header .headline .jays
 section header .headline .angry
 {
     position: relative;
-    clip-path: polygon(3% 0, 97% 0, 100% 10%, 100% 60%, 97% 70%, 3% 70%, 0 60%, 0 10%);
+    clip-path: polygon(3% 0, 97% 0, 100% 13%, 100% 59%, 97% 71%, 3% 71%, 0 59%, 0 13%);
     transition: .3s ease-in-out;
     animation: animateHeader 14s ease-in-out infinite;
 }
@@ -100,7 +101,7 @@ section header .headline .jays
 {
     0%, 100%
     {
-        clip-path: polygon(3% 0, 97% 0, 100% 10%, 100% 60%, 97% 70%, 3% 70%, 0 60%, 0 10%);
+        clip-path: polygon(3% 0, 97% 0, 100% 13%, 100% 59%, 97% 71%, 3% 71%, 0 59%, 0 13%);
     }
     16%, 46%
     {
@@ -108,7 +109,7 @@ section header .headline .jays
     }
     64%
     {
-        clip-path: polygon(3% 0, 97% 0, 100% 10%, 100% 60%, 97% 70%, 3% 70%, 0 60%, 0 10%);
+        clip-path: polygon(3% 0, 97% 0, 100% 13%, 100% 59%, 97% 71%, 3% 71%, 0 59%, 0 13%);
     }
 }
 @keyframes reverseAnimateHeader
@@ -119,7 +120,7 @@ section header .headline .jays
     }
     16%, 46%
     {
-        clip-path: polygon(23% 0, 77% 0, 80% 10%, 80% 60%, 77% 70%, 23% 70%, 20% 60%, 20% 10%);
+        clip-path: polygon(23% 0, 77% 0, 80% 13%, 80% 59%, 77% 71%, 23% 71%, 20% 59%, 20% 13%);
     }
     64%
     {
@@ -165,7 +166,7 @@ section .group
 {
     position: absolute;
     left: 100%;
-    top: -20px;
+    top: -18px;
     z-index: 9999;
 }
 section .group .example 
