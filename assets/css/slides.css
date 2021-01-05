@@ -185,6 +185,7 @@ background: rgb(218, 165, 32);
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     pointer-events: all;
+    z-index: 60;
 }
 /* Sliders Active State */
 .slide-container .slide.active
@@ -253,25 +254,26 @@ background: rgb(218, 165, 32);
          -o-transition-delay: .5s;
             transition-delay: .5s;
 }
-.slide-container .slide.slide-one::before,
-.slide-container .slide.slide-two::before,
-.slide-container .slide.slide-three::before
+section .close-slide
 {
-    content: 'click anywhere to close';
-    position: absolute;
-    height: 30px;
-    bottom: -30px;
+    cursor: pointer;
+    position: fixed;
+    height: 130px;
+    bottom: -115px;
+    font-size: 3rem;
     margin: auto;
-    color:rgba(218, 165, 32, .8);
+    color:rgba(218, 165, 32, .4);
     transition: .8s ease-in-out;
-    background:rgb(16, 1, 14);
-    z-index: 101;
+    background:transparent;
+    z-index: 201;
 } 
-.slide-container .slide.active.slide-one::before,
-.slide-container .slide.active.slide-two::before,
-.slide-container .slide.active.slide-three::before
+section .close-slide:hover
 {
-    bottom: 0;
+    color:rgba(218, 165, 32, 1);
+}
+section .close-slide.show-close
+{
+    bottom: -30px;
 }
 /* Media Queries */
 @media screen and (min-width: 540px) and (min-height: 720px)
@@ -351,16 +353,10 @@ background: rgb(218, 165, 32);
 
 @media screen and (min-width: 1366px) 
 {
-    .slide-container .slide.slide-one::before,
-    .slide-container .slide.slide-two::before,
-    .slide-container .slide.slide-three::before
-    {
-        right: 8%;
-    } 
     .scrollable-content 
     {
         visibility: visible;
-        background: linear-gradient(90deg, rgb(161, 157, 144) 0%, rgb(161, 157, 144) 91%, transparent 91%, transparent 100%);
+        background: transparent;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -435,7 +431,7 @@ background: rgb(218, 165, 32);
     .scrollable-content p
     {
         width: 40%;
-        color:rgb(18, 1, 16);
+        color:rgba(247, 236, 223, 0.6);
         margin-top: 34px;
         margin-left: 28%;
     }
@@ -480,7 +476,7 @@ background: rgb(218, 165, 32);
         justify-content: space-between;
         margin-top: 34px;
         margin-left: 4px;
-        color: rgb(18, 1, 16);
+        color: #350a5f;
         text-decoration: none;
         font-size: 3.8rem;
         transition: .3s ease-in-out;
@@ -523,17 +519,17 @@ background: rgb(218, 165, 32);
     .scrollable-content .projects-icons span i
     {
         clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-        background: linear-gradient(0deg, rgb(18, 1, 16) 0%, rgb(18, 1, 16) 14%, 
-                                    rgb(161, 157, 144) 14%,rgb(161, 157, 144) 81%, 
-                                    rgb(18, 1, 16) 81%, rgb(18, 1, 16) 100%);
+        background: linear-gradient(0deg, #350a5f 0%, #350a5f 14%, 
+                            rgb(18, 1, 16) 14%,rgb(18, 1, 16) 81%, 
+                                        #350a5f 81%, #350a5f 100%);
         margin-left: 4px;
     }
     .scrollable-content .projects-icons span .python
     {
         /* background: transparent; */
-        background: linear-gradient(0deg, rgb(18, 1, 16) 0%, rgb(18, 1, 16) 10%, 
-                                    rgb(161, 157, 144) 10%,rgb(161, 157, 144) 92%, 
-                                    rgb(18, 1, 16) 92%, rgb(18, 1, 16) 100%);
+        background: linear-gradient(0deg, #350a5f 0%, #350a5f 10%, 
+                            rgb(18, 1, 16) 10%,rgb(18, 1, 16) 92%, 
+                                    #350a5f 92%, #350a5f 100%);
     }
     .slide-container
     {
@@ -551,7 +547,7 @@ background: rgb(218, 165, 32);
     {
         font-size: 1.2rem;
         letter-spacing: .4rem;
-        z-index: 50;
+        z-index: 60;
     }
     .slide-container .slide.slide-one
 {
@@ -643,8 +639,8 @@ background: rgb(218, 165, 32);
 {
     opacity: 1;
     background: rgba(14, 1, 8, 1);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 91% 0, 91% 100%, 0% 100%);
+            clip-path: polygon(0 0, 91% 0, 91% 100%, 0% 100%);
 }
 .slide-container .slide.slide-one:hover::after,
 .slide-container .slide.slide-two:hover::after,

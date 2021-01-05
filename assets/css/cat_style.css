@@ -75,7 +75,6 @@ section header .headline .jays
     display: flex;
     justify-content: center;
     align-items: center;
-    text-transform: uppercase;
     height: calc(100%);
     padding: 0 8px;
     width: calc(100%);
@@ -85,6 +84,7 @@ section header .headline .jays
 section header .headline .angry
 {
     position: relative;
+    text-transform: uppercase;
     clip-path: polygon(3% 0, 97% 0, 100% 13%, 100% 59%, 97% 71%, 3% 71%, 0 59%, 0 13%);
     transition: .3s ease-in-out;
     animation: animateHeader 14s ease-in-out infinite;
@@ -169,6 +169,11 @@ section .group
     top: -18px;
     z-index: 9999;
 }
+.codepen
+{
+    width: 70px;
+    height: 70px;
+}
 section .group .example 
 {
     opacity: 1;
@@ -216,10 +221,6 @@ section .group .example .exCPlogo
         transform: translateX(-48px);
         background-color: #faebd770;
     }
-    48%, 52%
-    {
-        transform: translateX(-278px);
-    }
     56%, 70%
     {
         opacity: 0;
@@ -248,16 +249,14 @@ section .group .example .exCPlogo
 {
     cursor: pointer;
     /* background: linear-gradient(0deg, #350a5f 0%, #350a5f 10%, #120110 10%,#120110 90%, #350a5f 90%, #350a5f 100%); */
-    background: linear-gradient(0deg, #350a5f 0%, #350a5f 9%, #120110 9%,#120110 93%, #350a5f 93%, #350a5f 100%);
+    background: linear-gradient(0deg, #350a5f 0%, #350a5f 11%, #120110 11%,#120110 92%, #350a5f 92%, #350a5f 100%);
     font-size: 3.8rem;
     margin-left: 4px;
     margin-right: 4px;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     transition: .3s ease-in-out;
 }
-#headline-and-social header .social-media .media-link-cv i,
-#headline-and-social header .social-media .media-link-linkedin i,
-#headline-and-social header .social-media .media-link-github i
+#headline-and-social header .social-media .media-link-cv i
 {
     background: linear-gradient(0deg, #350a5f 0%, #350a5f 10%, #120110 10%,#120110 79%, #350a5f 79%, #350a5f 100%);
 }

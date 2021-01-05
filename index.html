@@ -64,11 +64,11 @@
 </section>
 <section class="is-scrollable">
 <div class="scrollable-content">
-<div class="content-toggle-wrap">
-  <span class="scrollable-content-toggle">
-      <i class="fas fa-dice-d6"></i></a>
-  </span>
-</div>
+  <div class="content-toggle-wrap">
+    <span class="scrollable-content-toggle">
+        <i class="fas fa-dice-d6"></i></a>
+    </span>
+  </div>
   <div class="projects-icons">
     <span class="content-text"><i class="fab fa-linkedin left"></i></span>
     <span class="content-text"><i class="fas fa-dice-d6 javascript top"></i></span>
@@ -151,19 +151,21 @@
     A developer who doesn't use lorem ipsum!? What an oddity. A developer who doesn't use lorem ipsum!? What an oddity.
     A developer who doesn't use lorem ipsum!? What an oddity. A developer who doesn't use lorem ipsum!? What an oddity.
   </p>
-  </div>
+</div>
 </section>
 <section class="has-headline-and-social-links">
   <div id="headline-and-social" class="hide-slides">
     <header>
       <div class="headline">
         <div class="group">
-          <div class="example">
-            <div class="exCPlogo"></div>
-          </div>
+          <a href="https://www.codepen.io" target="_blank" class="codepen">
+            <div class="example">
+              <div class="exCPlogo"></div>
+            </div>
+          </a>
         </div>
         <span class="angry">ANGRY CAT DESIGN</span>
-        <span class="jays">JOHN TRAAS</span>
+        <span class="jays">John Traas</span>
       </div>
       <div class="social-media">
         <span class="media-link-cv cv-download">
@@ -178,6 +180,7 @@
       </div>
     </header>
   </div>
+  <span class="close-slide show-close">X</span>
 </section>
 <section class="has-slides">
   <div id="slides" class="slide-container hide-slides">
@@ -234,6 +237,7 @@
       </div>
     </div>
   </div>
+  <!-- <span class="close-slide show-close">X</span> -->
 </section>
 </body>
 <script>
@@ -247,25 +251,42 @@
 <script src="assets/js/app.js"></script>
 <script src="assets/js/secondapp.js"></script>
 <script src="assets/js/thirdapp.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
-  let slideSwitch = document.querySelectorAll('.slide');
+  let slideToggle = document.querySelectorAll('.slide');
   let headerAndSocialSwitch = document.getElementById('headline-and-social');
+  var closeSlide = document.querySelectorAll('.close-slide')
 
-  slideSwitch.forEach(popup => popup.addEventListener('click', () =>{
+  slideToggle.forEach(popup => popup.addEventListener('click', (e) =>{
+    let activeSlide = document.querySelectorAll(".active");
+
+    let i;
+    for (i = 0; i < activeSlide.length; i++) {
+      activeSlide[i].classList.toggle('active');
+    }
+
     popup.classList.toggle('active');
-    headerAndSocialSwitch.classList.toggle('hidden');
+    headerAndSocialSwitch.classList.add('hidden');
+
+    let j;
+    for (j = 0; j < closeSlide.length; i++) {
+      closeSlide[i].classList.add('show-close');
+    }
+
   }));
 
-  let activeSlide = Array.from(document.getElementsByClassName('active'));
+  closeSlide.forEach(popup => popup.addEventListener('click', () =>{
+    let removeActive = document.querySelectorAll(".active");
 
-  activeSlide.forEach(element => element.addEventListener('click', () =>{
-    element.classList.toggle('active');
+    let i;
+    for (i = 0; i < removeActive.length; i++) {
+      removeActive[i].classList.remove('active');
+    }
+    popup.classList.remove('show-close');
+    headerAndSocialSwitch.classList.remove('hidden');
   }));
 
-  function toggleActive(element){
-    
-  }
 </script>
 
 <script>
@@ -321,7 +342,7 @@
       src="https://kit.fontawesome.com/cb5c413284.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
     <script src="assets/js/footer_animate.js"></script>
     <script src="assets/js/scroll_animations.js"></script>
