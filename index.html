@@ -180,7 +180,6 @@
       </div>
     </header>
   </div>
-  <span class="close-slide show-close">X</span>
 </section>
 <section class="has-slides">
   <div id="slides" class="slide-container hide-slides">
@@ -237,7 +236,7 @@
       </div>
     </div>
   </div>
-  <!-- <span class="close-slide show-close">X</span> -->
+  <span class="close-slide"><i class="fas fa-window-close"></i></span>
 </section>
 </body>
 <script>
@@ -268,12 +267,7 @@
 
     popup.classList.toggle('active');
     headerAndSocialSwitch.classList.add('hidden');
-
-    let j;
-    for (j = 0; j < closeSlide.length; i++) {
-      closeSlide[i].classList.add('show-close');
-    }
-
+    closeSlide[i].classList.add('show-close');
   }));
 
   closeSlide.forEach(popup => popup.addEventListener('click', () =>{
@@ -324,7 +318,7 @@
     function revealContent() {
       const content = document.getElementById('slides');
       const headlineSocial = document.getElementById('headline-and-social');
-      console.log(content);
+
       content.classList.remove('hide-slides');
       headlineSocial.classList.remove('hide-slides');
       content.classList.add('show-slides');
