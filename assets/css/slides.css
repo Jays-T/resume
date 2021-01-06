@@ -56,13 +56,19 @@ background: rgb(218, 165, 32);
     height: 100vh;
     pointer-events: all;
 }
+section #is-scrollable .hide-slides,
 .hide-slides
 {
+    opacity: 0;
     visibility: hidden;
     transition: visibility .3s ease-in-out;
+    overflow: hidden;
+    max-height: 100vh;
 }
+section #is-scrollable .show-slides,
 .show-slides
 {
+    opacity: 1;
     visibility: visible;
     transition: visibility .3s ease-in-out ;
 }
@@ -276,9 +282,9 @@ section .close-slide
 section .close-slide i
 {
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-    background: linear-gradient(0deg, rgb(218, 165, 32) 0%, rgb(218, 165, 32) 7%, 
-                            rgb(18, 1, 16) 7%,rgb(18, 1, 16) 93%, 
-                            rgb(218, 165, 32) 92%, rgb(218, 165, 32) 100%);
+    background: linear-gradient(0deg, rgb(218, 165, 32) 0%, rgb(218, 165, 32) 10%, 
+                            rgb(18, 1, 16) 10%,rgb(18, 1, 16) 90%, 
+                            rgb(218, 165, 32) 90%, rgb(218, 165, 32) 100%);
     transition: .6s ease-in-out;
 }
 section .close-slide:hover i

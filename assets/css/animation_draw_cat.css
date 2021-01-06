@@ -5,7 +5,7 @@ svg .draw {
     stroke: rgb(218, 165, 32);
     stroke-dasharray: 53765.1015625;
     stroke-dashoffset: 53765.1015625;
-    animation: drawCat 9.8s forwards;
+    animation: drawCat 4.2s forwards;
   }
   
   @keyframes drawCat {
@@ -15,35 +15,18 @@ svg .draw {
     }
     15%
     {
-      opacity: .6;
+      opacity: 1;
       stroke-dashoffset: 53765.1015625;
     }
-    25% 
-    {
-      opacity: 1;
-      stroke: rgb(218, 165, 32);
-    }
-    29%
-    {
-      stroke: rgba(122, 0, 104, 0.3);
-    }
-    30%
+    55%
     {
       stroke-dashoffset: 0;
     }
-    48%
-    {
-      stroke: rgba(122, 0, 104, 0.3);
-    }
-    51%
-    {
-      stroke: rgba(122, 0, 104, 1);
-    }
-    52%
+    57%
     {
       stroke-dashoffset: 0;
     }
-    70% 
+    97% 
     {
       stroke-dashoffset: 53765.1015625;
     }

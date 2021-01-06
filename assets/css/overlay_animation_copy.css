@@ -40,7 +40,7 @@ svg .loading-draw {
 }
 
 .fade-out-loader {
-  animation: fadeOutLoader 5s forwards;
+  animation: fadeOutLoader 3.4s forwards;
 }
 
 @keyframes fadeOutLoader {
@@ -104,7 +104,7 @@ svg .loading-draw {
     font-size: 5rem;
     color: transparent;
     font-weight: 500;
-    animation: flashLetters .8s forwards;
+    animation: flashLetters 1.6s forwards;
   }
   
   .angry,
@@ -124,39 +124,21 @@ svg .loading-draw {
     animation-delay: .4s;
   }
   
-  .cat span {
-    animation: flashLetters .8s forwards;
-  }
-  
   .headline-flash .cat span:nth-child(1),
   .headline-flash .cat span:nth-child(2),
   .headline-flash .cat span:nth-child(3) {
     animation-delay: .8s;
   }
   
-  .design span {
-    animation: flashLetters .8s forwards;
-  }
-  
-  .headline-flash .design span:nth-child(1) {
-    animation-delay: 1s;
-  }
-  .headline-flash .design span:nth-child(2) {
+  .headline-flash .design span:nth-child(1), 
+  .headline-flash .design span:nth-child(2),
+  .headline-flash .design span:nth-child(3),
+  .headline-flash .design span:nth-child(4),
+  .headline-flash .design span:nth-child(5),
+  .headline-flash .design span:nth-child(6) 
+  {
     animation-delay: 1.2s;
   }
-  .headline-flash .design span:nth-child(3) {
-    animation-delay: 1.4s;
-  }
-  .headline-flash .design span:nth-child(4) {
-    animation-delay: 1.6s;
-  }
-  .headline-flash .design span:nth-child(5) {
-    animation-delay: 1.8s;
-  }
-  .headline-flash .design span:nth-child(6) {
-    animation-delay: 2s;
-  }
-  
   @keyframes flashLetters {
     0%, 75%
     {

@@ -137,25 +137,32 @@ body
 .loading 
 {
     display: inline-block;
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
     top: 50%;
 }
 .loading-inner 
 {
     vertical-align: bottom;
-    display: inline-block;
-    padding: none;
-    margin: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
-    background: url(../images/angry_cat_70x70.png) center center,#fafafa;
+    background-color:  rgb(218, 165, 32);
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
     -webkit-background-size: cover;
     background-size: cover;
     animation: loader-inner 2s ease-in;
     animation-iteration-count: 4;
+}
+.loading-inner .loading-inner-cat-loader
+{
+    width: 54px;
+    height: 58px;
+    padding-bottom: 2px;
 }
 @keyframes loader-inner 
 {

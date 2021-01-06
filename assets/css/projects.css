@@ -1,15 +1,19 @@
 #projects
 {
+    top: 41.5vh;
     box-sizing: border-box;
+    height: calc(100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 65vh;
     background: transparent;
 }
 #projects .container
 {
+    display: flex;
+    flex-direction: column;
     max-width: 90vw;
+    height: 100%;
     pointer-events: all;
     position: relative;
     justify-content: center;
@@ -49,20 +53,24 @@
     transition: .2s ease-in-out;
     z-index: 102;
 }
-#projects .container:hover .card
+/* Only use 3d hover effect on laptops */
+@media screen and (min-width: 1366px)
 {
-    transition-delay: .2s;
-    transform: perspective(500px) rotateY(30deg);
-}
-#projects .container .card:hover
-{
-    transition-delay: .2s;
-    transform: perspective(500px) rotateY(0deg);
-}
-#projects .container .card:hover ~ .card
-{
-    transition-delay: .2s;
-    transform: perspective(500px) rotateY(-30deg);
+        #projects .container:hover .card
+    {
+        transition-delay: .2s;
+        transform: perspective(500px) rotateY(30deg);
+    }
+    #projects .container .card:hover
+    {
+        transition-delay: .2s;
+        transform: perspective(500px) rotateY(0deg);
+    }
+    #projects .container .card:hover ~ .card
+    {
+        transition-delay: .2s;
+        transform: perspective(500px) rotateY(-30deg);
+    }
 }
 #projects .container .card h2
 {
