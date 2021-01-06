@@ -302,16 +302,25 @@ section #headline-and-social header .social-media .media-link-cv .cv-download-ic
     position: relative;
     top: -35px;
 }
-@media screen and (min-width: 1366px)
+@media screen and (min-width: 768px)
 {
     section header 
     {
-        top: 50vh;
-        left: 240px;
+        top: 82%;
+        left: 40px;
         -webkit-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
         font-size: 1.8rem;
+        transform: scale(.85);
     }
-   
+}
+@media screen and (min-width: 1366px)
+{
+    section header 
+    {
+        top: 43.1vh;
+        left: 112px;
+        transform: scale(1);
+    }
 }
