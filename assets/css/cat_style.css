@@ -180,7 +180,6 @@ section .group .example
     position: relative;
 	width: 55px;
 	height: 70px;
-    cursor: pointer;
 }
 section .group .example .exCPlogo
 {
