@@ -61,7 +61,7 @@ section #is-scrollable .hide-slides,
 {
     opacity: 0;
     visibility: hidden;
-    transition: visibility .3s ease-in-out;
+    transition: visibility .8s ease-in-out;
     overflow: hidden;
     max-height: 100vh;
 }
@@ -70,7 +70,19 @@ section #is-scrollable .show-slides,
 {
     opacity: 1;
     visibility: visible;
-    transition: visibility .3s ease-in-out ;
+    transition: visibility .8s ease-in-out;
+    animation: showMeSlides .8s ease-in-out;
+}
+@keyframes showMeSlides
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
 }
 .slide-container .slide 
 {
