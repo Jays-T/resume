@@ -342,7 +342,7 @@ section .close-slide.show-close
     .slide-container .slide.slide-two::after,
     .slide-container .slide.slide-three::after 
     {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     .slide-container .slide.slide-one::after
     {
@@ -355,28 +355,28 @@ section .close-slide.show-close
     .slide-container .slide.slide-three::after
     {
         left: 90.2vw;
+    }
+    .slide-container .slide.active.slide-one::after,
+    .slide-container .slide.active.slide-two::after,
+    .slide-container .slide.active.slide-three::after
+    {
+    left: 94.5vw;
     }
 }
 
 @media screen and (min-width: 1024px)
 {
-    .slide-container .slide.slide-one::after,
-    .slide-container .slide.slide-two::after,
-    .slide-container .slide.slide-three::after 
-    {
-        font-size: 1.8rem;
-    }
     .slide-container .slide.slide-one::after
     {
-        left: 64.4vw;
+        left: 66.4vw;
     }
     .slide-container .slide.slide-two::after
     {
-        left: 77.2vw;
+        left: 79.2vw;
     }
     .slide-container .slide.slide-three::after
     {
-        left: 90.2vw;
+        left: 92.2vw;
     }
     .slide-container .slide-content p
     {
@@ -386,6 +386,12 @@ section .close-slide.show-close
     {
         top: 80%;
         left: 84vw;
+    }
+    .slide-container .slide.active.slide-one::after,
+    .slide-container .slide.active.slide-two::after,
+    .slide-container .slide.active.slide-three::after
+    {
+    left: 95.8vw;
     }
 }
 
@@ -522,7 +528,6 @@ section .close-slide.show-close
     .scrollable-content .projects-icons span .left,
     .scrollable-content .projects-icons span .right
     {
-        
         position: relative;
         top: 86px;
         left: 0;
