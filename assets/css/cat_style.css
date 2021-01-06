@@ -55,8 +55,7 @@ section header
         -ms-flex-align: center;
             align-items: center;
     position: fixed;
-    top: 82%;
-    left: 140px;
+    top: 74%;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -68,6 +67,8 @@ section header
     -o-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
     z-index: 40;
+    transform: scale(.65);
+    left: 0;
 }
 section header .headline .angry,
 section header .headline .jays
@@ -255,6 +256,7 @@ section .group .example .exCPlogo
     margin-right: 4px;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     transition: .3s ease-in-out;
+    
 }
 #headline-and-social header .social-media .media-link-cv i
 {
@@ -310,5 +312,6 @@ section #headline-and-social header .social-media .media-link-cv .cv-download-ic
             -ms-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
         font-size: 1.8rem;
-    } 
+    }
+   
 }
