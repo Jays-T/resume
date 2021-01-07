@@ -21,7 +21,7 @@
 /* Custom Scroll Bar */
 /* width */
 ::-webkit-scrollbar {
-    width: 2px;
+    width: 0;
 }
 /* Track */
 ::-webkit-scrollbar-track {
