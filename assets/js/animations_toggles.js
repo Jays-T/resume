@@ -142,9 +142,10 @@ function revealCat() {
 
 // Toggle slides active state
 
-let slideToggle = document.querySelectorAll('.slide');
-  let headerAndSocialSwitch = document.getElementById('headline-and-social');
-  var closeSlide = document.querySelectorAll('.close-slide')
+const slideToggle = document.querySelectorAll('.slide');
+  const headerAndSocialSwitch = document.getElementById('headline-and-social');
+  const toggleWrap = document.querySelector('.content-toggle-wrap')
+  const closeSlide = document.querySelectorAll('.close-slide')
 
   slideToggle.forEach(popup => popup.addEventListener('click', (e) =>{
     let activeSlide = document.querySelectorAll(".active");
@@ -156,6 +157,7 @@ let slideToggle = document.querySelectorAll('.slide');
 
     popup.classList.toggle('active');
     headerAndSocialSwitch.classList.add('hidden');
+    toggleWrap.classList.add('inactive');
     closeSlide[i].classList.add('show-close');
   }));
 
@@ -168,4 +170,5 @@ let slideToggle = document.querySelectorAll('.slide');
     }
     popup.classList.remove('show-close');
     headerAndSocialSwitch.classList.remove('hidden');
+    toggleWrap.classList.remove('inactive');
   }));
