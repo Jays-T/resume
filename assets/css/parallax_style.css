@@ -701,6 +701,7 @@ section .close-slide.show-close
         border-right: solid 3px var(--s-gold-fade-6);
         opacity: .8;
     } */
+    /* CALL TO ACTION DISPLAY STYLES */
     section .call-to-action
     {
         height: 100%;
@@ -710,32 +711,16 @@ section .close-slide.show-close
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas: "call-to-action-consult call-to-action-hi call-to-action-cv";
     }
-    .call-to-action-consult
-    {
-        grid-area: call-to-action-consult;
-    }
-    .call-to-action-hi
-    {
-        grid-area: call-to-action-hi;
-    }
-    .call-to-action-cv
-    {
-        grid-area: call-to-action-cv;
-    }
-    .call-to-action-link
-    {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        cursor: pointer;
-    }
     .call-to-action .display-code-live
     {
-        width: 25%;
+        width: 27%;
         text-align: center;
+        margin-left: 0;
         bottom: 0;
         position: absolute;
+        height: 100%;
     }
+    
     .call-to-action .display-code-live::before
     {
         content:'';
@@ -764,6 +749,25 @@ section .close-slide.show-close
         position: absolute;
         opacity: .6;
     }
+    .call-to-action-consult
+    {
+        grid-area: call-to-action-consult;
+    }
+    .call-to-action-hi
+    {
+        grid-area: call-to-action-hi;
+    }
+    .call-to-action-cv
+    {
+        grid-area: call-to-action-cv;
+    }
+    .call-to-action-link
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+    }
     .scrollable-content-right section i,
     .left-right-margin-8,
     .gold-text,
@@ -790,14 +794,6 @@ section .close-slide.show-close
         flex-wrap: wrap;
         width: 100%;
         margin-top: 12px;
-    }
-    .has-display-code
-    {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        height: 100px;
     }
     .scrollable-content .scrollable-content-right section ul 
     {
@@ -846,7 +842,6 @@ section .close-slide.show-close
         font-size: 1rem;
         font-weight: 400;
     }
-    .display-code-live i,
     .scrollable-content-right section .stack-lists i
     {
         display: inline-block;
@@ -870,33 +865,45 @@ section .close-slide.show-close
     {
         opacity: 1;
     }
-    .display-code-live i
-    {
-        color: var(--s-gold-fade-9);
-        background: linear-gradient(0deg, var(--s-gold-fade-9) 0%, var(--s-gold-fade-9) 14%, var(--p-dark-purple) 14%,var(--p-dark-purple) 91%, var(--s-gold-fade-9) 91%, var(--s-gold-fade-9) 100%);
-        transition: .3s ease-in-out;
-    }
     .stack-lists span
     {
         bottom: 0;
     }
+    .has-display-code
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-areas: "display-code-live-left display-code-live-right";
+        width: 100%;
+        height: 100px;
+    }
     .display-code-live
     {
-        padding-left: 30px;
-        padding-right: 30px;
-        width: 520px;
-        text-align: end;
-        bottom: -80px;
+        text-align: center;
+        margin-left: 25%;
+        bottom: -85px;
         position: absolute;
         height: 100%;
     }
-
     .display-code-live-left,
     .display-code-live-right
     {
-        opacity: .4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 60%;
+        opacity: .6;
         display: inline;
         transition: .3s ease-in-out;
+    }
+    .display-code-live-left
+    {
+        grid-area: display-code-live-left;
+    }
+    .display-code-live-right
+    {
+        grid-area: display-code-live-right;
     }
     .display-code-live::before
     {
@@ -905,12 +912,12 @@ section .close-slide.show-close
         background: var(--p-dark-purple);
         border-left: 3px solid var(--p-gold);
         border-bottom: 3px solid var(--p-gold);
-        top: 16%;
-        left: 18px;
+        top: 2%;
+        left: -3%;
         height: 30px;
         width:6px;
         position: absolute;
-        opacity: .6;
+        opacity: .8;
     }
     .display-code-live::after
     {
@@ -919,20 +926,21 @@ section .close-slide.show-close
         background: var(--p-dark-purple);
         border-right: 3px solid var(--p-gold);
         border-bottom: 3px solid var(--p-gold);
-        top: 16%;
-        right: -2px;
+        top: 2%;
+        right: -3%;
         height: 30px;
         width:6px;
         position: absolute;
-        opacity: .6;
+        opacity: .8;
     }
-    section .has-display-code .display-code-live .dim-text /* Ensure only words 'Code' and 'Live' light up on hover */
+    section .has-display-code .display-code-live .dim-text
     {
         opacity: .8;
     }
     .display-code-live-left:hover,
     .display-code-live-left:hover .dim-text,
-    .display-code-live-right:hover 
+    .display-code-live-right:hover,
+    .display-code-live-right:hover .dim-text
     {
         opacity: 1;
     }
