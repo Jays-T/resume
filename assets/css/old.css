@@ -99,4 +99,44 @@
 }
 
 
+/* Scroll Progress Bar */
+.sidebar 
+{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 102px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+.sidebar .progress-cont 
+{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 30vh;
+    background-color: var(--p-dark-purple);
+    z-index: 9999;
+}
+.sidebar .progress-cont .progress-bar 
+{
+    position: absolute;
+    height: 0%;
+    max-height: 30vh;
+    position: absolute;
+    background: var(--s-gold-fade-9);
+    width: 1px;
+}
+
 
