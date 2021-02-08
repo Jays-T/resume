@@ -34,37 +34,37 @@ window.onscroll = function ()
 
 /* Fill progress bar and draw cat according to amount scrolled */
 
-function progressBar() 
-{
-  // get scroll + height
-  let winScroll =
-    document.body.scrollTop || document.documentElement.scrollTop;
-  let height =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
+// function progressBar() 
+// {
+//   // get scroll + height
+//   let winScroll =
+//     document.body.scrollTop || document.documentElement.scrollTop;
+//   let height =
+//     document.documentElement.scrollHeight -
+//     document.documentElement.clientHeight;
 
-  // Calculate scroll for progress bar
-  let scrolled = (winScroll / height) * 72;
+//   // Calculate scroll for progress bar
+//   let scrolled = (winScroll / height) * 72;
 
-  // // Declare cat stroke offset
-  // const totalCat = 53765.1015625;
+//   // // Declare cat stroke offset
+//   // const totalCat = 53765.1015625;
 
-  // // Calculate scroll for cat drawing
-  // let catScroll = (winScroll / height) * 53765.1015625;
+//   // // Calculate scroll for cat drawing
+//   // let catScroll = (winScroll / height) * 53765.1015625;
 
-  // // Store cat length
-  // let theCat = document.getElementById("cat_path");
+//   // // Store cat length
+//   // let theCat = document.getElementById("cat_path");
 
-  // Below commented out code allows to get total cat draw length if needed
-  // let catLength = theCat.getTotalLength();
-  // console.log(catLength);
+//   // Below commented out code allows to get total cat draw length if needed
+//   // let catLength = theCat.getTotalLength();
+//   // console.log(catLength);
 
-  // Draw progress bar in equal relation to percent scrolled
-  document.getElementById("myBar").style.height = scrolled + "%";
+//   // Draw progress bar in equal relation to percent scrolled
+//   document.getElementById("myBar").style.height = scrolled + "%";
 
-  // // Draw cat in equal relation to percent scrolled
-  // theCat.style.strokeDashoffset = totalCat - catScroll;
-}
+//   // // Draw cat in equal relation to percent scrolled
+//   // theCat.style.strokeDashoffset = totalCat - catScroll;
+// }
 
 // /* Fade in Highlight on scroll */
 
@@ -144,7 +144,7 @@ function revealCat() {
 
 const slideToggle = document.querySelectorAll('.slide');
   const headerAndSocialSwitch = document.getElementById('headline-and-social');
-  const toggleWrap = document.querySelector('.content-toggle-wrap')
+  const toggleWrap = document.querySelector('.hide-on-slide')
   const closeSlide = document.querySelectorAll('.close-slide')
 
   slideToggle.forEach(popup => popup.addEventListener('click', (e) =>{
