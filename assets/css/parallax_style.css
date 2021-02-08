@@ -626,11 +626,10 @@ section .close-slide.show-close
     .scrollable-content-right section
     {
         position: relative;
-        padding-bottom: 100px;
         width: 85%;
         background: linear-gradient(-320deg, var(--s-dark-purple-fade-2) 0%, transparent 90%, transparent 100%);
         margin-top: 80px;
-        margin-bottom: 240px;
+        margin-bottom: 380px;
     }
     .scrollable-content-right section:nth-child(even)  
     {
@@ -638,7 +637,7 @@ section .close-slide.show-close
     }
     .scrollable-content-right section:nth-last-child(1)
     {
-        margin-bottom: 140px;
+        margin-bottom: 120px;
     }
     .scrollable-content-right .box-corners::before
     {
@@ -658,7 +657,7 @@ section .close-slide.show-close
         content: '';
         height: 28px;
         width: 16px;
-        bottom: 85px;
+        bottom: 80px;
         right: 4%;
         border-bottom: solid 3px var(--s-gold-fade-6);
         border-right: solid 3px var(--s-gold-fade-6);
@@ -797,6 +796,8 @@ section .close-slide.show-close
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
+        height: 100px;
     }
     .scrollable-content .scrollable-content-right section ul 
     {
@@ -885,7 +886,7 @@ section .close-slide.show-close
         padding-right: 30px;
         width: 520px;
         text-align: end;
-        bottom: -100px;
+        bottom: -80px;
         position: absolute;
         height: 100%;
     }
@@ -904,7 +905,7 @@ section .close-slide.show-close
         background: var(--p-dark-purple);
         border-left: 3px solid var(--p-gold);
         border-bottom: 3px solid var(--p-gold);
-        top: -6%;
+        top: 16%;
         left: 18px;
         height: 30px;
         width:6px;
@@ -918,7 +919,7 @@ section .close-slide.show-close
         background: var(--p-dark-purple);
         border-right: 3px solid var(--p-gold);
         border-bottom: 3px solid var(--p-gold);
-        top: -6%;
+        top: 16%;
         right: -2px;
         height: 30px;
         width:6px;
