@@ -26,11 +26,11 @@
 //       });
 //   }
   
-window.onscroll = function () 
-{
-  progressBar();
-  // highlight();
-};
+// window.onscroll = function () 
+// {
+//   progressBar();
+//   // highlight();
+// };
 
 /* Fill progress bar and draw cat according to amount scrolled */
 
@@ -143,32 +143,58 @@ function revealCat() {
 // Toggle slides active state
 
 const slideToggle = document.querySelectorAll('.slide');
-  const headerAndSocialSwitch = document.getElementById('headline-and-social');
-  const toggleWrap = document.querySelector('.hide-on-slide')
-  const closeSlide = document.querySelectorAll('.close-slide')
+const headerAndSocialSwitch = document.getElementById('headline-and-social');
+const toggleWrap = document.querySelector('.hide-on-slide')
+const closeSlide = document.querySelectorAll('.close-slide')
 
-  slideToggle.forEach(popup => popup.addEventListener('click', (e) =>{
-    let activeSlide = document.querySelectorAll(".active");
+slideToggle.forEach(popup => popup.addEventListener('click', (e) =>{
+  let activeSlide = document.querySelectorAll(".active");
 
-    let i;
-    for (i = 0; i < activeSlide.length; i++) {
-      activeSlide[i].classList.toggle('active');
-    }
+  let i;
+  for (i = 0; i < activeSlide.length; i++) {
+    activeSlide[i].classList.toggle('active');
+  }
 
-    popup.classList.toggle('active');
-    headerAndSocialSwitch.classList.add('hidden');
-    toggleWrap.classList.add('inactive');
-    closeSlide[i].classList.add('show-close');
-  }));
+  popup.classList.toggle('active');
+  headerAndSocialSwitch.classList.add('hidden');
+  toggleWrap.classList.add('inactive');
+  closeSlide[i].classList.add('show-close');
+}));
 
-  closeSlide.forEach(popup => popup.addEventListener('click', () =>{
-    let removeActive = document.querySelectorAll(".active");
+closeSlide.forEach(popup => popup.addEventListener('click', () =>{
+  let removeActive = document.querySelectorAll(".active");
 
-    let i;
-    for (i = 0; i < removeActive.length; i++) {
-      removeActive[i].classList.remove('active');
-    }
-    popup.classList.remove('show-close');
-    headerAndSocialSwitch.classList.remove('hidden');
-    toggleWrap.classList.remove('inactive');
-  }));
+  let i;
+  for (i = 0; i < removeActive.length; i++) {
+    removeActive[i].classList.remove('active');
+  }
+  popup.classList.remove('show-close');
+  headerAndSocialSwitch.classList.remove('hidden');
+  toggleWrap.classList.remove('inactive');
+}));
+
+// Toggle Say Hi Email Collapsible
+
+const collapse = document.querySelector(".say-hi-collapsible");
+const collapseToggle = document.querySelectorAll(".say-hi-toggle");
+
+collapseToggle.forEach(popup => popup.addEventListener('click', () =>{
+  collapse.classList.toggle('active');
+}));
+
+
+
+
+// let i;
+
+// for (i = 0; i < collapse.length; i++) {
+//   collapseToggle[i].addEventListener("click", function() {
+//     collapse.classList.toggle("active");
+//     // var content = this.nextElementSibling;
+//     // if (content.style.display === "block") {
+//     //   content.style.display = "none";
+//     // } else {
+//     //   content.style.display = "block";
+//     // }
+//   });
+// }
