@@ -787,7 +787,7 @@ section .close-slide.show-close
     .say-hi-collapsible.active .call-to-action-hi textarea
     {
         animation: showHiCollapsible .6s ease-in-out;
-        background: var(--s-gold-fade-2);
+        background: transparent;
     }
     @keyframes showHiCollapsible
     {
@@ -795,19 +795,15 @@ section .close-slide.show-close
         {
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         }
-        80%
-        {
-            background: var(--s-gold-fade-2);
-        }
         100%
         {
-            background: transparent;
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         }
     }
     .say-hi-collapsible.active .call-to-action-hi input,
     .say-hi-collapsible.active .call-to-action-hi textarea
     {
+        font-size: .9rem;
         width: 100%;
         position: relative;
         color: var(--p-text);
@@ -815,12 +811,19 @@ section .close-slide.show-close
         border-top: none;
         border-left: none;
         border-right: none;
-        border-bottom: 1px solid var(--s-gold-fade-2);
+        border-bottom: 1px solid var(--p-gold);
         outline: none;
+        opacity: .6;
+        transition: opacity .3s ease-in-out;
+    }
+    .say-hi-collapsible.active .call-to-action-hi input:hover,
+    .say-hi-collapsible.active .call-to-action-hi textarea:hover
+    {
+        opacity: 1;
     }
     .call-to-action-hi button 
     {
-        width: 25%;
+        width: 15%;
         font-size: 1rem;
         cursor: pointer;
         background: transparent;
@@ -913,7 +916,7 @@ section .close-slide.show-close
     }
     .scrollable-content-wrap span
     {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 200;
     }
     .scrollable-content-right section .stack-lists span
@@ -960,7 +963,7 @@ section .close-slide.show-close
     .display-code-live
     {
         text-align: center;
-        margin-left: 25%;
+        margin-left: 31%;
         bottom: -85px;
         position: absolute;
         height: 100%;
@@ -972,7 +975,7 @@ section .close-slide.show-close
         justify-content: center;
         align-items: center;
         height: 100%;
-        width: 60%;
+        width: 36%;
         opacity: .6;
         display: inline;
         transition: .3s ease-in-out;
@@ -1137,7 +1140,7 @@ section .close-slide.show-close
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        padding-bottom: 300px;
+        padding-bottom: 320px;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
             -ms-flex-direction: row;

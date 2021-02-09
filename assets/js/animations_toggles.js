@@ -144,8 +144,8 @@ function revealCat() {
 
 const slideToggle = document.querySelectorAll('.slide');
 const headerAndSocialSwitch = document.getElementById('headline-and-social');
-const toggleWrap = document.querySelector('.hide-on-slide')
-const closeSlide = document.querySelectorAll('.close-slide')
+const toggleWrap = document.querySelector('.hide-on-slide');
+const closeSlide = document.querySelectorAll('.close-slide');
 
 slideToggle.forEach(popup => popup.addEventListener('click', (e) =>{
   let activeSlide = document.querySelectorAll(".active");
