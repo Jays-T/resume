@@ -713,6 +713,7 @@ section .close-slide.show-close
         position: absolute;
         height: 100%;
     }
+    .error-message::before,
     .call-to-action-hi button::before,
     .call-to-action .display-code-live::before
     {
@@ -728,6 +729,7 @@ section .close-slide.show-close
         position: absolute;
         opacity: .6;
     }
+    .error-message::after,
     .call-to-action-hi button::after,
     .call-to-action .display-code-live::after
     {
@@ -839,6 +841,113 @@ section .close-slide.show-close
         opacity: .4;
         transition: opacity .3s ease-in-out;
     }
+    /* Tooltips for Say Hi Email Form */
+    .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .name span,
+    .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .email span,
+    .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .email-content span
+    {
+        height: 34px;
+        width: 220px;
+        visibility: hidden;
+        color: var(--p-text);
+        background: transparent;
+        position: absolute;
+        left: 70%;
+        top: 15%;
+    }
+    .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .name.active span
+    {
+        height: 34px;
+        width: 220px;
+        visibility: visible;
+        opacity: 1;
+        overflow: hidden;
+        font-weight: 200;
+        border-right: .02em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+            typing 1.5s steps(40, end),
+            blink-caret .75s step-end infinite;
+    }
+    /* The typing effect */
+    @keyframes typing {
+    from { width: 0 }
+    to { width: 220px }
+    }
+    
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--s-gold-fade-6); }
+    }
+    .error-message
+    {
+        width: 220px;
+        visibility: hidden;
+    }
+    .error-message.active
+    {
+        visibility: visible;
+    }
+    /* #emailform .error-message::before
+    {
+        content:'';
+        transform: skew(40deg);
+        background: var(--p-dark-purple);
+        border-left: none;
+        border-bottom: none;
+        border-right: .03em solid var(--p-gold);
+        border-top: .08em solid var(--p-gold);
+        opacity: .8;
+        top: 10px;
+        left: 68%;
+        height: 10px;
+        width: 6px;
+    }
+    #emailform .error-message::after
+    {
+        content:'';
+        transform: skew(-40deg);
+        background: var(--p-dark-purple);
+        border-right: .03em solid var(--p-gold);
+        border-bottom: .08em solid var(--p-gold);
+        opacity: .8;
+        top: 32px;
+        left: 68%;
+        height: 10px;
+        width: 6px;
+    } */
+    #emailform .error-message::before
+    {
+        content:'';
+        transform: skew(-40deg);
+        background: var(--p-dark-purple);
+        border-left: none;
+        border-bottom: none;
+        border-left: .03em solid var(--p-gold);
+        border-top: .08em solid var(--p-gold);
+        opacity: .8;
+        top: 10px;
+        left: 68.4%;
+        height: 12px;
+        width: 6px;
+    }
+    #emailform .error-message::after
+    {
+        content:'';
+        transform: skew(40deg);
+        background: var(--p-dark-purple);
+        border-right: none;
+        border-left: .03em solid var(--p-gold);
+        border-bottom: .08em solid var(--p-gold);
+        opacity: .8;
+        top: 30px;
+        left: 68.4%;
+        height: 12px;
+        width: 6px;
+    }
     .call-to-action-cv
     {
         grid-area: call-to-action-cv;
@@ -929,12 +1038,24 @@ section .close-slide.show-close
         display: inline-block;
         font-size: 2.5rem;
         top: 0;
-        clip-path: polygon(0px 25%, 50% 0px, 100% 25%, 100% 75%, 50% 100%, 0px 75%);
-    }
-    .scrollable-content-right section .stack-lists i
-    {
         color: var(--p-purple);
-        background: linear-gradient(0deg, var(--p-purple) 0%, var(--p-purple) 14%, var(--p-dark-purple) 14%,var(--p-dark-purple) 91%, var(--p-purple) 91%, var(--p-purple) 100%);
+    }
+    .scrollable-content-right section .stack-lists .block-icon
+    {
+        background: var(--p-purple);
+        border-radius: 4px;
+    }
+    .scrollable-content-right section .stack-lists .block-icon::after
+    {
+        content: 'dj';
+        color: var(--p-dark-purple);
+        height: 100%;
+        width: 100%; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 2rem;
+        font-weight: 900;
     }
     .scrollable-content-right section .stack-lists,
     .call-to-action-link
