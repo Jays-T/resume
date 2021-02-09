@@ -891,7 +891,7 @@ section .close-slide.show-close
     {
         visibility: visible;
     }
-    /* #emailform .error-message::before
+    #emailform .error-message::before
     {
         content:'';
         transform: skew(40deg);
@@ -917,35 +917,6 @@ section .close-slide.show-close
         top: 32px;
         left: 68%;
         height: 10px;
-        width: 6px;
-    } */
-    #emailform .error-message::before
-    {
-        content:'';
-        transform: skew(-40deg);
-        background: var(--p-dark-purple);
-        border-left: none;
-        border-bottom: none;
-        border-left: .03em solid var(--p-gold);
-        border-top: .08em solid var(--p-gold);
-        opacity: .8;
-        top: 10px;
-        left: 68.4%;
-        height: 12px;
-        width: 6px;
-    }
-    #emailform .error-message::after
-    {
-        content:'';
-        transform: skew(40deg);
-        background: var(--p-dark-purple);
-        border-right: none;
-        border-left: .03em solid var(--p-gold);
-        border-bottom: .08em solid var(--p-gold);
-        opacity: .8;
-        top: 30px;
-        left: 68.4%;
-        height: 12px;
         width: 6px;
     }
     .call-to-action-cv
