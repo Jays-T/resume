@@ -118,9 +118,11 @@
                 class="form-input"
                 placeholder="Name"
                 required
-                oninput="myFunction()"
+                onfocus="isActive()"
+                
+                oninput="isActive()"
               />
-              <label for="from_name" class="error-message name active"><span>Please input your name.</span></label>
+              <label for="from_name" class="error-message name"><span>Please input your name.</span></label>
               <!-- Sender email add input -->
               <input
                 type="text"
@@ -129,7 +131,9 @@
                 class="form-input"
                 placeholder="Email"
                 required
-                oninput="myFunction()"
+                onfocus="isActive()"
+                
+                oninput="isActive()"
               />
               <label for="from_email" class="error-message email"><span>Please input a valid email.</span></label>
               <!-- Text input for email main content -->
@@ -140,13 +144,16 @@
                 class="form-input"
                 placeholder="Say hi..."
                 required
-                oninput="myFunction()"
+                onfocus="isActive()"
+                
+                oninput="isActive()"
               ></textarea>
               <label for="email_content" class="error-message email-content"><span>Please input your message.</span></label>
               <button
-                id="email-button"
+                id="email_button"
                 class="btn font-montserrat uppercase margin-thin border-thin btn-colors center-block text-spacing"
                 type="submit"
+                onclick="setFocus()"
               >
                 Send Email
               </button>
@@ -339,10 +346,10 @@
 </body>
 <script>
 includeHTML();
-window.onclick = e => {
-  console.log(e.target);  // to get the element
-  console.log(e.target.tagName);  // to get the element tag name alone
-} 
+// window.onclick = e => {
+//   console.log(e.target);  // to get the element
+//   console.log(e.target.tagName);  // to get the element tag name alone
+// } 
 </script>
 <script>
   
@@ -359,6 +366,11 @@ window.onclick = e => {
       crossorigin="anonymous"
     ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
-<!-- <script src="assets/js/footer_animate.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("user_uwE1zr6VGq2l3SFfii47C");
+      })();
+    </script>
     
 </html>

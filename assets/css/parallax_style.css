@@ -873,24 +873,38 @@ section .close-slide.show-close
         white-space: nowrap; /* Keeps the content on a single line */
         margin: 0 auto; /* Gives that scrolling effect as the typing happens */
         letter-spacing: .15em; /* Adjust as needed */
-        animation: 
-            typing 1.6s steps(40, end),
-            blink-caret .75s step-end infinite;
+        transition: opacity .3s ease-in-out;
+    }
+    .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.name.active span
+    {
+        width: 220px;
+        animation: typing 1.6s steps(40, end),
+        blink-caret .75s step-end infinite;
     }
     .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.email.active span
     {
         width: 240px;
         top: 70%;
+        animation: typing 1.6s steps(40, end),
+        blink-caret .75s step-end infinite;
     }
     .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.email-content.active span
     {
-        top: 45%;
+        width: 252px;
+        top: 118%;
+        animation: typingContent 1.6s steps(40, end),
+        blink-caret .75s step-end infinite;
     }
     /* The typing effect */
     @keyframes typing 
     {
     from { width: 0 }
-    to { width: 220px }
+    to { width: 235px }
+    }
+    @keyframes typingContent
+    {
+    from { width: 0 }
+    to { width: 252px }
     }
     /* The typewriter cursor effect */
     @keyframes blink-caret 
@@ -898,11 +912,12 @@ section .close-slide.show-close
     from, to { border-color: transparent }
     50% { border-color: var(--s-gold-fade-6); }
     }
-    .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.valid span
+    /* In input is valid */
+    .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.active.valid span
     {
         animation:
             reverseTyping 1.6s steps(40, start) forwards,
-            blink-caret-purple .75s step-end infinite;
+            blink-caret-purple .75s step-end forwards;
     }
     /* Reverse typewriter */
     @keyframes reverseTyping 
@@ -915,9 +930,14 @@ section .close-slide.show-close
     from, to { border-color: transparent }
     50% { border-color: var(--p-medium-purple); }
     }
+    /* Show if email is invalid */
+    /* .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.valid.invalid-email span
+    {
+        visibility: visible;
+    } */
     .error-message
     {
-        width: 220px;
+        width: 252px;
         visibility: hidden;
     }
     .error-message.active
@@ -959,6 +979,14 @@ section .close-slide.show-close
     #emailform .error-message.email::after
     {
         top: 72px;
+    }
+    #emailform .error-message.email-content::before
+    {
+        top: 86px;
+    }
+    #emailform .error-message.email-content::after
+    {
+        top: 109px;
     }
     .call-to-action-cv
     {
