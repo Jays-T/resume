@@ -118,8 +118,9 @@
                 class="rounded margin-thin border-thin text-spacing"
                 placeholder="Name"
                 required
+                oninput="myFunction()"
               />
-              <div class="error-message name"><span>Please input your name.</span></div>
+              <label for="from_name" class="error-message name active"><span>Please input your name.</span></label>
               <!-- Sender email add input -->
               <input
                 type="text"
@@ -129,17 +130,17 @@
                 placeholder="Email"
                 required
               />
-              <div class="error-message email"><span>Please input a valid email.</span></div>
+              <label for="from_email" class="error-message email"><span>Please input a valid email.</span></label>
               <!-- Text input for email main content -->
               <textarea
                 rows="5"
-                name="content_everyday_gourmet"
+                name="email_content"
                 id="emailcontent"
                 class="rounded margin-thin border-thin text-spacing"
-                placeholder="Say hi...."
+                placeholder="Say hi..."
                 required
               ></textarea>
-              <div class="error-message email-content"><span>Please input your message.</span></div>
+              <label for="email_content" class="error-message email-content"><span>Please input your message.</span></label>
               <button
                 id="email-button"
                 class="btn font-montserrat uppercase margin-thin border-thin btn-colors center-block text-spacing"
@@ -342,22 +343,15 @@ window.onclick = e => {
 } 
 </script>
 <script>
-document.querySelector( "#visitorname" )
-    .addEventListener( "invalid", function( e ) {
-        e.preventDefault();
-        console.log(e);
-        e.target.nextElementSibling.classList.add("active");
-    }, true );
-    document.querySelector( "form" )
-    .addEventListener( "invalid", function( e ) {
-        e.preventDefault();
-    }, true );
+  
 </script>
+
 <script src="assets/js/particles.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/secondapp.js"></script>
 <script src="assets/js/thirdapp.js"></script>
 <script src="assets/js/animations_toggles.js"></script>
+<script src="assets/js/form_validation.js"></script>
 <script
       src="https://kit.fontawesome.com/cb5c413284.js"
       crossorigin="anonymous"

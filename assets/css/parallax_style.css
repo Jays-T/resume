@@ -588,14 +588,20 @@ section .close-slide.show-close
     left: 95.8vw;
     }
 }
-
+/* Ensure stacking icons stack correctly on wide viewports */
+#is-scrollable,
+.has-headline-and-social-links,
+.has-slides
+{
+    max-width: 2000px;
+}
 @media screen and (min-width: 1366px) 
 {
     #is-scrollable
     {
         transition: opacity .4s ease-in-out;
     }
-    .scrollable-content 
+    .scrollable-content
     {
         visibility: visible;
         background: transparent;
@@ -855,7 +861,7 @@ section .close-slide.show-close
         left: 70%;
         top: 15%;
     }
-    .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .name.active span
+    .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.active span
     {
         height: 34px;
         width: 220px;
@@ -868,19 +874,37 @@ section .close-slide.show-close
         margin: 0 auto; /* Gives that scrolling effect as the typing happens */
         letter-spacing: .15em; /* Adjust as needed */
         animation: 
-            typing 1.5s steps(40, end),
+            typing 1.6s steps(40, end),
             blink-caret .75s step-end infinite;
     }
     /* The typing effect */
-    @keyframes typing {
+    @keyframes typing 
+    {
     from { width: 0 }
     to { width: 220px }
     }
-    
     /* The typewriter cursor effect */
-    @keyframes blink-caret {
+    @keyframes blink-caret 
+    {
     from, to { border-color: transparent }
     50% { border-color: var(--s-gold-fade-6); }
+    }
+    .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.valid span
+    {
+        animation:
+            reverseTyping 1.6s steps(40, start) forwards,
+            blink-caret-purple .75s step-end infinite;
+    }
+    /* Reverse typewriter */
+    @keyframes reverseTyping 
+    {
+        from { width: 220px }
+        to { width: 0 }
+    }
+    @keyframes blink-caret-purple
+    {
+    from, to { border-color: transparent }
+    50% { border-color: var(--p-medium-purple); }
     }
     .error-message
     {
