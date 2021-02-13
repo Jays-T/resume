@@ -877,6 +877,15 @@ section .close-slide.show-close
             typing 1.6s steps(40, end),
             blink-caret .75s step-end infinite;
     }
+    .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.email.active span
+    {
+        width: 240px;
+        top: 70%;
+    }
+    .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.email-content.active span
+    {
+        top: 45%;
+    }
     /* The typing effect */
     @keyframes typing 
     {
@@ -942,6 +951,14 @@ section .close-slide.show-close
         left: 68%;
         height: 10px;
         width: 6px;
+    }
+    #emailform .error-message.email::before
+    {
+        top: 49px;
+    }
+    #emailform .error-message.email::after
+    {
+        top: 72px;
     }
     .call-to-action-cv
     {

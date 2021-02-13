@@ -1,56 +1,35 @@
 
-
-let emailForm = document.getElementById("#emailform");
-
-// console.log(fromName.value);
-// console.log(fromEmail.value);
-// console.log(emailContent.value);
-
-// function checkValidity(fromName) {
-
-//     if (fromName.value != fromName.defaultValue) {
-//         fromName.nextElementSibling.classList.remove("active");
-//     }
-
-//     // if (pwd1 == pwd2) {
-//     //   $("#password_confirm").text(`Passwords match!`);
-//     //   $("#register_user_button").removeClass("disabled");
-//     //   passwordsMatch = true;
-//     // } else {
-//     //   $("#password_confirm").text(`Passwords do not match!`);
-//     //   $("#register_user_button").addClass("disabled");
-//     // }
-//   }
-
 function myFunction(e) {
     let isValidated = false;
 
-    let fromName = document.querySelector("#visitorname");
+    let inputValue = document.activeElement.value;
+    let activeInput = document.activeElement;
 
-    // let fromEmail = document.getElementById("#emailaddress");
-    // let emailContent = document.getElementById("#emailcontent");
-
-    let inputValue = document.getElementById("visitorname").value;
 
     if (inputValue != null) {
         console.log(inputValue);
         isValidated = true;
         console.log(isValidated + " should be true");
-        fromName.nextElementSibling.classList.add("valid");
+        document.activeElement.nextElementSibling.classList.add("valid");
     }
 
     console.log(inputValue + " inputValue before if statement");
-    console.log(fromName.value + " fromName");
+    console.log(activeInput.value + " active input value");
+    console.log(activeInput.defaultValue + " active input default value");
     
-    if (fromName.value === fromName.defaultValue){ 
+    if (inputValue === activeInput.defaultValue){ 
         isValidated = false;
         console.log(isValidated + "should be false");
     }
 
     if (isValidated === false ) {
-        fromName.nextElementSibling.classList.remove("valid");
-        fromName.nextElementSibling.classList.add("active")
+        document.activeElement.nextElementSibling.classList.remove("valid");
+        document.activeElement.nextElementSibling.classList.add("active")
     }
+
+    // if (activeInput != document.activeElement) {
+
+    // }
   }
 
 

@@ -115,7 +115,7 @@
                 type="text"
                 name="from_name"
                 id="visitorname"
-                class="rounded margin-thin border-thin text-spacing"
+                class="form-input"
                 placeholder="Name"
                 required
                 oninput="myFunction()"
@@ -126,9 +126,10 @@
                 type="text"
                 name="from_email"
                 id="emailaddress"
-                class="rounded margin-thin border-thin text-spacing"
+                class="form-input"
                 placeholder="Email"
                 required
+                oninput="myFunction()"
               />
               <label for="from_email" class="error-message email"><span>Please input a valid email.</span></label>
               <!-- Text input for email main content -->
@@ -136,9 +137,10 @@
                 rows="5"
                 name="email_content"
                 id="emailcontent"
-                class="rounded margin-thin border-thin text-spacing"
+                class="form-input"
                 placeholder="Say hi..."
                 required
+                oninput="myFunction()"
               ></textarea>
               <label for="email_content" class="error-message email-content"><span>Please input your message.</span></label>
               <button
