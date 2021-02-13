@@ -154,11 +154,15 @@ slideToggle.forEach(popup => popup.addEventListener('click', (e) =>{
   for (i = 0; i < activeSlide.length; i++) {
     activeSlide[i].classList.toggle('active');
   }
-
   popup.classList.toggle('active');
   headerAndSocialSwitch.classList.add('hidden');
   toggleWrap.classList.add('inactive');
-  closeSlide[i].classList.add('show-close');
+
+  if (closeSlide[0].classList.contains('show-close')){
+  } else {
+    closeSlide[0].classList.add('show-close');
+  }
+
 }));
 
 closeSlide.forEach(popup => popup.addEventListener('click', () =>{
@@ -175,8 +179,8 @@ closeSlide.forEach(popup => popup.addEventListener('click', () =>{
 
 // Toggle Say Hi Email Collapsible
 
-const collapse = document.querySelector(".say-hi-collapsible");
 const collapseToggle = document.querySelectorAll(".say-hi-toggle");
+const collapse = document.querySelector(".say-hi-collapsible");
 
 collapseToggle.forEach(popup => popup.addEventListener('click', () =>{
   collapse.classList.toggle('active');
