@@ -5,7 +5,7 @@
 * Browsers: last 4 version
 */
 :root {
-    /* P = Primary | S = Secondary | T = Tertiary */
+    /* P = Primary | S = Secondary */
     --p-purple: rgb(53, 10, 95);
     --p-medium-purple: rgb(39, 18, 46);
     --p-dark-purple: rgb(18, 1, 16);
@@ -63,6 +63,8 @@ body section
 {
     max-width: 1920px;
 }
+
+/* Loading Animations */
 .loading 
 {
     display: inline-block;
@@ -138,7 +140,8 @@ body section
                 clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 }
-/* Scrollable Content */
+
+/* Hide Scrollable Content On Mobile */
 .scrollable-content 
 {
     visibility: hidden;
@@ -163,6 +166,7 @@ body section
     -webkit-box-shadow: inset 0 0 5px var(--p-medium-purple);
             box-shadow: inset 0 0 5px var(--p-medium-purple);
 }
+
 /* Particles animation */
 #particles-js,
 #particles-js-one,
@@ -173,6 +177,8 @@ body section
     background: transparent;
     opacity: .8;
 }
+
+/* Ignore pointer events */
 #draw-content,
 #cat_wrapper,
 #the_cat,
@@ -190,6 +196,7 @@ body section[id^="particles"]
     width: 100%;
     height: 100%;
 }
+
 /* Main Content Sliders */
 .slide-container 
 {
@@ -267,6 +274,7 @@ section #is-scrollable .show-slides,
     -o-transition: 1s;
     transition: 1s;
 }
+
 /* SLIDE ONE */
 .slide-container .slide.slide-one
 {
@@ -304,6 +312,7 @@ section #is-scrollable .show-slides,
     -webkit-clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
             clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
 }
+
 /* SLIDE TWO */
 .slide-container .slide.slide-two
 {
@@ -331,6 +340,7 @@ section #is-scrollable .show-slides,
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
 }
+
 /* SLIDE THREE */
 .slide-container .slide.slide-three
 {
@@ -358,6 +368,7 @@ section #is-scrollable .show-slides,
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
 }
+
 /* Sliders Pseudo Elements Styling */
 .slide-container .slide.active.slide-one::after,
 .slide-container .slide.active.slide-two::after,
@@ -381,6 +392,7 @@ section #is-scrollable .show-slides,
     pointer-events: all;
     z-index: 60;
 }
+
 /* Sliders Active State */
 .slide-container .slide.active
 {
@@ -448,6 +460,8 @@ section #is-scrollable .show-slides,
          -o-transition-delay: .5s;
             transition-delay: .5s;
 }
+
+/* Close slide button */
 section .close-slide
 {
     display: -webkit-box;
@@ -502,6 +516,7 @@ section .close-slide.show-close
     top: 85%;
     left: 80vw;
 }
+
 /* Media Queries */
 @media screen and (min-width: 540px) and (min-height: 720px)
 {
@@ -588,6 +603,7 @@ section .close-slide.show-close
     left: 95.8vw;
     }
 }
+
 /* Ensure stacking icons stack correctly on wide viewports */
 #is-scrollable,
 .has-headline-and-social-links,
@@ -597,6 +613,7 @@ section .close-slide.show-close
 }
 @media screen and (min-width: 1366px) 
 {
+    /* Scrollable Content */
     #is-scrollable
     {
         transition: opacity .4s ease-in-out;
@@ -621,6 +638,8 @@ section .close-slide.show-close
     {
         grid-area: scrollable-left;
     }
+
+    /* Scrollable Projects Section */
     .scrollable-content-right
     {
         z-index: 1;
@@ -699,6 +718,7 @@ section .close-slide.show-close
         margin-bottom: 38px;
         background: var(--p-dark-purple-shade);
     }
+
     /* CALL TO ACTION DISPLAY STYLES */
     section .call-to-action
     {
@@ -772,7 +792,8 @@ section .close-slide.show-close
         display: none;
         overflow: hidden;
     }
-    /* ACTIVE states for Say Hi Email form */
+
+    /* ACTIVE states for collapsible Email form */
     .say-hi-collapsible.active
     {
         display: flex;
@@ -847,6 +868,7 @@ section .close-slide.show-close
         opacity: .4;
         transition: opacity .3s ease-in-out;
     }
+
     /* Tooltips for Say Hi Email Form */
     .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .name span,
     .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .email span,
@@ -875,12 +897,16 @@ section .close-slide.show-close
         letter-spacing: .15em; /* Adjust as needed */
         transition: opacity .3s ease-in-out;
     }
+
+    /* Tooltip for Name input */
     .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.name.active span
     {
         width: 220px;
         animation: typing 1.6s steps(40, end),
         blink-caret .75s step-end infinite;
     }
+
+    /* Tooltip for Email input */
     .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.email.active span
     {
         width: 240px;
@@ -888,6 +914,8 @@ section .close-slide.show-close
         animation: typing 1.6s steps(40, end),
         blink-caret .75s step-end infinite;
     }
+
+    /* Tooltip for Message input */
     .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.email-content.active span
     {
         width: 252px;
@@ -912,14 +940,14 @@ section .close-slide.show-close
     from, to { border-color: transparent }
     50% { border-color: var(--s-gold-fade-6); }
     }
-    /* In input is valid */
+    /* If input is valid */
     .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.active.valid span
     {
         animation:
             reverseTyping 1.6s steps(40, start) forwards,
             blink-caret-purple .75s step-end forwards;
     }
-    /* Reverse typewriter */
+    /* Reverse typewriter effect */
     @keyframes reverseTyping 
     {
         from { width: 220px }
@@ -930,11 +958,7 @@ section .close-slide.show-close
     from, to { border-color: transparent }
     50% { border-color: var(--p-medium-purple); }
     }
-    /* Show if email is invalid */
-    /* .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.valid.invalid-email span
-    {
-        visibility: visible;
-    } */
+    /* Show if form input is invalid */
     .error-message
     {
         width: 252px;
@@ -944,6 +968,14 @@ section .close-slide.show-close
     {
         visibility: visible;
     }
+
+    /* States and positioning for elements skewed for tooltip visual effect
+
+      \ 
+        please input valid .....
+      /
+
+    */
     #emailform .error-message::before
     {
         content:'';
@@ -1048,6 +1080,8 @@ section .close-slide.show-close
     {
         opacity: 1;
     }
+
+    /* Screen Right Projects Stack Icons */
     .stack-lists
     {
         display: inline-block;
@@ -1113,6 +1147,8 @@ section .close-slide.show-close
     {
         bottom: 0;
     }
+
+    /* Screen Right Projects Code and View Live buttons */
     .has-display-code
     {
         display: grid;
@@ -1149,6 +1185,8 @@ section .close-slide.show-close
     {
         grid-area: display-code-live-right;
     }
+
+    /* Screen Right Button Borders */
     .display-code-live::before
     {
         content:'';
@@ -1213,6 +1251,8 @@ section .close-slide.show-close
     {
         opacity: 0;
     }
+
+    /* Animated Golden Box */
     .scrollable-content .scrollable-content-toggle
     {
         background:var(--s-gold-fade-8);
@@ -1293,6 +1333,8 @@ section .close-slide.show-close
             margin-top: -6px;
         }
     }
+
+    /* Screen Left Stacking Icons */
     .scrollable-content-left .projects-icons
     {
         position: -webkit-sticky;
@@ -1422,6 +1464,8 @@ section .close-slide.show-close
                             var(--p-dark-purple) 10%,var(--p-dark-purple) 92%, 
                                     var(--p-purple) 92%, var(--p-purple) 100%);
     }
+
+    /* Screen Right Navigation Slides */
     .slide-container
     {
         z-index: 20;
@@ -1561,6 +1605,7 @@ section .close-slide.show-close
         font-size: 1.1rem;
     }
 }
+
 /* END MEDIA QUERY */
 section .cat-svg 
 {
@@ -1639,6 +1684,8 @@ section header .headline .jays
     border-radius: 2px;
     background: var(--p-dark-purple);
 }
+
+/* Screen Left Landing Page Headline Animations */
 section header .headline .angry
 {
     position: relative;
@@ -1735,6 +1782,8 @@ section header .headline .jays
                 clip-path: polygon(100% 0, 100% 0, 100% 10%, 100% 60%, 100% 70%, 100% 70%, 100% 60%, 100% 10%);
     }
 }
+
+/* Screen Left Landing Page Icons */
 section header .social-media
 {
     top: 54px;
@@ -1780,26 +1829,23 @@ section header .social-media a:hover::before
     -webkit-clip-path: polygon(100% 0, 90% 0, 90% 100%, 100% 100%);
             clip-path: polygon(100% 0, 90% 0, 90% 100%, 100% 100%);
 }
-section .group
+
+/* Screen Left Landing Page Angry Cat Logo Fade In/Out */
+section .headline-anim-wrap
 {
     position: absolute;
     left: 100%;
     top: -18px;
     z-index: 9999;
 }
-.codepen
-{
-    width: 70px;
-    height: 70px;
-}
-section .group .example 
+section .headline-anim-wrap .logo-wrap 
 {
     opacity: 1;
     position: relative;
 	width: 55px;
 	height: 70px;
 }
-section .group .example .exCPlogo
+section .headline-anim-wrap .logo-wrap .angry-cat-logo
 {
     position: absolute;
     width: 100%;
@@ -1813,10 +1859,10 @@ section .group .example .exCPlogo
     /* background-color: transparent; */
     -webkit-clip-path: polygon( 100% 0, 50% 50%, 50% 50%, 50% 50%, 0 100%, 100% 100%, 100% 0, 50% 50%, 50% 50%, 50% 50%, 0 100%, 0 0, 100% 0, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 0 100%, 100% 100%, 100% 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 0 100%, 0 100%, 0 0, 0 0, 0 0, 0 0, 50% 50%);
     clip-path: polygon( 100% 0, 50% 50%, 50% 50%, 50% 50%, 0 100%, 100% 100%, 100% 0, 50% 50%, 50% 50%, 50% 50%, 0 100%, 0 0, 100% 0, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 0 100%, 100% 100%, 100% 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 0 100%, 0 100%, 0 0, 0 0, 0 0, 0 0, 50% 50%);
-    -webkit-animation: exampleCP 14s infinite;
-    animation: exampleCP 14s infinite;
+    -webkit-animation: acLogoFadeInOut 14s infinite;
+    animation: acLogoFadeInOut 14s infinite;
 }
-@-webkit-keyframes exampleCP
+@-webkit-keyframes acLogoFadeInOut
 {
     0%, 100%
     {
@@ -1830,17 +1876,6 @@ section .group .example .exCPlogo
         width: 70px;
         background-color: transparent;
     }
-    /* Commented out codepen logo animation transform */
-    /* 23%, 48%
-    {
-        width: 55px;
-        -webkit-clip-path: polygon( 50% 0, 50% 5%, 93% 35%, 50% 65%, 50% 70%, 100% 35%, 50% 0, 50% 5%, 7% 35%, 50% 65%, 50% 70%, 0 35%, 50% 0, 50% 30%, 52% 31%, 52% 6%, 50% 5%, 48% 6%, 48% 31%, 50% 30%, 50% 35%, 93% 65%, 52% 94%, 52% 66%, 50% 70%, 50% 100%, 100% 65%, 100% 35%, 96% 37%, 96% 62%, 50% 30%, 50% 35%, 7% 65%, 48% 94%, 48% 66%, 50% 70%, 50% 95%, 50% 100%, 0 65%, 0% 35%, 4% 37%, 4% 62%, 50% 30%);
-        clip-path: polygon( 50% 0, 50% 5%, 93% 35%, 50% 65%, 50% 70%, 100% 35%, 50% 0, 50% 5%, 7% 35%, 50% 65%, 50% 70%, 0 35%, 50% 0, 50% 30%, 52% 31%, 52% 6%, 50% 5%, 48% 6%, 48% 31%, 50% 30%, 50% 35%, 93% 65%, 52% 94%, 52% 66%, 50% 70%, 50% 100%, 100% 65%, 100% 35%, 96% 37%, 96% 62%, 50% 30%, 50% 35%, 7% 65%, 48% 94%, 48% 66%, 50% 70%, 50% 95%, 50% 100%, 0 65%, 0% 35%, 4% 37%, 4% 62%, 50% 30%);
-        transform: translateY(-34px);
-        transform: translateX(-48px);
-        background-color: #faebd770;
-    }
-    56%, 70% */
     26%, 36%
     {
         opacity: 0;
@@ -1860,7 +1895,7 @@ section .group .example .exCPlogo
         background-color: transparent;
     }
 }
-@keyframes exampleCP
+@keyframes acLogoFadeInOut
 {
     0%, 100%
     {
@@ -1874,17 +1909,6 @@ section .group .example .exCPlogo
         width: 70px;
         background-color: transparent;
     }
-    /* Commented out codepen logo animation transform */
-    /* 23%, 48%
-    {
-        width: 55px;
-        -webkit-clip-path: polygon( 50% 0, 50% 5%, 93% 35%, 50% 65%, 50% 70%, 100% 35%, 50% 0, 50% 5%, 7% 35%, 50% 65%, 50% 70%, 0 35%, 50% 0, 50% 30%, 52% 31%, 52% 6%, 50% 5%, 48% 6%, 48% 31%, 50% 30%, 50% 35%, 93% 65%, 52% 94%, 52% 66%, 50% 70%, 50% 100%, 100% 65%, 100% 35%, 96% 37%, 96% 62%, 50% 30%, 50% 35%, 7% 65%, 48% 94%, 48% 66%, 50% 70%, 50% 95%, 50% 100%, 0 65%, 0% 35%, 4% 37%, 4% 62%, 50% 30%);
-        clip-path: polygon( 50% 0, 50% 5%, 93% 35%, 50% 65%, 50% 70%, 100% 35%, 50% 0, 50% 5%, 7% 35%, 50% 65%, 50% 70%, 0 35%, 50% 0, 50% 30%, 52% 31%, 52% 6%, 50% 5%, 48% 6%, 48% 31%, 50% 30%, 50% 35%, 93% 65%, 52% 94%, 52% 66%, 50% 70%, 50% 100%, 100% 65%, 100% 35%, 96% 37%, 96% 62%, 50% 30%, 50% 35%, 7% 65%, 48% 94%, 48% 66%, 50% 70%, 50% 95%, 50% 100%, 0 65%, 0% 35%, 4% 37%, 4% 62%, 50% 30%);
-        transform: translateY(-34px);
-        transform: translateX(-48px);
-        background-color: #faebd770;
-    }
-    56%, 70% */
     26%, 36%
     {
         opacity: 0;
@@ -1904,6 +1928,8 @@ section .group .example .exCPlogo
         background-color: transparent;
     }
 }
+
+/* Setting background linear gradients and clip paths to give Screen Left Icons Hexagonal Borders/Shape */
 #skills-icons header .social-media .media-link-cv i,
 #skills-icons header .social-media .media-link-linkedin i,
 #skills-icons header .social-media .media-link-github i,
@@ -2002,6 +2028,7 @@ section #headline-and-social header .social-media .media-link-cv .cv-download-ic
                 transform: scale(1);
     }
 }
+
 /* Draw main cat Animation */
 svg .draw 
 {
@@ -2060,7 +2087,9 @@ svg .draw
         stroke-dashoffset: 53765.1015625;
     }
 }
-svg .draw-two 
+
+/* If used with relevant JavaScript, allows the Main Cat Animation SVG to draw according to the amount scrolled by the User */
+/* svg .draw-two 
 {
     stroke-width: 1.75rem;
     stroke-dasharray: 53765.1015625;
@@ -2089,8 +2118,9 @@ svg .draw-two
     100% {
         opacity: .6;
     }
-}
-/* Loader Animation */
+} */
+
+/* Loader Animation Small Golden Can in Hexagon */
 svg .loading-draw 
 {
     stroke-width: .65rem;
@@ -2168,6 +2198,8 @@ svg .loading-draw
         opacity: .1;
     }
 }
+
+/* Fade the Loader, triggered on page fully loaded */
 .fade-out-loader 
 {
     -webkit-animation: fadeOutLoader 3.4s forwards;
@@ -2207,6 +2239,7 @@ svg .loading-draw
         visibility: hidden;
     }
 }
+
 /* End Loader Animation */
 .overlay 
 {
@@ -2260,6 +2293,8 @@ svg .loading-draw
     display: none;
     }
 }
+
+/* Intro Text Flash */
 .headline 
 {
     position: relative;
@@ -2478,14 +2513,6 @@ body .container
     display: none;
     opacity: 0;
 }
-#paper-background 
-{
-    color: #27122e;
-    position: fixed;
-    z-index: -1;
-    height: 100vh;
-    width: 100vw;
-}
 #loader 
 {
     position: fixed;
@@ -2536,7 +2563,8 @@ body .container
 {
     opacity: 1;
 }
-/* SLIDES AND SLIDE ANIMATIONS */
+
+/* Skills background */
 .slide .slide-content .skills
 {
     display: -webkit-box;

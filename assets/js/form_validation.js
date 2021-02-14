@@ -2,6 +2,8 @@ let formInputs = document.querySelectorAll('.form-input');
 const emailForm = document.getElementById('emailform');
 const emailSubmit = document.getElementById('email_button');
 const emailInput = document.getElementById('emailaddress');
+const validation = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+
 
 // Set focus on first input without value
 function setFocus() {
@@ -19,6 +21,12 @@ function isActive(e) {
     let isValidated;
     let inputValue = document.activeElement.value;
     let activeInput = document.activeElement;
+
+    // if (emailInput.value.match(validation)) {
+    //     emailValidated = true;
+    // } else {
+    //     emailValidated = false;
+    // }
 
     if (inputValue != null) {
         isValidated = true;
@@ -58,7 +66,6 @@ document.querySelector( "#visitorname" )
 // Validate email syntax on submit
 emailForm.addEventListener('submit', (e) => {
     let visitorEmail = emailInput.value;
-    let validation = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
     let emailValidated = false;
     const service_id = "angry_cat_ao@heih!1";
     const template_id = "portfolio_cX69AB4A";
