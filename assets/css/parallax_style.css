@@ -665,13 +665,17 @@ section .close-slide.show-close
     {
         margin-bottom: 120px;
     }
+    .scrollable-content-right .box-corners 
+    {
+        position: relative;
+    }
     .scrollable-content-right .box-corners::before
     {
         position: absolute;
         content: '';
         height: 28px;
         width: 16px;
-        top: 115px;
+        top: -28px;
         left: 7%;
         border-top: solid 3px var(--s-gold-fade-6);
         border-left: solid 3px var(--s-gold-fade-6);
@@ -683,7 +687,7 @@ section .close-slide.show-close
         content: '';
         height: 28px;
         width: 16px;
-        bottom: 80px;
+        bottom: -28px;
         right: 4%;
         border-bottom: solid 3px var(--s-gold-fade-6);
         border-right: solid 3px var(--s-gold-fade-6);
@@ -701,7 +705,7 @@ section .close-slide.show-close
     }
     .scrollable-content-headline-wrap
     {
-        margin-bottom: 100px;
+        margin-bottom: 20px;
     }
     .scrollable-content-right .scrollable-headline
     {
@@ -1203,7 +1207,7 @@ section .close-slide.show-close
     {
         text-align: center;
         margin-left: 31%;
-        bottom: -85px;
+        /* bottom: -85px; */
         position: absolute;
         height: 100%;
     }

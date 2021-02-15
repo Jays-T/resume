@@ -22,7 +22,7 @@ function setFocus() {
 // Checks if active input has value
 // 
 function isActive(e) {
-    let isInputValidated;
+    let isInputValidated = false;
     let isEmailValidated = false;
     let isMessageValidated = false;
     let isNameValidated = false;
@@ -64,31 +64,49 @@ function isActive(e) {
         isInputValidated = false;
     }
 
+    // SHOW OR REMOVE TOOTIP
+    // SWITCH TEXT INPUT COLOR ON VALID OR INVALID
     switch (isInputValidated) {
         case true:
             activeInput.nextElementSibling.classList.add("valid");
+            activeInput.style.color = "#0ada0acc";
             break;
         case false:
             activeInput.nextElementSibling.classList.remove("valid");
             activeInput.nextElementSibling.classList.add("active");
+            activeInput.style.color = "#ff0000";
             break;
     }
 
-    switch (isEmailValidated && isNameValidated) {
+    // SWITCH TEXT INPUT INDIVIDUALLY COLOR ON VALID OR INVALID
+    switch (isNameValidated) {
         case true:
-            for (i = 0; i < formInputs.length; i++) {
-                formInputs[i].style.color = "#0ada0acc"
-                }
-            
+            nameInput.style.color = "#0ada0acc";
             break;
         case false:
-            for (i = 0; i < formInputs.length; i++) {
-                formInputs[i].style.color = "#ff0000"
-                }
-            
+            nameInput.style.color = "#ff0000";
             break;
     }
 
+    switch (isEmailValidated) {
+        case true:
+            emailInput.style.color = "#0ada0acc";
+            break;
+        case false:
+            emailInput.style.color = "#ff0000";
+            break;
+    }
+
+    switch (isMessageValidated) {
+        case true:
+            messageInput.style.color = "#0ada0acc";
+            break;
+        case false:
+            messageInput.style.color = "#ff0000";
+            break;
+    }
+
+    // SHOW SEND EMAIL BUTTON
     switch (isNameValidated && isEmailValidated && isMessageValidated) {
         case true:
             showEmailButton[1].classList.add('active');
@@ -100,20 +118,15 @@ function isActive(e) {
 }
 
 // Trigger animation for input currently in focus
-
 formInputs.forEach(focus => focus.addEventListener('focusout', () => {
     focus.nextElementSibling.classList.remove("active");
 }));
 
 // Double up Prevent default browser form invalid input popup
-document.querySelector( "#visitorname" )
+document.querySelector( "form" )
     .addEventListener( "invalid", function( e ) {
         e.preventDefault();
-    }, true );
-    document.querySelector( "form" )
-    .addEventListener( "invalid", function( e ) {
-        e.preventDefault();
-    }, true );
+}, true );
 
 // Validate email syntax on submit
 emailForm.addEventListener('submit', (e) => {
