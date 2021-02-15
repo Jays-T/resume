@@ -657,13 +657,9 @@ section .close-slide.show-close
     {
         position: relative;
         width: 85%;
-        background: linear-gradient(-320deg, var(--s-dark-purple-fade-2) 0%, transparent 90%, transparent 100%);
+        /* background: var(--s-dark-purple-fade-2); */
         margin-top: 80px;
         margin-bottom: 380px;
-    }
-    .scrollable-content-right section:nth-child(even)  
-    {
-        background: linear-gradient(320deg, var(--s-dark-purple-fade-2) 0%, transparent 90%, transparent 100%);
     }
     .scrollable-content-right section:nth-last-child(1)
     {
@@ -695,13 +691,13 @@ section .close-slide.show-close
     }
     .scrollable-content-right .call-to-action .box-corners::before
     {
-        top: -12%;
-        left: 30%;
+        top: 0;
+        left: 0;
     }
     .scrollable-content-right .call-to-action .box-corners::after
     {
-        bottom: -280%;
-        right: 30%;
+        bottom: 0;
+        right: 0;
     }
     .scrollable-content-headline-wrap
     {
@@ -727,7 +723,7 @@ section .close-slide.show-close
         position: relative;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "call-to-action-consult call-to-action-hi call-to-action-cv";
+        grid-template-areas: "call-to-action-hi call-to-action-consult call-to-action-cv";
         transition: all .3s ease-in-out;
     }
     .call-to-action .display-code-live
@@ -740,7 +736,6 @@ section .close-slide.show-close
         height: 100%;
     }
     .error-message::before,
-    .call-to-action-hi button::before,
     .call-to-action .display-code-live::before
     {
         content:'';
@@ -756,7 +751,6 @@ section .close-slide.show-close
         opacity: .6;
     }
     .error-message::after,
-    .call-to-action-hi button::after,
     .call-to-action .display-code-live::after
     {
         content:'';
@@ -771,6 +765,17 @@ section .close-slide.show-close
         position: absolute;
         opacity: .6;
     }
+    .call-to-action-hi button::before,
+    .call-to-action-hi button::after
+    {
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+    }
+    .call-to-action-hi.active button::before,
+    .call-to-action-hi.active button::after
+    {
+        opacity: 1;
+    }
     .call-to-action-consult
     {
         grid-area: call-to-action-consult;
@@ -781,18 +786,27 @@ section .close-slide.show-close
     }
     .say-hi-form
     {
-        width: 100%;
-        height: 100%;
-        border: 1px solid var(--s-gold-fade-6);
-        border-radius: 8px;
-        padding: 12px;
+        position: absolute;
+        left: 5%;
+        width: 90%;
+        /* height: 100%; */
+        /* border: 1px solid var(--s-gold-fade-6);
+        border-radius: 8px; */
+        padding: 40px;
     }
     .scrollable-content-wrap.say-hi-collapsible
     {
         display: none;
         overflow: hidden;
     }
-
+    
+    .scrollable-content-wrap.say-hi-collapsible .call-to-action
+    {
+        height: 0;
+        transition: height .3s ease-in-out;
+        grid-template-columns: 1fr;
+        grid-template-areas: "call-to-action-hi";
+    }
     /* ACTIVE states for collapsible Email form */
     .say-hi-collapsible.active
     {
@@ -811,6 +825,11 @@ section .close-slide.show-close
         {
             opacity: 1;
         }
+    }
+    .scrollable-content-wrap.say-hi-collapsible.active .call-to-action
+    {
+        width: 100%;
+        height: 300px;
     }
     .say-hi-collapsible.active .call-to-action-hi input,
     .say-hi-collapsible.active .call-to-action-hi textarea
@@ -840,7 +859,7 @@ section .close-slide.show-close
         border-top: none;
         border-left: none;
         border-right: none;
-        border-bottom: 1px solid var(--p-gold);
+        border-bottom: 1px solid var(--s-gold-fade-6);
         outline: none;
         opacity: .6;
         transition: opacity .3s ease-in-out;
@@ -850,23 +869,35 @@ section .close-slide.show-close
     {
         opacity: 1;
     }
+    #emailform
+    {
+        /* position: relative; */
+        width:66%;
+    }
     .call-to-action-hi button 
     {
-        width: 15%;
+        width: 20%;
         font-size: 1rem;
-        cursor: pointer;
+        
         background: transparent;
         text-decoration: none;
         text-align: center;
         color: var(--p-text);
+        border-bottom: 1px solid var(--p-dark-purple);
         border: none;
         outline: none;
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -280px;
-        opacity: .4;
+        left: 74%;
+        transform: translateY(-50%);
+        bottom: 40px;
+        opacity: .1;
         transition: opacity .3s ease-in-out;
+    }
+    .call-to-action-hi.active button
+    {
+        cursor: pointer;
+        border-bottom: 1px solid var(--p-gold);
+        opacity: .6;
     }
 
     /* Tooltips for Say Hi Email Form */
@@ -881,7 +912,7 @@ section .close-slide.show-close
         background: transparent;
         position: absolute;
         left: 70%;
-        top: 15%;
+        top: 42px;
     }
     .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.active span
     {
@@ -910,7 +941,7 @@ section .close-slide.show-close
     .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.email.active span
     {
         width: 240px;
-        top: 70%;
+        top: 80px;
         animation: typing 1.6s steps(40, end),
         blink-caret .75s step-end infinite;
     }
@@ -919,7 +950,7 @@ section .close-slide.show-close
     .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.email-content.active span
     {
         width: 252px;
-        top: 118%;
+        top: 118px;
         animation: typingContent 1.6s steps(40, end),
         blink-caret .75s step-end infinite;
     }
@@ -944,7 +975,7 @@ section .close-slide.show-close
     .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.active.valid span
     {
         animation:
-            reverseTyping 1.6s steps(40, start) forwards,
+            reverseTyping 1.2s steps(40, start) forwards,
             blink-caret-purple .75s step-end forwards;
     }
     /* Reverse typewriter effect */
@@ -986,10 +1017,11 @@ section .close-slide.show-close
         border-right: .03em solid var(--p-gold);
         border-top: .08em solid var(--p-gold);
         opacity: .8;
-        top: 10px;
+        top: 40px;
         left: 68%;
         height: 10px;
         width: 6px;
+        transition: opacity 1.6s ease-in-out;
     }
     #emailform .error-message::after
     {
@@ -999,26 +1031,36 @@ section .close-slide.show-close
         border-right: .03em solid var(--p-gold);
         border-bottom: .08em solid var(--p-gold);
         opacity: .8;
-        top: 32px;
+        top: 62px;
         left: 68%;
         height: 10px;
         width: 6px;
+        transition: opacity 1.6s ease-in-out;
     }
     #emailform .error-message.email::before
     {
-        top: 49px;
+        top: 78px;
     }
     #emailform .error-message.email::after
     {
-        top: 72px;
+        top: 100px;
     }
     #emailform .error-message.email-content::before
     {
-        top: 86px;
+        top: 116px;
     }
     #emailform .error-message.email-content::after
     {
-        top: 109px;
+        top: 138px;
+    }
+    /* Fade out on valid class*/
+    .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .active.valid.error-message::before
+    {
+        opacity: 0;
+    }
+    .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .active.valid.error-message::after
+    {
+        opacity: 0;
     }
     .call-to-action-cv
     {
@@ -1137,7 +1179,7 @@ section .close-slide.show-close
         opacity: .5;
         transition: .3s ease-in-out;
     }
-    .call-to-action-hi button:hover,
+    .call-to-action-hi.active button:hover,
     .scrollable-content-right section .stack-lists:hover,
     .call-to-action-link:hover
     {

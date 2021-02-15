@@ -1,13 +1,16 @@
 let formInputs = document.querySelectorAll('.form-input');
-const emailForm = document.getElementById('emailform');
 const emailSubmit = document.getElementById('email_button');
-const emailInput = document.getElementById('emailaddress');
-const validation = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+const emailForm = document.getElementById('emailform');
 
+const emailInput = document.getElementById('emailaddress');
+const nameInput = document.getElementById('visitorname');
+const messageInput = document.getElementById('emailcontent');
+
+const validation = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+const nameAndMessageValidation = /\d/;
 
 // Set focus on first input without value
 function setFocus() {
-    console.log(formInputs);
     for (i = 0; i < formInputs.length; i++) {
         if (!formInputs[i].value) {
             formInputs[i].focus();
@@ -17,32 +20,81 @@ function setFocus() {
 }
 
 // Checks if active input has value
+// 
 function isActive(e) {
-    let isValidated;
+    let isInputValidated;
+    let isEmailValidated = false;
+    let isMessageValidated = false;
+    let isNameValidated = false;
     let inputValue = document.activeElement.value;
     let activeInput = document.activeElement;
+    let showEmailButton = document.querySelectorAll('.call-to-action-hi');
 
-    // if (emailInput.value.match(validation)) {
-    //     emailValidated = true;
-    // } else {
-    //     emailValidated = false;
-    // }
+    // EMAIL VALIDATION
+    if (emailInput.value.match(validation)) {
+        isEmailValidated = true;
+    } 
+    else {
+        isEmailValidated = false;
+    }
 
+    // NAME VALIDATION
+    if (nameAndMessageValidation.test(nameInput.value)) {
+        isNameValidated = false;
+    }
+    else {
+        isNameValidated = true;
+    }
+
+    // MESSAGE VALIDATION
+    if (messageInput.value === messageInput.defaultValue) {
+        isMessageValidated = false;
+    }
+    else {
+        isMessageValidated = true;
+    }
+
+
+    // CHECK INPUTS ARE NOT EMPTY
     if (inputValue != null) {
-        isValidated = true;
+        isInputValidated = true;
     }
 
     if (inputValue === activeInput.defaultValue){ 
-        isValidated = false;
+        isInputValidated = false;
     }
 
-    switch (isValidated) {
+    switch (isInputValidated) {
         case true:
             activeInput.nextElementSibling.classList.add("valid");
             break;
         case false:
             activeInput.nextElementSibling.classList.remove("valid");
             activeInput.nextElementSibling.classList.add("active");
+            break;
+    }
+
+    switch (isEmailValidated && isNameValidated) {
+        case true:
+            for (i = 0; i < formInputs.length; i++) {
+                formInputs[i].style.color = "#0ada0acc"
+                }
+            
+            break;
+        case false:
+            for (i = 0; i < formInputs.length; i++) {
+                formInputs[i].style.color = "#ff0000"
+                }
+            
+            break;
+    }
+
+    switch (isNameValidated && isEmailValidated && isMessageValidated) {
+        case true:
+            showEmailButton[1].classList.add('active');
+            break;
+        case false:
+            showEmailButton[1].classList.remove('active');
             break;
     }
 }
@@ -53,7 +105,7 @@ formInputs.forEach(focus => focus.addEventListener('focusout', () => {
     focus.nextElementSibling.classList.remove("active");
 }));
 
-// Prevent default browser form invalid input popup
+// Double up Prevent default browser form invalid input popup
 document.querySelector( "#visitorname" )
     .addEventListener( "invalid", function( e ) {
         e.preventDefault();
@@ -93,19 +145,3 @@ emailForm.addEventListener('submit', (e) => {
     }
     return false;
 });
-
-// event.preventDefault();
-
-//   var service_id = "everyday_gourmet";
-//   var template_id = "everyday_gourmet_email";
-
-//   myform.find("button").text("Sending...");
-//   emailjs.sendForm(service_id,template_id,myform[0])
-//   	.then(function(){
-//         myform.find("button").text("Sent!");
-//     }, function(err) {
-//        alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-//        myform.find("button").text("Retry");
-//     });
-//     document.getElementById('emailform').reset();
-//   return false;
