@@ -9,6 +9,10 @@ const messageInput = document.getElementById('emailcontent');
 const validation = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
 const nameAndMessageValidation = /\d/;
 
+let isEmailValidated = false;
+let isMessageValidated = false;
+let isNameValidated = false;
+
 // Set focus on first input without value
 function setFocus() {
     for (i = 0; i < formInputs.length; i++) {
@@ -21,11 +25,9 @@ function setFocus() {
 
 // Checks if active input has value
 // 
-function isActive(e) {
+function isActive() {
     let isInputValidated = false;
-    let isEmailValidated = false;
-    let isMessageValidated = false;
-    let isNameValidated = false;
+    
     let inputValue = document.activeElement.value;
     let activeInput = document.activeElement;
     let showEmailButton = document.querySelectorAll('.call-to-action-hi');
@@ -84,6 +86,8 @@ function isActive(e) {
             nameInput.style.color = "#0ada0acc";
             break;
         case false:
+            nameInput.nextElementSibling.classList.remove("valid");
+            nameInput.nextElementSibling.classList.add("active");
             nameInput.style.color = "#ff0000";
             break;
     }
@@ -142,17 +146,16 @@ emailForm.addEventListener('submit', (e) => {
     } else {
         emailValidated = false;
     }
-    switch (emailValidated) {
+    switch (emailValidated && isNameValidated && isEmailValidated && isMessageValidated) {
         case false:
             console.log("No no no, no emails today!");
-            emailInput.focus();
-            emailInput.nextElementSibling.classList.remove('valid');
-            emailInput.nextElementSibling.classList.add('active');
+            activeElement.nextElementSibling.classList.remove('valid');
+            activeElement.nextElementSibling.classList.add('active');
             break;
         case true:
             console.log("Yeeeeeeees, emails today!");
             emailjs.sendForm(service_id, template_id, emailForm);
-            emailInput.nextElementSibling.classList.remove('active');
+            activeElement.nextElementSibling.classList.remove('active');
             emailForm.reset();
             break;
     }
