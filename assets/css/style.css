@@ -1304,7 +1304,7 @@ section .close-slide.show-close
         background: transparent;
         grid-template-columns: minmax(461px, 26%) minmax(835px, 64%);
         grid-template-areas: "scrollable-left scrollable-right";
-        width: 80%;
+        width: 100vw;
     }
     .scrollable-content-left
     {
@@ -1337,6 +1337,10 @@ section .close-slide.show-close
         margin-top: 80px;
         margin-bottom: 380px;
     }
+    .scrollable-content-right:nth-child(2) section
+    {
+        margin-top: 380px;
+    }
     .scrollable-content-right section:nth-last-child(1)
     {
         margin-bottom: 120px;
@@ -1364,7 +1368,7 @@ section .close-slide.show-close
         height: 28px;
         width: 16px;
         bottom: -28px;
-        right: 4%;
+        right: 14%;
         border-bottom: solid 3px var(--s-gold-fade-6);
         border-right: solid 3px var(--s-gold-fade-6);
         opacity: .2;
@@ -1381,10 +1385,12 @@ section .close-slide.show-close
     }
     .scrollable-content-headline-wrap
     {
+        justify-content: start;
         margin-bottom: 20px;
     }
     .scrollable-content-right .scrollable-headline
     {
+        text-align: left;
         text-transform: uppercase;
         font-size: 2.6rem;
         font-weight: 200;
@@ -1416,6 +1422,7 @@ section .close-slide.show-close
         height: 100%;
     }
     .error-message::before,
+    section .has-display-code .display-code-live::before,
     .call-to-action .display-code-live::before
     {
         content:'';
@@ -1433,6 +1440,7 @@ section .close-slide.show-close
         opacity: .6;
     }
     .error-message::after,
+    section .has-display-code .display-code-live::after,
     .call-to-action .display-code-live::after
     {
         content:'';
@@ -1445,7 +1453,7 @@ section .close-slide.show-close
         top: -6%;
         right: 0;
         bottom: 0;
-        left: 100%;
+        left: 96%;
         height: 30px;
         width:6px;
         position: absolute;
@@ -1601,6 +1609,7 @@ section .close-slide.show-close
     {
         height: 34px;
         width: 220px;
+        font-size: 1rem;
         visibility: visible;
         opacity: 1;
         overflow: hidden;
@@ -1779,8 +1788,9 @@ section .close-slide.show-close
     {
         position: relative;
         display: flex;
+        align-items: center;
         flex-wrap: wrap;
-        width: 100%;
+        width: 90%;
         margin-top: 12px;
     }
     .scrollable-content .scrollable-content-right section ul 
@@ -1885,8 +1895,7 @@ section .close-slide.show-close
     .display-code-live
     {
         text-align: center;
-        margin-left: 31%;
-        /* bottom: -85px; */
+        margin-left: 25%;
         position: absolute;
         height: 100%;
     }
