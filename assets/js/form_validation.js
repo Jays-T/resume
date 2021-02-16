@@ -155,7 +155,6 @@ emailForm.addEventListener('submit', (e) => {
         case true:
             console.log("Yeeeeeeees, emails today!");
             emailjs.sendForm(service_id, template_id, emailForm);
-            activeElement.nextElementSibling.classList.remove('active');
             emailForm.reset();
             break;
     }
