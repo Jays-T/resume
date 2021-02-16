@@ -177,6 +177,7 @@ body section
     grid-area: scrollable-right;
     background: var(--p-dark-purple);
     border-top: 30px solid var(--s-gold-fade-3);
+    border-bottom: 30px solid var(--s-gold-fade-3);
 }
 
 #is-scrollable .scrollable-content .scrollable-content-right li,
@@ -191,8 +192,14 @@ body section
 {
     position: relative;
     width: 100%;
-    /* background: var(--s-dark-purple-fade-2); */
     margin-top: 260px;
+}
+.scrollable-content-right:nth-child(2) section
+{
+    position: relative;
+    width: 100%;
+    margin-top: 280px;
+    margin-bottom: 70px
 }
 .scrollable-content-right .box-corners 
 {
@@ -234,12 +241,15 @@ body section
 }
 .scrollable-content-headline-wrap
 {
+    display: flex;
+    justify-content: center;
     margin-bottom: 20px;
 }
 .scrollable-content-right .scrollable-headline
 {
     text-transform: uppercase;
-    font-size: 2.6rem;
+    width: 90%;
+    font-size: 2.2rem;
     font-weight: 200;
     line-height: 3rem;
     letter-spacing: .6rem;
@@ -419,7 +429,6 @@ section .call-to-action
 {
     width: 20%;
     font-size: 1rem;
-    
     background: transparent;
     text-decoration: none;
     text-align: center;
@@ -428,9 +437,9 @@ section .call-to-action
     border: none;
     outline: none;
     position: absolute;
-    left: 74%;
+    left: 69%;
     transform: translateY(-50%);
-    bottom: 40px;
+    bottom: 0;
     opacity: .1;
     transition: opacity .3s ease-in-out;
 }
@@ -649,6 +658,8 @@ from, to { border-color: transparent }
 }
 .stack-list-wrap
 {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     margin: -2% 0 0 20%;
     text-align: start;
@@ -669,10 +680,10 @@ from, to { border-color: transparent }
 .stack-lists
 {
     display: inline-block;
-    height: 75px;
-    width: 150px;
+    height: 65px;
+    width: 85px;
     text-align: center;
-    margin-bottom: 12px;
+
 }
 .scrollable-content-right section .stack-lists i,
 .scrollable-content-right section .stack-lists span
@@ -683,18 +694,18 @@ from, to { border-color: transparent }
 }
 .scrollable-content-wrap span
 {
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: 200;
 }
 .scrollable-content-right section .stack-lists span
 {
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: 400;
 }
 .scrollable-content-right section .stack-lists i
 {
     display: inline-block;
-    font-size: 2.5rem;
+    font-size: 1.4rem;
     top: 0;
     color: var(--p-purple);
 }
@@ -737,15 +748,18 @@ from, to { border-color: transparent }
 {
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    grid-template-areas: "display-code-live-left display-code-live-right";
+    grid-template-areas: 
+    "display-code-live-left empty"
+    "display-code-live-right empty"
+    ;
     width: 100%;
-    height: 100px;
+    height: 120px;
+    margin-bottom: 40px;
 }
 .display-code-live
 {
-    text-align: center;
-    margin-left: 31%;
-    /* bottom: -85px; */
+    text-align: start;
+    margin-left: 0;
     position: absolute;
     height: 100%;
 }
@@ -756,10 +770,12 @@ from, to { border-color: transparent }
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 36%;
+    width: 100%;
+    margin-left: 12%;
     opacity: .6;
     display: inline;
     transition: .3s ease-in-out;
+    position: relative;
 }
 .display-code-live-left
 {
@@ -771,34 +787,34 @@ from, to { border-color: transparent }
 }
 
 /* Screen Right Button Borders */
-/* .display-code-live::before
+section .has-display-code .display-code-live::before
 {
     content:'';
     transform: skew(40deg);
     background: var(--p-dark-purple);
-    border-left: 3px solid var(--p-gold);
-    border-bottom: 3px solid var(--p-gold);
-    top: 2%;
-    left: -3%;
-    height: 30px;
+    border-right: 3px solid var(--p-gold);
+    border-top: 3px solid var(--p-gold);
+    top: -12px;
+    left: -8%;
+    height: 12px;
     width:6px;
     position: absolute;
     opacity: .8;
 }
-.display-code-live::after
+section .has-display-code .display-code-live::after
 {
     content:'';
     transform: skew(-40deg);
     background: var(--p-dark-purple);
     border-right: 3px solid var(--p-gold);
     border-bottom: 3px solid var(--p-gold);
-    top: 2%;
-    right: -3%;
-    height: 30px;
+    bottom: 20px;
+    left: -8%;
+    height: 12px;
     width:6px;
     position: absolute;
     opacity: .8;
-} */
+}
 section .has-display-code .display-code-live .dim-text
 {
     opacity: .8;
@@ -1288,7 +1304,7 @@ section .close-slide.show-close
         background: transparent;
         grid-template-columns: minmax(461px, 26%) minmax(835px, 64%);
         grid-template-areas: "scrollable-left scrollable-right";
-        width: 100vw;
+        width: 80%;
     }
     .scrollable-content-left
     {
@@ -1302,6 +1318,8 @@ section .close-slide.show-close
         z-index: 1;
         grid-area: scrollable-right;
         background: transparent;
+        border-top: none;
+        border-bottom: none;
     }
     #is-scrollable .scrollable-content .scrollable-content-right li,
     #is-scrollable .scrollable-content .scrollable-content-right li a,
@@ -1403,6 +1421,8 @@ section .close-slide.show-close
         content:'';
         transform: skew(40deg);
         background: var(--p-dark-purple);
+        border-right: none;
+        border-top: none;
         border-left: 3px solid var(--p-gold);
         border-bottom: 3px solid var(--p-gold);
         top: -6%;
@@ -1418,10 +1438,14 @@ section .close-slide.show-close
         content:'';
         transform: skew(-40deg);
         background: var(--p-dark-purple);
+        border-left: none;
+        border-top: none;
         border-right: 3px solid var(--p-gold);
         border-bottom: 3px solid var(--p-gold);
         top: -6%;
         right: 0;
+        bottom: 0;
+        left: 100%;
         height: 30px;
         width:6px;
         position: absolute;
@@ -1451,9 +1475,6 @@ section .close-slide.show-close
         position: absolute;
         left: 5%;
         width: 90%;
-        /* height: 100%; */
-        /* border: 1px solid var(--s-gold-fade-6);
-        border-radius: 8px; */
         padding: 40px;
     }
     .scrollable-content-wrap.say-hi-collapsible
