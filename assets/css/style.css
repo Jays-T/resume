@@ -192,8 +192,7 @@ body section
     position: relative;
     width: 100%;
     /* background: var(--s-dark-purple-fade-2); */
-    margin-top: 80px;
-    margin-bottom: 260px;
+    margin-top: 260px;
 }
 .scrollable-content-right .box-corners 
 {
