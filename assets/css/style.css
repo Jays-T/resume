@@ -140,12 +140,682 @@ body section
                 clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 }
-
-/* Hide Scrollable Content On Mobile */
-.scrollable-content 
+/* --------------------------------------------------------START MOBILE SCROLLABLE*/
+#is-scrollable
+{
+    transition: opacity .4s ease-in-out;
+}
+/* .scrollable-content 
+{
+    visibility: hidden;
+} */
+.scrollable-content
+{
+    visibility: visible;
+    background: var(--p-dark-purple);
+    display: grid;
+    height: calc(100%);
+    grid-template-columns: minmax(300px, 100%);
+    grid-template-areas: "scrollable-right";
+    width: 100%;
+    margin-top: 101vh;
+    /* pointer-events: all; */
+    z-index: 0;
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.scrollable-content-left
 {
     visibility: hidden;
 }
+
+/* Scrollable Projects Section */
+.scrollable-content-right
+{
+    z-index: 10000;
+    grid-area: scrollable-right;
+    background: var(--p-dark-purple);
+    border-top: 30px solid var(--s-gold-fade-3);
+}
+
+#is-scrollable .scrollable-content .scrollable-content-right li,
+#is-scrollable .scrollable-content .scrollable-content-right li a,
+#is-scrollable .scrollable-content .scrollable-content-right a
+{
+    color: var(--p-text);
+    cursor: pointer;
+    text-decoration: none;
+}
+.scrollable-content-right section
+{
+    position: relative;
+    width: 100%;
+    /* background: var(--s-dark-purple-fade-2); */
+    margin-top: 80px;
+    margin-bottom: 260px;
+}
+.scrollable-content-right .box-corners 
+{
+    position: relative;
+}
+.scrollable-content-right .box-corners::before
+{
+    position: absolute;
+    content: '';
+    height: 28px;
+    width: 16px;
+    top: -28px;
+    left: 1%;
+    border-top: solid 3px var(--s-gold-fade-6);
+    border-left: solid 3px var(--s-gold-fade-6);
+    opacity: .8;
+}
+.scrollable-content-right .box-corners::after
+{
+    position: absolute;
+    content: '';
+    height: 28px;
+    width: 16px;
+    bottom: -28px;
+    right: 1%;
+    border-bottom: solid 3px var(--s-gold-fade-6);
+    border-right: solid 3px var(--s-gold-fade-6);
+    opacity: .8;
+}
+.scrollable-content-right .call-to-action .box-corners::before
+{
+    top: 0;
+    left: 0;
+}
+.scrollable-content-right .call-to-action .box-corners::after
+{
+    bottom: 0;
+    right: 0;
+}
+.scrollable-content-headline-wrap
+{
+    margin-bottom: 20px;
+}
+.scrollable-content-right .scrollable-headline
+{
+    text-transform: uppercase;
+    font-size: 2.6rem;
+    font-weight: 200;
+    line-height: 3rem;
+    letter-spacing: .6rem;
+    text-align: center;
+    background: var(--p-dark-purple-shade);
+}
+
+/* CALL TO ACTION DISPLAY STYLES */
+section .call-to-action
+{
+    height: 75px;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "call-to-action-hi empty empty"
+    "call-to-action-cv empty empty"
+    "call-to-action-consult empty empty"
+    ;
+    transition: all .3s ease-in-out;
+}
+.call-to-action-link
+{
+    margin: 10px 0;
+}
+.call-to-action .display-code-live
+{
+    width: 100%;
+    height: 40px;
+    text-align: start;
+    margin-left: 12%;
+    bottom: 0;
+    padding: 5px 0;
+    position: relative;
+}
+.error-message::before,
+.call-to-action .display-code-live::before
+{
+    content:'';
+    transform: skew(40deg);
+    background: var(--p-dark-purple);
+    border-right: 3px solid var(--p-gold);
+    border-top: 3px solid var(--p-gold);
+    top: -6px;
+    left: -8%;
+    height: 12px;
+    width:6px;
+    position: absolute;
+    opacity: .6;
+}
+.error-message::after,
+.call-to-action .display-code-live::after
+{
+    content:'';
+    transform: skew(-40deg);
+    background: var(--p-dark-purple);
+    border-right: 3px solid var(--p-gold);
+    border-bottom: 3px solid var(--p-gold);
+    bottom: -6px;
+    left: -8%;
+    height: 12px;
+    width:6px;
+    position: absolute;
+    opacity: .6;
+}
+.call-to-action-hi button::before,
+.call-to-action-hi button::after
+{
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+.call-to-action-hi.active button::before,
+.call-to-action-hi.active button::after
+{
+    opacity: 1;
+}
+.call-to-action-consult
+{
+    grid-area: call-to-action-consult;
+}
+.call-to-action-hi
+{
+    grid-area: call-to-action-hi;
+}
+.say-hi-form
+{
+    position: relative;
+    top: -12px;
+    left: 1.5%;
+    width: 97%;
+    background: var(--p-dark-purple);
+    padding: 30px 20px 0 20px;
+}
+.scrollable-content-wrap.say-hi-collapsible
+{
+    display: none;
+    overflow: hidden;
+    background-color: var(--p-dark-purple);
+}
+.scrollable-content-wrap.say-hi-collapsible .call-to-action
+{
+    height: 0;
+    transition: height .3s ease-in-out;
+    grid-template-columns: 1fr;
+    grid-template-areas: "call-to-action-hi";
+}
+/* ACTIVE states for collapsible Email form */
+.say-hi-collapsible.active
+{
+    display: flex;
+    overflow: visible;
+    transition: all .3s ease-in-out;
+    animation: changeOpacity .6s ease-in-out;
+}
+@keyframes changeOpacity
+{
+    0%,50%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+.scrollable-content-wrap.say-hi-collapsible.active .call-to-action
+{
+    width: 100%;
+    height: 300px;
+}
+.say-hi-collapsible.active .call-to-action-hi input,
+.say-hi-collapsible.active .call-to-action-hi textarea
+{
+    animation: showHiCollapsible .6s ease-in-out;
+    background: transparent;
+}
+@keyframes showHiCollapsible
+{
+    0%
+    {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    100%
+    {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+.say-hi-collapsible.active .call-to-action-hi input,
+.say-hi-collapsible.active .call-to-action-hi textarea
+{
+    font-size: .9rem;
+    width: 100%;
+    position: relative;
+    color: var(--p-text);
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--s-gold-fade-6);
+    outline: none;
+    opacity: .9;
+    transition: opacity .3s ease-in-out;
+}
+.say-hi-collapsible.active .call-to-action-hi input:hover,
+.say-hi-collapsible.active .call-to-action-hi textarea:hover
+{
+    opacity: 1;
+}
+#emailform
+{
+    /* position: relative; */
+    width:60%;
+}
+.call-to-action-hi button 
+{
+    width: 20%;
+    font-size: 1rem;
+    
+    background: transparent;
+    text-decoration: none;
+    text-align: center;
+    color: var(--p-text);
+    border-bottom: 1px solid var(--p-dark-purple);
+    border: none;
+    outline: none;
+    position: absolute;
+    left: 74%;
+    transform: translateY(-50%);
+    bottom: 40px;
+    opacity: .1;
+    transition: opacity .3s ease-in-out;
+}
+.call-to-action-hi.active button
+{
+    cursor: pointer;
+    border-bottom: 1px solid var(--p-gold);
+    opacity: .6;
+}
+
+/* Tooltips for Say Hi Email Form */
+.scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .name span,
+.scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .email span,
+.scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .email-content span
+{
+    height: 34px;
+    width: 220px;
+    visibility: hidden;
+    color: var(--p-text);
+    background: transparent;
+    position: absolute;
+    left: 62%;
+    top: 38px;
+}
+.scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.active span
+{
+    height: 34px;
+    width: 220px;
+    font-size: .59rem;
+    visibility: visible;
+    opacity: 1;
+    overflow: hidden;
+    font-weight: 200;
+    border-right: .02em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    transition: opacity .3s ease-in-out;
+}
+
+/* Tooltip for Name input */
+.scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.name.active span
+{
+    width: 220px;
+    animation: typing 1.6s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* Tooltip for Email input */
+.scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.email.active span
+{
+    width: 240px;
+    top: 76px;
+    animation: typing 1.6s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* Tooltip for Message input */
+.scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.email-content.active span
+{
+    width: 252px;
+    top: 113px;
+    animation: typingContent 1.6s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing 
+{
+from { width: 0 }
+to { width: 235px }
+}
+@keyframes typingContent
+{
+from { width: 0 }
+to { width: 252px }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret 
+{
+from, to { border-color: transparent }
+50% { border-color: var(--s-gold-fade-6); }
+}
+/* If input is valid */
+.scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.active.valid span
+{
+    animation:
+        reverseTyping 1.2s steps(40, start) forwards,
+        blink-caret-purple .75s step-end forwards;
+}
+/* Reverse typewriter effect */
+@keyframes reverseTyping 
+{
+    from { width: 220px }
+    to { width: 0 }
+}
+@keyframes blink-caret-purple
+{
+from, to { border-color: transparent }
+50% { border-color: var(--p-medium-purple); }
+}
+/* Show if form input is invalid */
+.error-message
+{
+    width: 252px;
+    visibility: hidden;
+}
+.error-message.active
+{
+    visibility: visible;
+}
+
+/* States and positioning for elements skewed for tooltip visual effect
+
+  \ 
+    please input valid .....
+  /
+
+*/
+#emailform .error-message::before
+{
+    content:'';
+    transform: skew(40deg);
+    background: var(--p-dark-purple);
+    border-left: none;
+    border-bottom: none;
+    border-right: .03em solid var(--p-gold);
+    border-top: .08em solid var(--p-gold);
+    opacity: .8;
+    top: 29px;
+    left: 60%;
+    height: 8px;
+    width: 3px;
+    transition: opacity 1.6s ease-in-out;
+}
+#emailform .error-message::after
+{
+    content:'';
+    transform: skew(-40deg);
+    background: var(--p-dark-purple);
+    border-right: .03em solid var(--p-gold);
+    border-bottom: .08em solid var(--p-gold);
+    opacity: .8;
+    top: 54px;
+    left: 60%;
+    height: 8px;
+    width: 3px;
+    transition: opacity 1.6s ease-in-out;
+}
+#emailform .error-message.email::before
+{
+    top: 67px;
+}
+#emailform .error-message.email::after
+{
+    top: 92px;
+}
+#emailform .error-message.email-content::before
+{
+    top: 104px;
+}
+#emailform .error-message.email-content::after
+{
+    top: 129px;
+}
+/* Fade out on valid class*/
+.scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .active.valid.error-message::before
+{
+    opacity: 0;
+}
+.scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .active.valid.error-message::after
+{
+    opacity: 0;
+}
+.call-to-action-cv
+{
+    grid-area: call-to-action-cv;
+}
+.call-to-action-link
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.scrollable-content-right section i,
+.left-right-margin-8,
+.gold-text,
+.outline-text
+{
+    margin: 0 8px 0 8px;
+}
+@supports (-webkit-text-stroke: 1px var(--p-text)) {
+    .outline-text {
+        -webkit-text-stroke: 1px var(--p-text);
+        -webkit-text-fill-color: transparent;
+    }
+}
+.gold-text
+{
+    width: 18%;
+    text-align: end;
+    color: var(--s-gold-fade-6);
+}
+.scrollable-content-wrap
+{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 12px;
+}
+.scrollable-content .scrollable-content-right section ul 
+{
+    list-style-type: none;
+    margin: 40px 0 0 80px;
+}
+.stack-list-wrap
+{
+    width: 100%;
+    margin: -2% 0 0 20%;
+    text-align: start;
+}
+.text-list-wrap
+{
+    margin: 0 0 0 5%;
+    width: 60%;
+    opacity: .6;
+    transition: opacity .3s ease-in-out;
+}
+.text-list-wrap:hover
+{
+    opacity: 1;
+}
+
+/* Screen Right Projects Stack Icons */
+.stack-lists
+{
+    display: inline-block;
+    height: 75px;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+.scrollable-content-right section .stack-lists i,
+.scrollable-content-right section .stack-lists span
+{
+    display: block;
+    position: relative;
+    margin-bottom: 12px;
+}
+.scrollable-content-wrap span
+{
+    font-size: 1rem;
+    font-weight: 200;
+}
+.scrollable-content-right section .stack-lists span
+{
+    font-size: 1rem;
+    font-weight: 400;
+}
+.scrollable-content-right section .stack-lists i
+{
+    display: inline-block;
+    font-size: 2.5rem;
+    top: 0;
+    color: var(--p-purple);
+}
+.scrollable-content-right section .stack-lists .block-icon
+{
+    background: var(--p-purple);
+    border-radius: 4px;
+}
+.scrollable-content-right section .stack-lists .block-icon::after
+{
+    content: 'dj';
+    color: var(--p-dark-purple);
+    height: 100%;
+    width: 100%; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2rem;
+    font-weight: 900;
+}
+.scrollable-content-right section .stack-lists,
+.call-to-action-link
+{
+    opacity: .8;
+    transition: .3s ease-in-out;
+}
+.call-to-action-hi.active button:hover,
+.scrollable-content-right section .stack-lists:hover,
+.call-to-action-link:hover
+{
+    opacity: 1;
+}
+.stack-lists span
+{
+    bottom: 0;
+}
+
+/* Screen Right Projects Code and View Live buttons */
+.has-display-code
+{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas: "display-code-live-left display-code-live-right";
+    width: 100%;
+    height: 100px;
+}
+.display-code-live
+{
+    text-align: center;
+    margin-left: 31%;
+    /* bottom: -85px; */
+    position: absolute;
+    height: 100%;
+}
+.display-code-live-left,
+.display-code-live-right
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 36%;
+    opacity: .6;
+    display: inline;
+    transition: .3s ease-in-out;
+}
+.display-code-live-left
+{
+    grid-area: display-code-live-left;
+}
+.display-code-live-right
+{
+    grid-area: display-code-live-right;
+}
+
+/* Screen Right Button Borders */
+/* .display-code-live::before
+{
+    content:'';
+    transform: skew(40deg);
+    background: var(--p-dark-purple);
+    border-left: 3px solid var(--p-gold);
+    border-bottom: 3px solid var(--p-gold);
+    top: 2%;
+    left: -3%;
+    height: 30px;
+    width:6px;
+    position: absolute;
+    opacity: .8;
+}
+.display-code-live::after
+{
+    content:'';
+    transform: skew(-40deg);
+    background: var(--p-dark-purple);
+    border-right: 3px solid var(--p-gold);
+    border-bottom: 3px solid var(--p-gold);
+    top: 2%;
+    right: -3%;
+    height: 30px;
+    width:6px;
+    position: absolute;
+    opacity: .8;
+} */
+section .has-display-code .display-code-live .dim-text
+{
+    opacity: .8;
+}
+.display-code-live-left:hover,
+.display-code-live-left:hover .dim-text,
+.display-code-live-right:hover,
+.display-code-live-right:hover .dim-text
+{
+    opacity: 1;
+}
+.scrollable-content .active
+{
+    margin-top: 0;
+}
+/* --------------------------------------------------------END MOBILE SCROLLABLE*/
 /* Custom Scroll Bar */
 /* width */
 ::-webkit-scrollbar 
@@ -614,28 +1284,16 @@ section .close-slide.show-close
 @media screen and (min-width: 1366px) 
 {
     /* Scrollable Content */
-    #is-scrollable
-    {
-        transition: opacity .4s ease-in-out;
-    }
     .scrollable-content
     {
-        visibility: visible;
         background: transparent;
-        display: grid;
-        height: calc(100%);
         grid-template-columns: minmax(461px, 26%) minmax(835px, 64%);
         grid-template-areas: "scrollable-left scrollable-right";
         width: 100vw;
-        margin-top: 101vh;
-        /* pointer-events: all; */
-        z-index: 0;
-        -webkit-transition: .3s ease-in-out;
-        -o-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
     }
     .scrollable-content-left
     {
+        visibility: visible;
         grid-area: scrollable-left;
     }
 
@@ -644,6 +1302,7 @@ section .close-slide.show-close
     {
         z-index: 1;
         grid-area: scrollable-right;
+        background: transparent;
     }
     #is-scrollable .scrollable-content .scrollable-content-right li,
     #is-scrollable .scrollable-content .scrollable-content-right li a,

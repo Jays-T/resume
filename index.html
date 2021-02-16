@@ -30,7 +30,8 @@
             gtag('config', 'G-BW6VWJ19Z3');
         </script> -->
         <script src="assets/js/html_include.js"></script>
-        <link rel="stylesheet" href="assets/css/parallax_style.css">
+        <!-- <link rel="stylesheet" href="assets/css/scrollable_on_mobile.css"> -->
+        <link rel="stylesheet" href="assets/css/style.css">
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
@@ -123,7 +124,7 @@
                 
                 oninput="isActive()"
               />
-              <label for="from_name" class="error-message name"><span>Please input your name.</span></label>
+              <div for="from_name" class="error-message name"><span>Please input your name</span></div>
               <!-- Sender email add input -->
               <input
                 type="text"
@@ -136,7 +137,7 @@
                 
                 oninput="isActive()"
               />
-              <label for="from_email" class="error-message email"><span>Please input a valid email.</span></label>
+              <div for="from_email" class="error-message email"><span>Please input a valid email</span></div>
               <!-- Text input for email main content -->
               <textarea
                 rows="5"
@@ -149,7 +150,7 @@
                 
                 oninput="isActive()"
               ></textarea>
-              <label for="email_content" class="error-message email-content"><span>Please input your message.</span></label>
+              <div for="email_content" class="error-message email-content"><span>Please input your message</span></div>
               <button
                 id="email_button"
                 class="btn font-montserrat uppercase margin-thin border-thin btn-colors center-block text-spacing"
