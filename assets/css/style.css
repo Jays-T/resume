@@ -336,6 +336,7 @@ section .call-to-action
 {
     grid-area: call-to-action-hi;
 }
+/* Using !important to force element to stay in view on mobile keyboard shown */
 .say-hi-form
 {
     position: relative;
@@ -423,6 +424,7 @@ section .call-to-action
 {
     opacity: 1;
 }
+/* Using !important to force email form to stay in view on mobile keyboard shown */
 #emailform
 {
     width:60%;
