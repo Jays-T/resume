@@ -170,14 +170,20 @@ emailForm.addEventListener('submit', (e) => {
             activeElement.nextElementSibling.classList.add('active');
             break;
         case true:
+            // SEND EMAIL
             console.log("Yeeeeeeees, emails today!");
             emailjs.sendForm(service_id, template_id, emailForm);
+            // RESET FORM
             emailForm.reset();
+            // HIDE EMAIL FORM
             collapse.classList.remove('active');
-            successMessage.classList.add('active');
+            // DISPLAY SUCCESS MESSAGE
+            setTimeout(() => {
+                successMessage.classList.add('active');
+            }, 400);
             setTimeout(() => {
                 successMessage.classList.remove('active');
-            }, 4000);
+            }, 4400);
             break;
     }
     return false;
