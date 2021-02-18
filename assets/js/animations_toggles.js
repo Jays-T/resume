@@ -51,7 +51,7 @@ const headerAndSocialSwitch = document.getElementById('headline-and-social');
 const toggleWrap = document.querySelector('.hide-on-slide');
 const closeSlide = document.querySelectorAll('.close-slide');
 
-slideToggle.forEach(popup => popup.addEventListener('click', (e) =>{
+slideToggle.forEach(popup => popup.addEventListener('click', (e) => {
   let activeSlide = document.querySelectorAll(".active");
 
   let i;
@@ -62,14 +62,15 @@ slideToggle.forEach(popup => popup.addEventListener('click', (e) =>{
   headerAndSocialSwitch.classList.add('hidden');
   toggleWrap.classList.add('inactive');
 
-  if (closeSlide[0].classList.contains('show-close')){
+  if (closeSlide[0].classList.contains('show-close')) {
   } else {
     closeSlide[0].classList.add('show-close');
   }
 
 }));
 
-closeSlide.forEach(popup => popup.addEventListener('click', () =>{
+// Check Which Slide Is Active And Close It
+closeSlide.forEach(popup => popup.addEventListener('click', () => {
   let removeActive = document.querySelectorAll(".active");
 
   let i;
@@ -83,9 +84,63 @@ closeSlide.forEach(popup => popup.addEventListener('click', () =>{
 
 // Toggle Say Hi Email Collapsible
 
-const collapseToggle = document.querySelectorAll(".say-hi-toggle");
+const collapseToggle = document.querySelectorAll('.say-hi-toggle');
 const collapse = document.querySelector(".say-hi-collapsible");
 
-collapseToggle.forEach(popup => popup.addEventListener('click', () =>{
+collapseToggle.forEach(popup => popup.addEventListener('click', () => {
   collapse.classList.toggle('active');
+}));
+
+// Toggle Skills Headlines
+
+// Store relevant skills elements
+const hasSkills = document.querySelector('.skills-headline-wrap');
+const skillsHeadlines = hasSkills.querySelectorAll('.skills-headline');
+
+skillsHeadlines.forEach(popup => popup.addEventListener('click', (e) => {
+
+  // Store Active Skills
+  let activeSkills = hasSkills.querySelectorAll(".show-skill");
+
+  // Store Checks
+  let checkActiveSkill;
+  let checkNextElement;
+
+  // Check if Active State Exists
+  if (activeSkills.length != 0) {
+    checkActiveSkill = true;
+  }
+  if (activeSkills.length === 0) {
+    checkActiveSkill = false;
+  }
+
+  // Check if Next Element has Active State
+  if (popup.nextElementSibling.classList.contains('show-skill')) {
+    checkNextElement = true;
+  } else {
+    checkNextElement = false;
+  };
+
+  // If Active Skills Open Close Them And Toggle Relevant Elements
+  switch (checkActiveSkill) {
+    case true:
+      let i;
+        for (i = 0; i < activeSkills.length; i++) {
+          activeSkills[i].classList.toggle('show-skill');
+        }
+      popup.nextElementSibling.classList.toggle('show-skill');
+      break;
+    case false:
+      popup.nextElementSibling.classList.toggle('show-skill');
+  }
+
+  // If Next Element has Active State Remove State
+  switch (checkNextElement) {
+    case true:
+      popup.nextElementSibling.classList.remove('show-skill');
+      break;
+    case false:
+      break;
+  }
+
 }));
