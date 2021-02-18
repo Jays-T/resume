@@ -66,19 +66,35 @@ function isActive() {
         isInputValidated = false;
     }
 
-    // SHOW OR REMOVE TOOTIP
+    // SHOW OR REMOVE TOOTIP ON NAME + MESSAGE INPUT DETECTION
     // SWITCH TEXT INPUT COLOR ON VALID OR INVALID
-    switch (isInputValidated) {
-        case true:
-            activeInput.nextElementSibling.classList.add("valid");
-            activeInput.style.color = "#0ada0acc";
-            break;
-        case false:
-            activeInput.nextElementSibling.classList.remove("valid");
-            activeInput.nextElementSibling.classList.add("active");
-            activeInput.style.color = "#ff0000";
-            break;
+    if (activeInput != emailInput) {
+        switch (isInputValidated) {
+            case true:
+                activeInput.nextElementSibling.classList.add("valid");
+                activeInput.style.color = "#0ada0acc";
+                break;
+            case false:
+                activeInput.nextElementSibling.classList.remove("valid");
+                activeInput.nextElementSibling.classList.add("active");
+                activeInput.style.color = "#ff0000";
+                break;
+        }
     }
+
+    // RUN FOR EMAIL INPUT TO SHOW TOOLTIP WHILE EMAIL FORMAT IS INVALID
+    if (activeInput === emailInput) {
+        switch (isInputValidated && isEmailValidated) {
+            case true:
+                activeInput.nextElementSibling.classList.add("valid");
+                break;
+            case false:
+                activeInput.nextElementSibling.classList.remove("valid");
+                activeInput.nextElementSibling.classList.add("active");
+                break;
+        }
+    }
+   
 
     // SWITCH TEXT INPUT INDIVIDUALLY COLOR ON VALID OR INVALID
     switch (isNameValidated) {
@@ -86,14 +102,13 @@ function isActive() {
             nameInput.style.color = "#0ada0acc";
             break;
         case false:
-            nameInput.nextElementSibling.classList.remove("valid");
-            nameInput.nextElementSibling.classList.add("active");
             nameInput.style.color = "#ff0000";
             break;
     }
 
     switch (isEmailValidated) {
         case true:
+            emailInput.nextElementSibling.classList.add("valid");
             emailInput.style.color = "#0ada0acc";
             break;
         case false:
@@ -146,6 +161,7 @@ emailForm.addEventListener('submit', (e) => {
     } else {
         emailValidated = false;
     }
+    // Allow form submit if all validations are true
     switch (emailValidated && isNameValidated && isEmailValidated && isMessageValidated) {
         case false:
             console.log("No no no, no emails today!");
