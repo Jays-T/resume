@@ -519,10 +519,11 @@ from { width: 0 }
 to { width: 252px }
 }
 /* The typewriter cursor effect */
+/* Both states set to transparent on mobile views */
 @keyframes blink-caret 
 {
 from, to { border-color: transparent }
-50% { border-color: var(--s-gold-fade-6); }
+50% { border-color: transparent; }
 }
 /* If input is valid */
 .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.active.valid span
@@ -537,10 +538,11 @@ from, to { border-color: transparent }
     from { width: 220px }
     to { width: 0 }
 }
+/* Both states set to transparent on mobile views */
 @keyframes blink-caret-purple
 {
 from, to { border-color: transparent }
-50% { border-color: var(--p-medium-purple); }
+50% { border-color: transparent; }
 }
 /* Show if form input is invalid */
 .error-message
@@ -1564,7 +1566,6 @@ section .close-slide.show-close
     }
     #emailform
     {
-        /* position: relative; */
         width:66%;
     }
     .call-to-action-hi button 
