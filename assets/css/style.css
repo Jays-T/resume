@@ -343,7 +343,7 @@ section .call-to-action
     left: 1.5%;
     width: 97%;
     background: var(--p-dark-purple);
-    padding: 30px 20px 0 20px;
+    padding: 30px 20px 0 20px !important;
 }
 .scrollable-content-wrap.say-hi-collapsible
 {
@@ -426,6 +426,7 @@ section .call-to-action
 #emailform
 {
     width:60%;
+    padding-bottom: 0 !important;
 }
 .call-to-action-hi button 
 {
