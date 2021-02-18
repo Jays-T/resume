@@ -291,7 +291,7 @@ section .call-to-action
 .slide .slide-content .skills-overlay
 {
     height: 100%;
-    width: 60%;
+    width: 100%;
     position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -307,25 +307,41 @@ section .call-to-action
 }
 .skills-headline-wrap
 {
-    height: 275px;
+    height: 60%;
     width: 100%;
     position: relative;
     display: grid;
     grid-template-columns: .3fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-        "non-technical empty"
-        "frontend frontend-stack"
-        "backend backend-stack";
+        "non-technical non-technical"
+        "non-technical-skills non-technical-skills"
+        "frontend frontend"
+        "frontend-stack frontend-stack"
+        "backend backend"
+        "backend-stack backend-stack";
     transition: all .3s ease-in-out;
 }
 .skills-headline
 {
-    padding: 20px;
-    position: relative;
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: .8rem;
+    padding: 18px 2px;;
     display: inline;
-    height: 75px;
-    margin-bottom: 10px;
+    margin: 10px 0;
+    opacity: .6;
+}
+.non-technical,
+.frontend,
+.backend
+{
+    width: 100%;
+    height: 40px;
+    text-align: start;
+    margin-left: 12%;
+    bottom: 0;
+    position: relative;
 }
 .non-technical
 {
@@ -339,25 +355,88 @@ section .call-to-action
 {
     grid-area: backend;
 }
-.frontend-stack.scrollable-content-wrap
+.scrollable-content-wrap.non-technical-skills,
+.scrollable-content-wrap.frontend-stack,
+.scrollable-content-wrap.backend-stack
 {
-    width: 100%;
+    visibility: hidden;
+    background: var(--p-dark-purple);
+    height: 0;
+    width: 90%;
     display: flex;
     justify-content: space-between;
-    padding: 0 0 80px 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    animation: removeHeight .5s forwards;
+}
+@keyframes removeHeight
+{
+    0%
+    {
+        height: 220px;
+        opacity: 1;
+    }
+    60%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        height: 0;
+    }
+}
+.scrollable-content-wrap.show-skill.non-technical-skills,
+.scrollable-content-wrap.show-skill.frontend-stack,
+.scrollable-content-wrap.show-skill.backend-stack
+{
+    visibility: visible;
+    width: 90%;
+    top: 0;
+    left: 6.5%;
+    animation: changeHeight .5s forwards;
+    border-top: 1px solid var(--s-gold-fade-3);
+    border-bottom: 1px solid var(--s-gold-fade-3);
+}
+@keyframes changeHeight
+{
+    0%
+    {
+        opacity: 0;
+        height: 0;
+    }
+    100%
+    {
+        opacity: 1;
+        height: 220px;
+    }
+}
+.scrollable-content-wrap.non-technical-skills
+{
+    left: 6.5%;
+    grid-area: non-technical-skills;
+}
+.scrollable-content-wrap.frontend-stack
+{
+    left: 6.5%;
     grid-area: frontend-stack;
 }
-.backend-stack.scrollable-content-wrap
+.scrollable-content-wrap.backend-stack
 {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 0 80px 0;
+    left: 6.5%;
     grid-area: backend-stack;
 }
 .frontend-stack.scrollable-content-wrap .stack-list-wrap,
 .backend-stack.scrollable-content-wrap .stack-list-wrap
 {
-    margin: -2% 0 0 5%;
+    margin: 5% 0;
+}
+.frontend-stack.scrollable-content-wrap .stack-list-wrap i,
+.frontend-stack.scrollable-content-wrap .stack-list-wrap span,
+.backend-stack.scrollable-content-wrap .stack-list-wrap i,
+.backend-stack.scrollable-content-wrap .stack-list-wrap span
+{
+    display: block;
 }
 .skills-headline::before,
 .error-message::before,
@@ -393,13 +472,11 @@ section .call-to-action
 }
 .skills-headline::before
 {
-    top: 0;
-    left: 0;
+    left: -4%;
 }
 .skills-headline::after
 {
-    bottom: 0;
-    left: 0;
+    left: -4%;
 }
 .call-to-action-hi button::before,
 .call-to-action-hi button::after
@@ -812,14 +889,13 @@ from, to { border-color: transparent }
 }
 
 /* Screen Right Projects Stack Icons */
+/* Skills Section Icons */
 .skills-headline-wrap .stack-lists,
 .stack-lists
 {
-    display: inline-block;
     height: 65px;
     width: 85px;
     text-align: center;
-
 }
 .skills-headline-wrap .stack-lists i,
 .scrollable-content-right section .stack-lists i,
@@ -834,19 +910,27 @@ from, to { border-color: transparent }
     font-size: .8rem;
     font-weight: 200;
 }
+/* .slide .slide-content .skills-overlay .stack-lists i
+{
+    padding: 14px;
+} */
 .skills-headline-wrap .stack-lists span,
 .scrollable-content-right section .stack-lists span
 {
     font-size: .8rem;
     font-weight: 400;
 }
-.skills-headline-wrap .stack-lists i,
+.slide .slide-content .skills-overlay .stack-lists i,
 .scrollable-content-right section .stack-lists i
 {
     display: inline-block;
     font-size: 1.4rem;
     top: 0;
     color: var(--p-purple);
+}
+.slide .slide-content .skills-overlay .stack-lists .block-icon
+{
+    padding: 0;
 }
 .skills-headline-wrap .stack-lists .block-icon,
 .scrollable-content-right section .stack-lists .block-icon
@@ -864,8 +948,12 @@ from, to { border-color: transparent }
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 900;
+}
+.skills-headline-wrap .stack-lists .block-icon::after
+{
+    top: 20%;
 }
 .scrollable-content-right section .stack-lists,
 .call-to-action-link
@@ -1101,16 +1189,17 @@ section #is-scrollable .show-slides,
     transition: 1s;
 }
 
-.slide-container .slide .slide-content
+/* .slide-container .slide .slide-content
 {
     position: relative;
     height: 60%;
     width: 80%;
-}
+} */
 
 /* SLIDE ONE */
 .slide-container .slide.slide-one
 {
+    visibility: hidden;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -1121,6 +1210,7 @@ section #is-scrollable .show-slides,
             clip-path: polygon(74% 0, 61% 0, 61% 100%, 74% 100%);
 }
 .slide-container .slide.slide-one::after {
+    visibility: visible;
     content: 'INFO';
     text-align: center;
     letter-spacing: -1rem;
@@ -1149,14 +1239,17 @@ section #is-scrollable .show-slides,
 /* SLIDE TWO */
 .slide-container .slide.slide-two
 {
+    visibility: hidden;
     height: 100%;
     opacity: .7;
     background: var(--s-dark-purple-fade-6);
     -webkit-clip-path: polygon(87% 0, 74% 0, 74% 100%, 87% 100%);
             clip-path: polygon(87% 0, 74% 0, 74% 100%, 87% 100%);
+    pointer-events: all;
 }
 .slide-container .slide.slide-two::after 
 {
+    visibility: visible;
     content: 'SKILLS';
     text-align: center;
     letter-spacing: -.8rem;
@@ -1177,6 +1270,7 @@ section #is-scrollable .show-slides,
 /* SLIDE THREE */
 .slide-container .slide.slide-three
 {
+    visibility: hidden;
     height: 100%;
     opacity: .9;
     background: var(--s-dark-purple-fade-8);
@@ -1185,6 +1279,7 @@ section #is-scrollable .show-slides,
 }
 .slide-container .slide.slide-three::after 
 {
+    visibility: visible;
     content: 'PROJECTS';
     text-align: center;
     letter-spacing: -.6rem;
@@ -1200,6 +1295,15 @@ section #is-scrollable .show-slides,
     -webkit-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
+}
+
+/* Set Slides to Visible on Active State */
+.slide-container .slide.active.slide-one,
+.slide-container .slide.active.slide-two,
+.slide-container .slide.active.slide-three 
+{
+    visibility: visible;
+    pointer-events: all;
 }
 
 /* Sliders Pseudo Elements Styling */
@@ -1252,7 +1356,7 @@ section #is-scrollable .show-slides,
         -ms-flex-pack: center;
             justify-content: center;
     margin-right: 10%;
-    max-width: 100vw;
+    width: 100%;
     padding: 6px;
     z-index: 10;
     opacity: 0;
@@ -3476,7 +3580,6 @@ body .container
 .slide .slide-content .skills-overlay i
 {
     font-size: 2.8rem;
-    padding: 14px;
 }
 #projects
 {
