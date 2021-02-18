@@ -485,6 +485,45 @@ section .call-to-action
     transition: opacity .3s ease-in-out;
 }
 
+/* Email Success Message */
+#is-scrollable .success-message
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 90%;
+}
+#is-scrollable .success-message span{
+    display: block;
+    opacity: 0;
+}
+#is-scrollable .success-message.active span
+{
+    opacity: 1;
+    overflow: hidden;
+    text-align: start;
+    border-right: .02em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    width: 352px;
+    transition: opacity .3s ease-in-out;
+    animation: typing350 1.6s steps(40, end),
+    blink-caret .75s step-end infinite,
+    fadeMessage 3.2s forwards;
+}
+@keyframes fadeMessage
+{
+    0%, 95%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
 /* Tooltip for Name input */
 .scrollable-content-wrap .call-to-action .call-to-action-hi #emailform .error-message.name.active span
 {
@@ -507,7 +546,7 @@ section .call-to-action
 {
     width: 252px;
     top: 113px;
-    animation: typingContent 1.6s steps(40, end),
+    animation: typing250 1.6s steps(40, end),
     blink-caret .75s step-end infinite;
 }
 /* The typing effect */
@@ -516,10 +555,15 @@ section .call-to-action
 from { width: 0 }
 to { width: 235px }
 }
-@keyframes typingContent
+@keyframes typing250
 {
 from { width: 0 }
 to { width: 252px }
+}
+@keyframes typing350
+{
+from { width: 0 }
+to { width: 352px }
 }
 /* The typewriter cursor effect */
 /* Both states set to transparent on mobile views */

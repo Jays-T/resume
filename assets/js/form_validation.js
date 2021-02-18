@@ -149,6 +149,7 @@ document.querySelector( "form" )
 
 // Validate email syntax on submit
 emailForm.addEventListener('submit', (e) => {
+    const successMessage = document.querySelector('.success-message');
     let visitorEmail = emailInput.value;
     let emailValidated = false;
     const service_id = "angry_cat_ao@heih!1";
@@ -172,6 +173,11 @@ emailForm.addEventListener('submit', (e) => {
             console.log("Yeeeeeeees, emails today!");
             emailjs.sendForm(service_id, template_id, emailForm);
             emailForm.reset();
+            collapse.classList.remove('active');
+            successMessage.classList.add('active');
+            setTimeout(() => {
+                successMessage.classList.remove('active');
+            }, 4000);
             break;
     }
     return false;
