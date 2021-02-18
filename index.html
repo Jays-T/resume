@@ -322,9 +322,9 @@
   </div>
 </section>
 <!-- Screen Right navigation slides -->
-<section class="has-slides">
+<section class="has-slides info-slide skills-slide projects-slide">
   <div id="slides" class="slide-container hide-slides">
-    <div class="slide slide-one">
+    <div class="slide slide-one info-slide">
       <div class="slide-content">
         <img src="assets/images/John Portrait1.jpg" alt="portrait of developer John Traas">
         <p class="box-corners">
@@ -340,12 +340,67 @@
         </p>
       </div>
     </div>
-    <div class="slide slide-two">
+    <div class="slide slide-two skills-slide">
       <div class="slide-content">
-        <div class="skills box-corners" include-html="skills.html"></div>
+        <div class="skills box-corners">
+          <div class="skills-overlay">
+            <div class="skills-headline-wrap">
+              <h1 class="skills-headline non-technical">Non-Technical</h1>
+                <div class="scrollable-content-wrap non-technical-skills">
+                  <p>I have non-technical skills.</p>
+                </div>
+              <h1 class="skills-headline frontend">Frontend</h1>
+                <div class="scrollable-content-wrap frontend-stack">
+                  <div class="stack-list-wrap">
+                    <span class="stack-lists">
+                      <i class="fab fa-html5 html5"></i>
+                      <span class="left-right-margin-8">HTML</span>
+                    </span>
+                    <span class="stack-lists">
+                      <i class="fab fa-css3-alt css3"></i> 
+                      <span class="left-right-margin-8">CSS</span>
+                    </span>
+                    <span class="stack-lists">
+                      <i class="fab fa-bootstrap bootstrap"></i>
+                      <span class="left-right-margin-8">BOOTSTRAP</span>
+                    </span>
+                    <span class="stack-lists">
+                      <i class="fab fa-js-square javascript"></i> 
+                      <span class="left-right-margin-8">JavaScript</span>
+                    </span>
+                  </div>
+                </div>
+              <h1 class="skills-headline backend">Backend</h1>
+              <div class="scrollable-content-wrap backend-stack">
+                <div class="stack-list-wrap">
+                  <span class="stack-lists">
+                    <i class="fab fa-python python"></i>
+                    <span class="left-right-margin-8">Python</span>
+                  </span>
+                  <span class="stack-lists">
+                    <i class="fab fa-bimobject block-icon"></i>
+                    <span class="left-right-margin-8">Django</span>
+                  </span>
+                  <span class="stack-lists">
+                    <i class="fas fa-database"></i>
+                    <span class="left-right-margin-8">PostGre SQL</span>
+                  </span>
+                  <span class="stack-lists">
+                    <i class="fab fa-aws"></i>
+                    <span class="left-right-margin-8">AWS</span>
+                  </span>
+                  <span class="stack-lists">
+                    <i class="fab fa-git-alt"></i>
+                    <span class="left-right-margin-8">GIT</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>          
+        </div>
       </div>
     </div>
-    <div class="slide slide-three">
+    <div class="slide slide-three projects-slide">
       <div class="slide-content">
         <div id="projects">
           <div class="box-corners" include-html="projects.html">
@@ -359,10 +414,10 @@
 </body>
 <script>
 includeHTML();
-// window.onclick = e => {
-//   console.log(e.target);  // to get the element
-//   console.log(e.target.tagName);  // to get the element tag name alone
-// } 
+window.onclick = e => {
+  console.log(e.target);  // to get the element
+  console.log(e.target.tagName);  // to get the element tag name alone
+} 
 </script>
 <script>
   
