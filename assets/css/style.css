@@ -349,6 +349,7 @@ section .call-to-action
 {
     display: none;
     overflow: hidden;
+    position: relative;
     background-color: var(--p-dark-purple);
 }
 .scrollable-content-wrap.say-hi-collapsible .call-to-action
@@ -422,7 +423,6 @@ section .call-to-action
 }
 #emailform
 {
-    /* position: relative; */
     width:60%;
 }
 .call-to-action-hi button 
