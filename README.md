@@ -3,6 +3,7 @@
 My personal portfolio
 
 This project is a one-page website that I designed for my personal portfolio and freelance web design company.
+<a href="https://jays-t.github.io/resume/">View Live Site in it's current state</a>
 
 ![App Showcase](assets/images/angry_cat.svg)
 
@@ -13,12 +14,9 @@ This project is a one-page website that I designed for my personal portfolio and
     + [Business Goals](#business-goals)
     + [Customer Goals](#customer-goals)
   * [**Features and App Sections**](#features-and-app-sections)
-    + [Web App Sections](#web-app-sections)
     + [Features](#features)
     + [Features Left to Implement](#features-left-to-implement)
     + [Wireframes](#wireframes)
-  * [**Information Architecture**](#information-architecture)
-    + [Data Models](#data-models)
   * [**Graphic Design and Brand Elements**](#graphic-design-and-brand-elements)
     + [Fonts](#fonts)
     + [Colours](#colours)
@@ -29,9 +27,6 @@ This project is a one-page website that I designed for my personal portfolio and
   * [**Testing and Defensive Design**](#testing-and-defensive-design)
   * [**Deployment**](#deployment)
     + [Local Deployment](#local-deployment)
-    + [Heroku Deployment](#heroku-deployment)
-    + [Hosting Files with AWS](#hosting-files-with-aws)
-    + [Sending E-mails through Gmail](#sending-e-mails-through-gmail)
   * [**Credits**](#credits)
     + [Content](#content)
     + [Media](#media)
@@ -58,70 +53,12 @@ This project is a one-page website that I designed for my personal portfolio and
 
 ![Navigation Feature](readme-files/img-features/img-features-navigation.png)
 
-### Features Left to Implement
-
-**Animations**
-
-![Animations Feature](readme-files/img-features-left-to-implement/img-features-animations.png)
-
-**Contact page**
-
-**Save for later**
-
-![Save for Later Feature](readme-files/img-features-left-to-implement/img-features-save-for-later.png)
-
-**Cart keeps items after logging out**
-
-**Comments, voting on blog posts and products in blog posts**
-
-![Comments, Voting and Featured Products Features](readme-files/img-features-left-to-implement/img-features-blog-post-comments-voting-featuring.png)
-
-**Product reviews**
-
-**Better feedback on loyalty points donations**
-
-![Donation Feedback Feature](readme-files/img-features-left-to-implement/img-features-donation-feedback.png)
-
-**Recommendation system**
-
 ### Wireframes
 
 The wireframes linked below are only some that I've made for this project. They were created with [Figma](https://www.figma.com/).
 
 Desktop wireframes:
 * [homepage](https://raw.githubusercontent.com/valentina-b/ecosio-eco-friendly-cosmetics/master/readme-files/wireframes/dsk/wireframe-dsk-homepage.png)
-
-<div align="right">
-    <a href="#table-of-contents"> ⇧ Back To Top </a>
-</div>
-
-## Information Architecture
-
-### Data Models
-
-**User Model**
-
-**Profiles App**
-
-`UserProfile` model
-
-**Products App**
-
-`Category` model
-
-`Brand` model
-
-`Product` model
-
-**Checkout App**
-
-`Order` model
-
-`OrderLineItem` model
-
-**Blog App**
-
-`Order` model
 
 <div align="right">
     <a href="#table-of-contents"> ⇧ Back To Top </a>
