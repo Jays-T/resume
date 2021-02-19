@@ -3,7 +3,7 @@
 My personal portfolio
 
 This project is a one-page website that I designed for my personal portfolio and freelance web design company.
-<a href="https://jays-t.github.io/resume/">View Live Site in it's current state</a>
+<a href="https://jays-t.github.io/resume/">View Live Site</a>
 
 ![App Showcase](assets/images/angry_cat.svg)
 
