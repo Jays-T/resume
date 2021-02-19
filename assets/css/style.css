@@ -331,6 +331,7 @@ section .call-to-action
     display: inline;
     margin: 10px 0;
     opacity: .6;
+    pointer-events: all;
 }
 .non-technical,
 .frontend,
@@ -359,7 +360,8 @@ section .call-to-action
 .scrollable-content-wrap.frontend-stack,
 .scrollable-content-wrap.backend-stack
 {
-    visibility: hidden;
+    visibility: visible;
+    opacity: 1;
     background: var(--p-dark-purple);
     height: 0;
     width: 90%;
@@ -368,7 +370,10 @@ section .call-to-action
     margin: 0;
     padding: 0;
     opacity: 0;
-    animation: removeHeight .5s forwards;
+    border-top: 1px solid var(--s-gold-fade-3);
+    border-bottom: 1px solid var(--s-gold-fade-3);
+    animation: removeHeight .5s ease-out forwards;
+    overflow: hidden;
 }
 @keyframes removeHeight
 {
@@ -377,24 +382,28 @@ section .call-to-action
         height: 220px;
         opacity: 1;
     }
-    60%
+    /* 60%
     {
         opacity: 0;
+    } */
+    90%
+    {
+        height: 0;
+        visibility: visible;
     }
     100%
     {
-        height: 0;
+        visibility: hidden;
     }
 }
 .scrollable-content-wrap.show-skill.non-technical-skills,
 .scrollable-content-wrap.show-skill.frontend-stack,
 .scrollable-content-wrap.show-skill.backend-stack
 {
-    visibility: visible;
     width: 90%;
     top: 0;
     left: 6.5%;
-    animation: changeHeight .5s forwards;
+    animation: changeHeight .5s ease-in-out forwards;
     border-top: 1px solid var(--s-gold-fade-3);
     border-bottom: 1px solid var(--s-gold-fade-3);
 }
@@ -910,10 +919,6 @@ from, to { border-color: transparent }
     font-size: .8rem;
     font-weight: 200;
 }
-/* .slide .slide-content .skills-overlay .stack-lists i
-{
-    padding: 14px;
-} */
 .skills-headline-wrap .stack-lists span,
 .scrollable-content-right section .stack-lists span
 {
@@ -1189,13 +1194,6 @@ section #is-scrollable .show-slides,
     transition: 1s;
 }
 
-/* .slide-container .slide .slide-content
-{
-    position: relative;
-    height: 60%;
-    width: 80%;
-} */
-
 /* SLIDE ONE */
 .slide-container .slide.slide-one
 {
@@ -1245,7 +1243,6 @@ section #is-scrollable .show-slides,
     background: var(--s-dark-purple-fade-6);
     -webkit-clip-path: polygon(87% 0, 74% 0, 74% 100%, 87% 100%);
             clip-path: polygon(87% 0, 74% 0, 74% 100%, 87% 100%);
-    pointer-events: all;
 }
 .slide-container .slide.slide-two::after 
 {
@@ -1303,7 +1300,6 @@ section #is-scrollable .show-slides,
 .slide-container .slide.active.slide-three 
 {
     visibility: visible;
-    pointer-events: all;
 }
 
 /* Sliders Pseudo Elements Styling */
@@ -1356,6 +1352,7 @@ section #is-scrollable .show-slides,
         -ms-flex-pack: center;
             justify-content: center;
     margin-right: 10%;
+    height: 60%;
     width: 100%;
     padding: 6px;
     z-index: 10;
@@ -1552,6 +1549,23 @@ section .close-slide.show-close
 }
 @media screen and (min-width: 1366px) 
 {
+    .slide .slide-content .skills-overlay
+    {
+        height: 100%;
+        width: 68%;
+        position: absolute;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        
+    }
     .slide-container .slide.slide-one .slide-content img
     {
         left: -20%;
@@ -2584,6 +2598,7 @@ section .close-slide.show-close
     .slide-container .slide.active.slide-two::after,
     .slide-container .slide.active.slide-three::after
     {
+        letter-spacing: -1.4rem;
         left: 80vw;
         -webkit-transition-delay: .2s;
             -o-transition-delay: .2s;
@@ -3573,8 +3588,8 @@ body .container
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     padding: 20px;
 }
 .slide .slide-content .skills-overlay i
