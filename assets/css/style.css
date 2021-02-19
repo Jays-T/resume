@@ -366,7 +366,8 @@ section .call-to-action
     height: 0;
     width: 90%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    /* align-items: center; */
     margin: 0;
     padding: 0;
     opacity: 0;
@@ -379,13 +380,9 @@ section .call-to-action
 {
     0%
     {
-        height: 220px;
+        height: 300px;
         opacity: 1;
     }
-    /* 60%
-    {
-        opacity: 0;
-    } */
     90%
     {
         height: 0;
@@ -417,7 +414,7 @@ section .call-to-action
     100%
     {
         opacity: 1;
-        height: 220px;
+        height: 300px;
     }
 }
 .scrollable-content-wrap.non-technical-skills
@@ -438,7 +435,7 @@ section .call-to-action
 .frontend-stack.scrollable-content-wrap .stack-list-wrap,
 .backend-stack.scrollable-content-wrap .stack-list-wrap
 {
-    margin: 5% 0;
+    margin: 5% 25%;
 }
 .frontend-stack.scrollable-content-wrap .stack-list-wrap i,
 .frontend-stack.scrollable-content-wrap .stack-list-wrap span,
@@ -3592,7 +3589,7 @@ body .container
     height: 100%;
     padding: 20px;
 }
-.slide .slide-content .skills-overlay i
+.slide .slide-content .skills-overlay .stack-lists i
 {
     font-size: 2.8rem;
 }
