@@ -307,8 +307,9 @@ section .call-to-action
 }
 .skills-headline-wrap
 {
-    height: 60%;
+    height: 100%;
     width: 100%;
+    padding-top: 15%;
     position: relative;
     display: grid;
     grid-template-columns: .3fr 1fr;
@@ -380,7 +381,7 @@ section .call-to-action
 {
     0%
     {
-        height: 300px;
+        height: 225px;
         opacity: 1;
     }
     90%
@@ -397,7 +398,6 @@ section .call-to-action
 .scrollable-content-wrap.show-skill.frontend-stack,
 .scrollable-content-wrap.show-skill.backend-stack
 {
-    width: 90%;
     top: 0;
     left: 6.5%;
     animation: changeHeight .5s ease-in-out forwards;
@@ -414,7 +414,7 @@ section .call-to-action
     100%
     {
         opacity: 1;
-        height: 300px;
+        height: 225px;
     }
 }
 .scrollable-content-wrap.non-technical-skills
@@ -877,10 +877,15 @@ from, to { border-color: transparent }
 .stack-list-wrap
 {
     display: flex;
-    flex-wrap: wrap;
+    
     width: 100%;
     margin: -2% 0 0 20%;
     text-align: start;
+}
+.skills .stack-list-wrap
+{
+    justify-content: center;
+    align-items: center;
 }
 .text-list-wrap
 {
@@ -1546,6 +1551,11 @@ section .close-slide.show-close
 }
 @media screen and (min-width: 1366px) 
 {
+    .skills-headline-wrap
+    {
+        padding: 0;
+        height: 60%;
+    }
     .slide .slide-content .skills-overlay
     {
         height: 100%;
@@ -2070,6 +2080,7 @@ section .close-slide.show-close
     }
     .stack-list-wrap
     {
+        flex-wrap: wrap;
         width: 100%;
         margin: -2% 0 0 20%;
         text-align: start;
