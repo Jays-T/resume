@@ -342,7 +342,7 @@ section .call-to-action
     width: 100%;
     height: 40px;
     text-align: start;
-    margin-left: 12%;
+    margin-left: 7.5%;
     bottom: 0;
     position: relative;
 }
@@ -436,11 +436,15 @@ section .call-to-action
 .frontend-stack.scrollable-content-wrap .stack-list-wrap,
 .backend-stack.scrollable-content-wrap .stack-list-wrap
 {
-    margin: 5% 25%;
+    margin: 5% 15%;
 }
-.frontend-stack.scrollable-content-wrap .stack-list-wrap i,
+.slide .slide-content .projects-headline-wrap.scrollable-content-wrap .stack-list-wrap i,
+.slide .slide-content .frontend-stack.scrollable-content-wrap .stack-list-wrap i,
+.slide .slide-content .backend-stack.scrollable-content-wrap .stack-list-wrap i
+{
+    font-size: 1.8rem;
+}
 .frontend-stack.scrollable-content-wrap .stack-list-wrap span,
-.backend-stack.scrollable-content-wrap .stack-list-wrap i,
 .backend-stack.scrollable-content-wrap .stack-list-wrap span
 {
     display: block;
@@ -878,13 +882,14 @@ from, to { border-color: transparent }
 .stack-list-wrap
 {
     display: flex;
-    
+    flex-wrap: wrap;
     width: 100%;
     margin: -2% 0 0 20%;
     text-align: start;
 }
 .skills .stack-list-wrap
 {
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
 }
@@ -1380,13 +1385,24 @@ section #is-scrollable .show-slides,
     -o-object-fit: cover;
        object-fit: cover;
 }
+.info-paragraph,
+.skills-paragraph
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-paragraph
+{
+    height: 100%;
+    width: 100%;
+}
 .slide-container .slide-content p
 {
     
     opacity: 0;
     margin-top: 20%;
     padding: 6px;
-    max-width: 85%;
     -webkit-transition: 1s ease-in-out;
     -o-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
@@ -1552,6 +1568,17 @@ section .close-slide.show-close
 }
 @media screen and (min-width: 1366px) 
 {
+    .non-technical,
+    .frontend,
+    .backend
+    {
+        margin-left: 8%;
+    }
+    .info-paragraph
+    {
+        height: 100%;
+        width: 50%;
+    }
     .skills-headline-wrap
     {
         padding: 0;
@@ -2069,7 +2096,7 @@ section .close-slide.show-close
     {
         position: relative;
         display: flex;
-        align-items: center;
+        /* align-items: center; */
         flex-wrap: wrap;
         width: 90%;
         margin-top: 12px;
@@ -2148,12 +2175,22 @@ section .close-slide.show-close
         font-size: 2rem;
         font-weight: 900;
     }
+    .skills-headline,
+    .skills-headline-wrap .stack-lists
+    {
+        pointer-events: all;
+    }
+    .skills-paragraph,
+    .skills-headline,
+    .skills-headline-wrap .stack-lists,
     .scrollable-content-right section .stack-lists,
     .call-to-action-link
     {
         opacity: .5;
         transition: .3s ease-in-out;
     }
+    .skills-headline:hover,
+    .skills-headline-wrap .stack-lists:hover,
     .call-to-action-hi.active button:hover,
     .scrollable-content-right section .stack-lists:hover,
     .call-to-action-link:hover
@@ -2617,8 +2654,6 @@ section .close-slide.show-close
     }
 .slide-container .slide-content p
     {
-        width: 60%;
-        height: 60%;
         font-size: 1.1rem;
     }
 }
