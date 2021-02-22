@@ -406,7 +406,7 @@ section .call-to-action
     padding: 18px 2px;;
     display: inline;
     margin: 10px 0;
-    opacity: .6;
+    opacity: .8;
     pointer-events: all;
     width: 100%;
     height: 40px;
@@ -513,7 +513,7 @@ section .call-to-action
     height: 12px;
     width:6px;
     position: absolute;
-    opacity: .6;
+    opacity: .8;
 }
 .skills-headline::after,
 .projects-headline::after,
@@ -530,7 +530,7 @@ section .call-to-action
     height: 12px;
     width:6px;
     position: absolute;
-    opacity: .6;
+    opacity: .8;
 }
 .skills-headline::before,
 .projects-headline::before
@@ -663,7 +663,7 @@ section .call-to-action
     text-decoration: none;
     text-align: center;
     color: var(--p-text);
-    border-bottom: 1px solid var(--p-dark-purple);
+    border-bottom: 1px solid transparent;
     border: none;
     outline: none;
     position: absolute;
@@ -671,13 +671,13 @@ section .call-to-action
     transform: translateY(-50%);
     bottom: 0;
     opacity: .1;
-    transition: opacity .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 .call-to-action-hi.active button
 {
     cursor: pointer;
     border-bottom: 1px solid var(--p-gold);
-    opacity: .6;
+    opacity: .8;
 }
 
 /* Tooltips for Say Hi Email Form */
@@ -950,7 +950,7 @@ from, to { border-color: transparent }
 {
     margin: 0 0 0 5%;
     width: 60%;
-    opacity: .6;
+    opacity: .8;
     transition: opacity .3s ease-in-out;
 }
 .text-list-wrap:hover
@@ -1075,7 +1075,7 @@ from, to { border-color: transparent }
     height: 100%;
     width: 100%;
     margin-left: 12%;
-    opacity: .6;
+    opacity: .8;
     display: inline;
     transition: .3s ease-in-out;
     position: relative;
@@ -1808,7 +1808,7 @@ section .close-slide.show-close
         height: 30px;
         width:6px;
         position: absolute;
-        opacity: .6;
+        opacity: .8;
     }
     .error-message::after,
     section .has-display-code .display-code-live::after,
@@ -1828,7 +1828,7 @@ section .close-slide.show-close
         height: 30px;
         width:6px;
         position: absolute;
-        opacity: .6;
+        opacity: .8;
     }
     .call-to-action-hi button::before,
     .call-to-action-hi button::after
@@ -1923,7 +1923,7 @@ section .close-slide.show-close
         border-right: none;
         border-bottom: 1px solid var(--s-gold-fade-6);
         outline: none;
-        opacity: .6;
+        opacity: .8;
         transition: opacity .3s ease-in-out;
     }
     .say-hi-collapsible.active .call-to-action-hi input:hover,
@@ -1958,7 +1958,7 @@ section .close-slide.show-close
     {
         cursor: pointer;
         border-bottom: 1px solid var(--p-gold);
-        opacity: .6;
+        opacity: .8;
     }
 
     /* Tooltips for Say Hi Email Form */
@@ -2179,7 +2179,7 @@ section .close-slide.show-close
     {
         margin: 0 0 0 5%;
         width: 60%;
-        opacity: .6;
+        opacity: .8;
         transition: opacity .3s ease-in-out;
     }
     .text-list-wrap:hover
@@ -2294,7 +2294,7 @@ section .close-slide.show-close
         align-items: center;
         height: 100%;
         width: 36%;
-        opacity: .6;
+        opacity: .8;
         display: inline;
         transition: .3s ease-in-out;
     }
@@ -3209,6 +3209,7 @@ svg .draw
 }
 
 /* If used with relevant JavaScript, allows the Main Cat Animation SVG to draw according to the amount scrolled by the User */
+/* I've left this commented out here because I intend to use it in a future edition of this site */
 /* svg .draw-two 
 {
     stroke-width: 1.75rem;
