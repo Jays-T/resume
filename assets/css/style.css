@@ -486,10 +486,6 @@ section .call-to-action
 {
     margin: 0;
 }
-.slide .slide-content .scrollable-content-wrap .stack-list-wrap span i
-{
-    font-size: 1.8rem;
-}
 .slide .slide-content .scrollable-content-wrap .stack-list-wrap span
 {
     display: block;
@@ -982,8 +978,9 @@ from, to { border-color: transparent }
 .projects-headline-wrap .stack-lists span,
 .scrollable-content-right section .stack-lists span
 {
-    font-size: .8rem;
-    font-weight: 400;
+    letter-spacing: .2rem;
+    font-size: .6rem;
+    font-weight: 200;
 }
 .slide .slide-content .skills-overlay .stack-lists i,
 .slide .slide-content .projects-overlay .stack-lists i,
@@ -1059,10 +1056,11 @@ from, to { border-color: transparent }
 {
     position: relative;
     display: grid;
-    grid-template-columns: 30% 60%;
+    grid-template-columns: 30% 70%;
     grid-template-areas: 
-    "projects-wrap empty"
-    "projects-wrap stack-list-wrap"
+    "projects-wrap projects-wrap"
+    "projects-wrap projects-wrap"
+    "stack-list-wrap stack-list-wrap"
     ;
     width: 100%;
     height: 225px;
@@ -1084,7 +1082,7 @@ from, to { border-color: transparent }
 .projects-display-code-wrap
 {
     position: absolute;
-    top: 15%;
+    top: 30%;
     grid-area: projects-wrap;
     display: flex;
     flex-wrap: wrap;
@@ -1094,6 +1092,17 @@ from, to { border-color: transparent }
     pointer-events: all;
     cursor: pointer;
     text-decoration: none;
+}
+.projects-display-code .dim-text
+{
+    color: var(--p-text);
+    font-weight: 200;
+    opacity: .6;
+    transition: opacity .3s ease-in-out;
+}
+.projects-display-code .dim-text:hover
+{
+    opacity: 1;
 }
 .projects-display-code .display-code-live-left,
 .projects-display-code .display-code-live-right,
@@ -1151,6 +1160,15 @@ section .has-display-code .display-code-live::after
     position: absolute;
     opacity: .8;
 }
+.projects-has-display-code .projects-display-code::before,
+.projects-has-display-code .projects-display-code::after
+{
+    opacity: .2;
+}
+/* .projects-has-display-code .projects-display-code::after
+{
+    bottom: -5px;
+} */
 section .has-display-code .display-code-live .dim-text
 {
     opacity: .8;
@@ -1488,12 +1506,10 @@ section #is-scrollable .show-slides,
 }
 .info-paragraph
 {
+    align-items: flex-start;
+    flex-direction: column;
     height: 100%;
     width: 100%;
-}
-.slide-container .slide-content p
-{
-    
     opacity: 0;
     margin-top: 20%;
     padding: 6px;
@@ -1501,15 +1517,20 @@ section #is-scrollable .show-slides,
     -o-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
 }
-.slide-container .slide.active .slide-content p
+.slide-container .slide.active .slide-content .info-paragraph
 {
-    opacity: 1;
+    opacity: .8;
     margin-top: 0;
     -webkit-transition-delay: .5s;
          -o-transition-delay: .5s;
             transition-delay: .5s;
 }
-
+.info-blurb
+{
+    font-size: .8rem;
+    font-weight: 200;
+    padding: 5px 0;
+}
 /* Close slide button */
 section .close-slide
 {
@@ -1596,6 +1617,31 @@ section .close-slide.show-close
 }
 @media screen and (min-width: 768px)
 {
+    .projects-has-display-code
+    {
+        position: relative;
+        display: grid;
+        grid-template-columns: 30% 60%;
+        grid-template-areas: 
+        "projects-wrap stack-list-wrap"
+        "projects-wrap stack-list-wrap"
+        "projects-wrap stack-list-wrap"
+        ;
+        width: 100%;
+        height: 225px;
+        margin-bottom: 0;
+    }
+    .slide .slide-content .scrollable-content-wrap .stack-list-wrap span i
+    {
+        font-size: 1.8rem;
+    }
+    .skills-headline-wrap .stack-lists span,
+    .projects-headline-wrap .stack-lists span,
+    .scrollable-content-right section .stack-lists span
+    {
+        font-size: .8rem;
+        font-weight: 400;
+    }
     .slide-container .slide.slide-one::after,
     .slide-container .slide.slide-two::after,
     .slide-container .slide.slide-three::after 
@@ -1665,12 +1711,18 @@ section .close-slide.show-close
     .skills-headline,
     .projects-headline
     {
+        font-size: 1.2rem;
         margin-left: 8%;
     }
     .info-paragraph
     {
         height: 100%;
         width: 50%;
+    }
+    .info-blurb
+    {
+        font-size: 1.2rem;
+        padding: 15px 5px;
     }
     .skills-headline-wrap,
     .projects-headline-wrap
@@ -2336,6 +2388,11 @@ section .close-slide.show-close
     {
         height: 60px;
         width: 100%;
+    }
+    .projects-display-code a 
+    {
+        position: relative;
+        left: 14px;
     }
     .display-code-live-left
     {

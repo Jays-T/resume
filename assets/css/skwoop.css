@@ -1,0 +1,43 @@
+/* Idea for animation sourced from the geniuses at Keyframers (https://www.youtube.com/channel/UCtmYk7H-NNYLEe_LgBRYomA) */
+.slide-container .slide.active .slide-content .skwoop 
+{
+  transform-origin: top left;
+  animation: skwoop 0.7s ease-in backwards;
+  animation-delay: .4s;
+}
+@keyframes skwoop 
+{
+    from 
+    {
+        opacity: 0;
+        transform: translateY(10vh) skewY(5deg);
+    }
+}
+/* Skills + Projects Section Animation Delay */
+.slide-container .slide.active .slide-content .skwoop:nth-child(3)
+{
+    animation-delay: .55s;
+}
+.slide-container .slide.active .slide-content .skwoop:nth-child(5)
+{
+    animation-delay: .7s;
+}
+.slide-container .slide.active .slide-content .skwoop:nth-child(7)
+{
+    animation-delay: .85s;
+}
+
+/* Info Section Animation Delay */
+.slide-container .slide.active .slide-content .info-paragraph .skwoop:nth-child(2)
+{
+    animation-delay: .68s;
+}
+.slide-container .slide.active .slide-content .info-paragraph .skwoop:nth-child(3)
+{
+    animation-delay: .96s;
+}
+.slide-container .slide.active .slide-content .info-paragraph .skwoop:nth-child(4)
+
+{
+    animation-delay: 1.22s;
+}
