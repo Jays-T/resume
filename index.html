@@ -114,7 +114,7 @@
                 type="text"
                 name="from_name"
                 id="visitorname"
-                class="form-input"
+                class="form-input skwoop"
                 placeholder="Name"
                 required
                 onfocus="isActive()"
@@ -127,7 +127,7 @@
                 type="text"
                 name="from_email"
                 id="emailaddress"
-                class="form-input"
+                class="form-input skwoop"
                 placeholder="Email"
                 required
                 onfocus="isActive()"
@@ -140,7 +140,7 @@
                 rows="5"
                 name="email_content"
                 id="emailcontent"
-                class="form-input"
+                class="form-input skwoop"
                 placeholder="Say hi..."
                 required
                 onfocus="isActive()"
@@ -150,7 +150,7 @@
               <div for="email_content" class="error-message email-content"><span>Please input your message</span></div>
               <button
                 id="email_button"
-                class="btn font-montserrat uppercase margin-thin border-thin btn-colors center-block text-spacing"
+                class="btn font-montserrat uppercase margin-thin border-thin btn-colors center-block text-spacing skwoop"
                 type="submit"
                 onclick="setFocus()"
               >
@@ -323,7 +323,7 @@
   <div id="slides" class="slide-container hide-slides">
     <div class="slide slide-one info-slide">
       <div class="slide-content">
-        <img src="assets/images/John Portrait1.jpg" alt="portrait of developer John Traas">
+        <img class="portrait" src="assets/images/John Portrait1.jpg" alt="portrait of developer John Traas">
         <div class="box-corners info-paragraph">
             <span class="skwoop info-blurb">Hi there, my name is John but most people call me Jays. I'm a developer, UI designer and musician.</span>
             <span class="skwoop info-blurb">I have a great affinity for all things UI/UX and design related. The logic of back-end fascinates me.</span>
@@ -403,47 +403,59 @@
         <div class="projects box-corners">
           <div class="projects-overlay">
             <div class="projects-headline-wrap" style="--total: 4">
-              <span class="projects-headline everyday-gourmet skwoop" data-title="Everyday Gourmet" style="--i: 0">Everyday Gourmet</span>
-                <div class="scrollable-content-wrap everyday-gourmet-details accordion-content">
-                  <div class="projects-has-display-code">
-                    <div class="projects-display-code-wrap">
-                      <div class="projects-display-code display-code-live-left">
-                        <a href="https://github.com/Jays-T/everyday-gourmet-development" target="_blank">
-                          <span class="dim-text"> View</span><span class="outline-text"> Code</span> <span class="dim-text"> Repo</span></a> 
+                <span class="projects-headline everyday-gourmet skwoop title">Everyday Gourmet</span>
+                  <div class="scrollable-content-wrap everyday-gourmet-details accordion-content">
+                    <div class="projects-has-display-code">
+                      <div class="projects-display-code-wrap">
+                        <div class="projects-display-code display-code-live-left preview">
+                          <a class="image-hover" href="#" target="_blank">
+                            <span class="dim-text"> Quick</span><span class="outline-text"> Preview</span>
+                            <img class="show-on-hover" src="assets/images/projects_images/everday_gourmet_1031x650.png" alt="screenshot of everday gourmet wine pairing website by John Traas at Angry Cat Design">
+                          </a> 
+                        </div>
+                        <div class="projects-display-code display-code-live-left">
+                          <a href="https://github.com/Jays-T/everyday-gourmet-development" target="_blank">
+                            <span class="dim-text"> View</span><span class="outline-text"> Code</span> <span class="dim-text"> Repo</span></a> 
+                        </div>
+                        <div class="projects-display-code display-code-live-right">
+                          <a href="https://jays-t.github.io/everyday-gourmet-development/" target="_blank"> 
+                            <span class="dim-text"> Test</span><span class="outline-text"> Live</span> <span class="dim-text"> Site</span></a>
+                        </div>
                       </div>
-                      <div class="projects-display-code display-code-live-right">
-                        <a href="https://jays-t.github.io/everyday-gourmet-development/" target="_blank"> 
-                          <span class="dim-text"> Test</span><span class="outline-text"> Live</span> <span class="dim-text"> Site</span></a>
+                      <div class="stack-list-wrap">
+                        <span class="stack-lists">
+                          <i class="fab fa-python python"></i>
+                          <span class="left-right-margin-8">Python</span>
+                        </span>
+                        <span class="stack-lists">
+                          <i class="fab fa-bimobject block-icon"></i>
+                          <span class="left-right-margin-8">Django</span>
+                        </span>
+                        <span class="stack-lists">
+                          <i class="fas fa-database"></i>
+                          <span class="left-right-margin-8">PostGre SQL</span>
+                        </span>
+                        <span class="stack-lists">
+                          <i class="fab fa-aws"></i>
+                          <span class="left-right-margin-8">AWS</span>
+                        </span>
+                        <span class="stack-lists">
+                          <i class="fab fa-git-alt"></i>
+                          <span class="left-right-margin-8">GIT</span>
+                        </span>
                       </div>
-                    </div>
-                    <div class="stack-list-wrap">
-                      <span class="stack-lists">
-                        <i class="fab fa-python python"></i>
-                        <span class="left-right-margin-8">Python</span>
-                      </span>
-                      <span class="stack-lists">
-                        <i class="fab fa-bimobject block-icon"></i>
-                        <span class="left-right-margin-8">Django</span>
-                      </span>
-                      <span class="stack-lists">
-                        <i class="fas fa-database"></i>
-                        <span class="left-right-margin-8">PostGre SQL</span>
-                      </span>
-                      <span class="stack-lists">
-                        <i class="fab fa-aws"></i>
-                        <span class="left-right-margin-8">AWS</span>
-                      </span>
-                      <span class="stack-lists">
-                        <i class="fab fa-git-alt"></i>
-                        <span class="left-right-margin-8">GIT</span>
-                      </span>
                     </div>
                   </div>
-                </div>
-              <span class="projects-headline band-room skwoop" data-title="The Band Room" style="--i: 1">The Band Room</span>
+              <span class="projects-headline band-room skwoop">The Band Room</span>
                 <div class="scrollable-content-wrap band-room-details accordion-content">
                   <div class="projects-has-display-code">
                     <div class="projects-display-code-wrap">
+                      <div class="projects-display-code display-code-live-left preview">
+                        <a class="image-hover" href="#" target="_blank">
+                          <span class="dim-text"> Quick</span><span class="outline-text"> Preview</span>
+                          <img class="show-on-hover" src="assets/images/projects_images/the_band_room_1031x650.png" alt="screenshot of the band room site by John Traas at Angry Cat Design">
+                        </a> 
+                      </div>
                       <div class="projects-display-code display-code-live-left">
                         <a href="https://github.com/Jays-T/everyday-gourmet-development" target="_blank">
                           <span class="dim-text"> View</span><span class="outline-text"> Code</span> <span class="dim-text"> Repo</span></a> 
@@ -477,76 +489,88 @@
                     </div>
                   </div>
                 </div>
-              <span class="projects-headline photography-philosophy skwoop" data-title="Photography Philosophy" style="--i: 2">Photography Philosophy</span>
-              <div class="scrollable-content-wrap photography-philosophy-details accordion-content">
-                <div class="projects-has-display-code">
-                  <div class="projects-display-code-wrap">
-                    <div class="projects-display-code display-code-live-left">
-                      <a href="https://github.com/Jays-T/everyday-gourmet-development" target="_blank">
-                        <span class="dim-text"> View</span><span class="outline-text"> Code</span> <span class="dim-text"> Repo</span></a> 
+              <span class="projects-headline photography-philosophy skwoop">Photography Philosophy</span>
+                <div class="scrollable-content-wrap photography-philosophy-details accordion-content">
+                  <div class="projects-has-display-code">
+                    <div class="projects-display-code-wrap">
+                      <div class="projects-display-code display-code-live-left preview">
+                        <a class="image-hover" href="#" target="_blank">
+                          <span class="dim-text"> Quick</span><span class="outline-text"> Preview</span>
+                          <img class="show-on-hover" src="assets/images/projects_images/photography_philosophy_1031x650.png" alt="screenshot of photography philosophy lanthus clark website by John Traas at Angry Cat Design">
+                        </a> 
+                      </div>
+                      <div class="projects-display-code display-code-live-left">
+                        <a href="https://github.com/Jays-T/everyday-gourmet-development" target="_blank">
+                          <span class="dim-text"> View</span><span class="outline-text"> Code</span> <span class="dim-text"> Repo</span></a> 
+                      </div>
+                      <div class="projects-display-code display-code-live-right">
+                        <a href="https://jays-t.github.io/everyday-gourmet-development/" target="_blank"> 
+                          <span class="dim-text"> Test</span><span class="outline-text"> Live</span> <span class="dim-text"> Site</span></a>
+                      </div>
                     </div>
-                    <div class="projects-display-code display-code-live-right">
-                      <a href="https://jays-t.github.io/everyday-gourmet-development/" target="_blank"> 
-                        <span class="dim-text"> Test</span><span class="outline-text"> Live</span> <span class="dim-text"> Site</span></a>
+                    <div class="stack-list-wrap">
+                      <span class="stack-lists">
+                        <i class="fab fa-python python"></i>
+                        <span class="left-right-margin-8">Python</span>
+                      </span>
+                      <span class="stack-lists">
+                        <i class="fab fa-bimobject block-icon"></i>
+                        <span class="left-right-margin-8">Django</span>
+                      </span>
+                      <span class="stack-lists">
+                        <i class="fas fa-database"></i>
+                        <span class="left-right-margin-8">PostGre SQL</span>
+                      </span>
+                      <span class="stack-lists">
+                        <i class="fab fa-aws"></i>
+                        <span class="left-right-margin-8">AWS</span>
+                      </span>
+                      <span class="stack-lists">
+                        <i class="fab fa-git-alt"></i>
+                        <span class="left-right-margin-8">GIT</span>
+                      </span>
                     </div>
-                  </div>
-                  <div class="stack-list-wrap">
-                    <span class="stack-lists">
-                      <i class="fab fa-python python"></i>
-                      <span class="left-right-margin-8">Python</span>
-                    </span>
-                    <span class="stack-lists">
-                      <i class="fab fa-bimobject block-icon"></i>
-                      <span class="left-right-margin-8">Django</span>
-                    </span>
-                    <span class="stack-lists">
-                      <i class="fas fa-database"></i>
-                      <span class="left-right-margin-8">PostGre SQL</span>
-                    </span>
-                    <span class="stack-lists">
-                      <i class="fab fa-aws"></i>
-                      <span class="left-right-margin-8">AWS</span>
-                    </span>
-                    <span class="stack-lists">
-                      <i class="fab fa-git-alt"></i>
-                      <span class="left-right-margin-8">GIT</span>
-                    </span>
                   </div>
                 </div>
-              </div>
-              <span class="projects-headline darwiche skwoop" data-title="Darwiche" style="--i: 3">Darwiche</span>
-              <div class="scrollable-content-wrap darwiche-details accordion-content">
-                <div class="projects-has-display-code">
-                  <div class="projects-display-code-wrap">
-                    <div class="projects-display-code display-code-live-left">
-                      <a href="https://github.com/Jays-T/everyday-gourmet-development" target="_blank">
-                        <span class="dim-text"> View</span><span class="outline-text"> Code</span> <span class="dim-text"> Repo</span></a> 
+              <span class="projects-headline darwiche skwoop">Darwiche</span>
+                <div class="scrollable-content-wrap darwiche-details accordion-content">
+                  <div class="projects-has-display-code">
+                    <div class="projects-display-code-wrap">
+                      <div class="projects-display-code display-code-live-left preview">
+                        <a class="image-hover" href="#" target="_blank">
+                          <span class="dim-text"> Quick</span><span class="outline-text"> Preview</span>
+                          <img class="show-on-hover" src="assets/images/projects_images/darwiche_1031x650.png" alt="screenshot of darwiche band website by John Traas at Angry Cat Design">
+                        </a> 
+                      </div>
+                      <div class="projects-display-code display-code-live-left">
+                        <a href="https://github.com/Jays-T/everyday-gourmet-development" target="_blank">
+                          <span class="dim-text"> View</span><span class="outline-text"> Code</span> <span class="dim-text"> Repo</span></a> 
+                      </div>
+                      <div class="projects-display-code display-code-live-right">
+                        <a href="https://jays-t.github.io/everyday-gourmet-development/" target="_blank"> 
+                          <span class="dim-text"> Test</span><span class="outline-text"> Live</span> <span class="dim-text"> site</span></a>
+                      </div>
                     </div>
-                    <div class="projects-display-code display-code-live-right">
-                      <a href="https://jays-t.github.io/everyday-gourmet-development/" target="_blank"> 
-                        <span class="dim-text"> Test</span><span class="outline-text"> Live</span> <span class="dim-text"> site</span></a>
+                    <div class="stack-list-wrap">
+                      <span class="stack-lists">
+                        <i class="fab fa-html5 html5"></i>
+                        <span class="left-right-margin-8"> HTML </span>
+                      </span>
+                      <span class="stack-lists">
+                        <i class="fab fa-css3-alt css3"></i> 
+                        <span class="left-right-margin-8">CSS </span>
+                      </span>
+                      <span class="stack-lists">
+                        <i class="fab fa-bootstrap bootstrap"></i>
+                        <span class="left-right-margin-8">BOOTSTRAP</span>
+                      </span>
+                      <span class="stack-lists">
+                        <i class="fab fa-git-alt"></i>
+                        <span class="left-right-margin-8">GIT</span>
+                      </span>
                     </div>
-                  </div>
-                  <div class="stack-list-wrap">
-                    <span class="stack-lists">
-                      <i class="fab fa-html5 html5"></i>
-                      <span class="left-right-margin-8"> HTML </span>
-                    </span>
-                    <span class="stack-lists">
-                      <i class="fab fa-css3-alt css3"></i> 
-                      <span class="left-right-margin-8">CSS </span>
-                    </span>
-                    <span class="stack-lists">
-                      <i class="fab fa-bootstrap bootstrap"></i>
-                      <span class="left-right-margin-8">BOOTSTRAP</span>
-                    </span>
-                    <span class="stack-lists">
-                      <i class="fab fa-git-alt"></i>
-                      <span class="left-right-margin-8">GIT</span>
-                    </span>
                   </div>
                 </div>
-              </div>
             </div>
           </div> 
         </div>
