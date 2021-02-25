@@ -1724,11 +1724,38 @@ section .close-slide.show-close
     }
     .show-on-hover
     {
-        background: var(--p-dark-purple);
+        display: inline-block;
+        visibility: visible;
+        position: absolute;
+        left: 140%;
+        top: -30px;
         height: 205px;
         object-fit: cover;
         opacity: 0;
         z-index: 10;
+        animation: hidePreview .8s forwards;
+    }
+    @keyframes hidePreview
+    {
+        0%
+        {   
+            display: inline-block;
+            visibility: visible;
+            opacity: .8;
+            clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+        }
+        99%
+        {   
+            display: inline-block;
+            visibility: visible;
+            opacity: .8;
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        }
+        100%
+        {
+            display: none;
+            visibility: hidden;
+        }
     }
 
     /* Reveal Preview Image */
@@ -1745,30 +1772,14 @@ section .close-slide.show-close
     {
         0%
         {
-            opacity: 1;
+            opacity: .8;
             clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
         }
         100%
-        {   opacity: 1;
+        {   opacity: .8;
             clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
         }
     }
-    .show-on-hover .hide-off-hover
-    {
-        animation: hidePreview .8s forwards;
-    }
-    @keyframes hidePreview
-    {
-        0%
-        {
-            clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-        }
-        100%
-        {   
-            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-        }
-    }
-
     /* Slide Stack Lists when Preview Active */
     .slide-right
     {
