@@ -23,3 +23,6 @@ el.addEventListener("click", function (e) {
     el.hidden = false;
   });
 });
+
+
+let activeProjectHover = document.activeElement;

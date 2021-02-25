@@ -1128,7 +1128,12 @@ from, to { border-color: transparent }
 {
     grid-area: display-code-live-right;
 }
-
+.preview,
+.show-on-hover
+{
+    display: none;
+    visibility: hidden;
+}
 /* Screen Right Button Borders */
 .projects-has-display-code .projects-display-code::before,
 section .has-display-code .display-code-live::before
@@ -1490,7 +1495,7 @@ section #is-scrollable .show-slides,
          -o-transition-delay: .5s;
             transition-delay: .5s;
 }
-.slide-container .slide-content img
+.slide-container .slide-content .portrait
 {
     height: 225px;
     width: 225px;
@@ -1617,6 +1622,10 @@ section .close-slide.show-close
 }
 @media screen and (min-width: 768px)
 {
+    .projects-display-code-wrap
+    {
+        top: 15%;
+    }
     .projects-has-display-code
     {
         position: relative;
@@ -1708,6 +1717,92 @@ section .close-slide.show-close
 }
 @media screen and (min-width: 1366px) 
 {
+    .preview
+    {
+        display: inline-block;
+        visibility: visible;
+    }
+    .show-on-hover
+    {
+        background: var(--p-dark-purple);
+        height: 205px;
+        object-fit: cover;
+        opacity: 0;
+        z-index: 10;
+    }
+
+    /* Reveal Preview Image */
+    .preview:hover .show-on-hover
+    {
+        position: absolute;
+        left: 140%;
+        top: -30px;
+        display: inline-block;
+        visibility: visible;
+        animation: revealPreview .8s forwards;
+    }
+    @keyframes revealPreview
+    {
+        0%
+        {
+            opacity: 1;
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        }
+        100%
+        {   opacity: 1;
+            clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+        }
+    }
+    .show-on-hover .hide-off-hover
+    {
+        animation: hidePreview .8s forwards;
+    }
+    @keyframes hidePreview
+    {
+        0%
+        {
+            clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+        }
+        100%
+        {   
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        }
+    }
+
+    /* Slide Stack Lists when Preview Active */
+    .slide-right
+    {
+        animation: pushStackList .8s forwards;
+    }
+    @keyframes pushStackList
+    {
+        0%
+        { 
+            margin-left: 0;
+        }
+        100%
+        {
+            margin-left: 140px;
+        }
+
+    }
+    .slide-left
+    {
+        animation: reverseStackListPush .8s forwards;
+    }
+    @keyframes reverseStackListPush
+    {
+        0%
+        { 
+            margin-left: 140px;
+        }
+        100%
+        {
+            margin-left: 0;
+        }
+
+    }
+
     .skills-headline,
     .projects-headline
     {
@@ -2816,7 +2911,7 @@ section .close-slide.show-close
         color: var(--p-gold) !important; /* Important used here to override pulse animation while active but not disrupt timing on pulse animation*/
         text-shadow: none !important;
     }
-.slide-container .slide-content p
+    .slide-container .slide-content p
     {
         font-size: 1.1rem;
     }

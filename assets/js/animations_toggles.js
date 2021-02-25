@@ -154,3 +154,36 @@ function toggleAccordion(popup){
       break;
   }
 }
+
+// Slide Stack Lists on Preview
+
+const preview = document.querySelectorAll('.preview');
+const stackLists = document.querySelectorAll('.stack-list-wrap');
+const previewImages = document.querySelectorAll('.show-on-hover');
+
+preview.forEach(popup => popup.addEventListener('mouseover', () => {
+  console.log('hovering hovering');
+  let i;
+    for (i = 0; i < stackLists.length; i++) {
+      stackLists[i].classList.remove('slide-left');
+      stackLists[i].classList.add('slide-right');
+    }
+
+  let j;
+  for (j = 0; j < previewImages.length; j++) {
+    previewImages[j].classList.remove('hide-off-hover');
+  }
+}))
+
+preview.forEach(popup => popup.addEventListener('mouseout', () => {
+  console.log('no hovering');
+  let i;
+    for (i = 0; i < stackLists.length; i++) {
+      stackLists[i].classList.remove('slide-right');
+      stackLists[i].classList.add('slide-left');
+    }
+  let j;
+  for (j = 0; j < previewImages.length; j++) {
+    previewImages[j].classList.add('hide-off-hover');
+  }
+}))
