@@ -42,23 +42,30 @@
 <body>
 <!-- Loading Animations -->
 <section class="has-loader">
+  <h1>Loader and Cat Animation</h1>
   <div class="container cat-svg" include-html="cat.html">
   </div>
 </section>
 <!-- Particles -->
 <section id="particles-js">
+  <h2>Particles Animation One</h2>
 </section>
 <section id="particles-js-one">
+  <h3>Particles Animation Two</h3>
 </section>
 <section id="particles-js-two">
+  <h4>Particles Animation Three</h4>
 </section>
 <!-- Scrollable Content -->
 <section id="is-scrollable" class="hide-slides hide-on-slide">
+
+  <h5>Scrollable Content</h5>
+
 <div class="scrollable-content">
   <div class="scrollable-content-left icons">
     <div class="content-toggle-wrap">
       <span class="scrollable-content-toggle">
-          <i class="fas fa-dice-d6"></i></a>
+          <i class="fas fa-dice-d6"></i>
       </span>
     </div>  
     <div class="projects-icons">
@@ -90,7 +97,7 @@
   <div class="scrollable-content-right text">
     <section>
       <div class="scrollable-content-headline-wrap">
-        <h1 class="scrollable-headline"><span class="outline-text">Get</span> in Touch</h1>
+        <span class="scrollable-headline"><span class="outline-text">Get</span> in Touch</span>
       </div>
       <div class="scrollable-content-wrap">
         <div class="call-to-action">
@@ -110,6 +117,7 @@
           <div class="call-to-action-hi say-hi-form box-corners">
             <form id="emailform" class="">
               <!-- Name input -->
+              <label for="visitorname">Name</label>
               <input
                 type="text"
                 name="from_name"
@@ -121,8 +129,9 @@
                 
                 oninput="isActive()"
               />
-              <div for="from_name" class="error-message name"><span>Please input your name</span></div>
+              <div class="error-message name"><span>Please input your name</span></div>
               <!-- Sender email add input -->
+              <label for="emailaddress">Email</label>
               <input
                 type="text"
                 name="from_email"
@@ -134,8 +143,9 @@
                 
                 oninput="isActive()"
               />
-              <div for="from_email" class="error-message email"><span>Please input a valid email</span></div>
+              <div class="error-message email"><span>Please input a valid email</span></div>
               <!-- Text input for email main content -->
+              <label for="emailcontent">Message</label>
               <textarea
                 rows="5"
                 name="email_content"
@@ -147,7 +157,7 @@
                 
                 oninput="isActive()"
               ></textarea>
-              <div for="email_content" class="error-message email-content"><span>Please input your message</span></div>
+              <div class="error-message email-content"><span>Please input your message</span></div>
               <button
                 id="email_button"
                 class="btn font-montserrat uppercase margin-thin border-thin btn-colors center-block text-spacing skwoop"
@@ -262,7 +272,7 @@
             </span>
             <span class="stack-lists">
               <i class="fab fa-html5 html5"></i>
-              <span class="left-right-margin-8"> HTML </span>
+              <span class="left-right-margin-8">HTML</span>
             </span>
             <span class="stack-lists">
               <i class="fab fa-css3-alt css3"></i> 
@@ -320,10 +330,13 @@
 </section>
 <!-- Screen Right navigation slides -->
 <section class="has-slides info-slide skills-slide projects-slide">
+
+  <h6>Info Skills and Projects Slides</h6>
+
   <div id="slides" class="slide-container hide-slides">
     <div class="slide slide-one info-slide">
       <div class="slide-content">
-        <img class="portrait" src="assets/images/John Portrait1.jpg" alt="portrait of developer John Traas">
+        <img class="portrait" src="assets/images/John__Headshot.jpg" alt="portrait of developer John Traas">
         <div class="box-corners info-paragraph">
             <span class="skwoop info-blurb">Hi there, my name is John but most people call me Jays. I'm a developer, UI designer and musician.</span>
             <span class="skwoop info-blurb">I have a great affinity for all things UI/UX and design related. The logic of back-end fascinates me.</span>
@@ -351,6 +364,10 @@
                 <div class="scrollable-content-wrap frontend-stack accordion-content">
                   <div class="stack-list-wrap">
                     <span class="stack-lists">
+                      <i class="fab fa-js-square javascript"></i> 
+                      <span class="left-right-margin-8">JavaScript</span>
+                    </span>
+                    <span class="stack-lists">
                       <i class="fab fa-html5 html5"></i>
                       <span class="left-right-margin-8">HTML</span>
                     </span>
@@ -361,10 +378,6 @@
                     <span class="stack-lists">
                       <i class="fab fa-bootstrap bootstrap"></i>
                       <span class="left-right-margin-8">BOOTSTRAP</span>
-                    </span>
-                    <span class="stack-lists">
-                      <i class="fab fa-js-square javascript"></i> 
-                      <span class="left-right-margin-8">JavaScript</span>
                     </span>
                   </div>
                 </div>
@@ -402,50 +415,50 @@
       <div class="slide-content">
         <div class="projects box-corners">
           <div class="projects-overlay">
-            <div class="projects-headline-wrap" style="--total: 4">
-                <span class="projects-headline everyday-gourmet skwoop title">Everyday Gourmet</span>
-                  <div class="scrollable-content-wrap everyday-gourmet-details accordion-content">
-                    <div class="projects-has-display-code">
-                      <div class="projects-display-code-wrap">
-                        <div class="projects-display-code display-code-live-left preview">
-                          <a class="image-hover" href="#" target="_blank">
-                            <span class="dim-text"> Quick</span><span class="outline-text"> Preview</span>
-                            <img class="show-on-hover" src="assets/images/projects_images/everday_gourmet_1031x650.png" alt="screenshot of everday gourmet wine pairing website by John Traas at Angry Cat Design">
-                          </a> 
-                        </div>
-                        <div class="projects-display-code display-code-live-left">
-                          <a href="https://github.com/Jays-T/everyday-gourmet-development" target="_blank">
-                            <span class="dim-text"> View</span><span class="outline-text"> Code</span> <span class="dim-text"> Repo</span></a> 
-                        </div>
-                        <div class="projects-display-code display-code-live-right">
-                          <a href="https://jays-t.github.io/everyday-gourmet-development/" target="_blank"> 
-                            <span class="dim-text"> Test</span><span class="outline-text"> Live</span> <span class="dim-text"> Site</span></a>
-                        </div>
+            <div class="projects-headline-wrap">
+              <span class="projects-headline everyday-gourmet skwoop title">Everyday Gourmet</span>
+                <div class="scrollable-content-wrap everyday-gourmet-details accordion-content">
+                  <div class="projects-has-display-code">
+                    <div class="projects-display-code-wrap">
+                      <div class="projects-display-code display-code-live-left preview">
+                        <a class="image-hover" href="#" target="_blank">
+                          <span class="dim-text"> Quick</span><span class="outline-text"> Preview</span>
+                          <img class="show-on-hover" src="assets/images/projects_images/everday_gourmet_1031x650.png" alt="screenshot of everday gourmet wine pairing website by John Traas at Angry Cat Design">
+                        </a> 
                       </div>
-                      <div class="stack-list-wrap">
-                        <span class="stack-lists">
-                          <i class="fab fa-python python"></i>
-                          <span class="left-right-margin-8">Python</span>
-                        </span>
-                        <span class="stack-lists">
-                          <i class="fab fa-bimobject block-icon"></i>
-                          <span class="left-right-margin-8">Django</span>
-                        </span>
-                        <span class="stack-lists">
-                          <i class="fas fa-database"></i>
-                          <span class="left-right-margin-8">PostGre SQL</span>
-                        </span>
-                        <span class="stack-lists">
-                          <i class="fab fa-aws"></i>
-                          <span class="left-right-margin-8">AWS</span>
-                        </span>
-                        <span class="stack-lists">
-                          <i class="fab fa-git-alt"></i>
-                          <span class="left-right-margin-8">GIT</span>
-                        </span>
+                      <div class="projects-display-code display-code-live-left">
+                        <a href="https://github.com/Jays-T/everyday-gourmet-development" target="_blank">
+                          <span class="dim-text"> View</span><span class="outline-text"> Code</span> <span class="dim-text"> Repo</span></a> 
+                      </div>
+                      <div class="projects-display-code display-code-live-right">
+                        <a href="https://jays-t.github.io/everyday-gourmet-development/" target="_blank"> 
+                          <span class="dim-text"> Test</span><span class="outline-text"> Live</span> <span class="dim-text"> Site</span></a>
                       </div>
                     </div>
+                    <div class="stack-list-wrap">
+                      <span class="stack-lists">
+                        <i class="fab fa-js-square javascript"></i> 
+                        <span class="left-right-margin-8">JavaScript</span>
+                      </span>
+                      <span class="stack-lists">
+                        <i class="fas fa-server"></i>
+                        <span class="left-right-margin-8">API</span>
+                      </span>
+                      <span class="stack-lists">
+                        <i class="fab fa-html5 html5"></i>
+                        <span class="left-right-margin-8">HTML</span>
+                      </span>
+                      <span class="stack-lists">
+                        <i class="fab fa-css3-alt css3"></i> 
+                        <span class="left-right-margin-8">CSS</span>
+                      </span>
+                      <span class="stack-lists">
+                        <i class="fab fa-git-alt"></i>
+                        <span class="left-right-margin-8">GIT</span>
+                      </span>
+                    </div>
                   </div>
+                </div>
               <span class="projects-headline band-room skwoop">The Band Room</span>
                 <div class="scrollable-content-wrap band-room-details accordion-content">
                   <div class="projects-has-display-code">
@@ -471,16 +484,16 @@
                         <span class="left-right-margin-8">Python</span>
                       </span>
                       <span class="stack-lists">
-                        <i class="fab fa-bimobject block-icon"></i>
-                        <span class="left-right-margin-8">Django</span>
+                        <i class="fab fa-html5 html5"></i>
+                        <span class="left-right-margin-8">HTML</span>
                       </span>
                       <span class="stack-lists">
-                        <i class="fas fa-database"></i>
-                        <span class="left-right-margin-8">PostGre SQL</span>
+                        <i class="fab fa-css3-alt css3"></i> 
+                        <span class="left-right-margin-8">CSS</span>
                       </span>
                       <span class="stack-lists">
-                        <i class="fab fa-aws"></i>
-                        <span class="left-right-margin-8">AWS</span>
+                        <i class="fas fa-server"></i>
+                        <span class="left-right-margin-8">MongoDb</span>
                       </span>
                       <span class="stack-lists">
                         <i class="fab fa-git-alt"></i>
@@ -528,6 +541,10 @@
                       <span class="stack-lists">
                         <i class="fab fa-git-alt"></i>
                         <span class="left-right-margin-8">GIT</span>
+                      </span>
+                      <span class="stack-lists">
+                        <i class="fab fa-js-square javascript"></i> 
+                        <span class="left-right-margin-8">JavaScript</span>
                       </span>
                     </div>
                   </div>
@@ -584,10 +601,7 @@
 includeHTML();
 window.onclick = e => {
   console.log(e.target);  // to get the element
-} 
-</script>
-<script>
-  
+}
 </script>
 <!-- Particles -->
 <script src="assets/js/particles.js"></script>
