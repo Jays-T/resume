@@ -2912,6 +2912,8 @@ section .close-slide.show-close
     }
 
     /* Screen Right Projects Stack Icons */
+    .skills-headline-wrap .stack-lists,
+    .projects-headline-wrap .stack-lists,
     .stack-lists
     {
         display: inline-block;
