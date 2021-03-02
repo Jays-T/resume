@@ -29,7 +29,7 @@
 }
 
 /* Email Form and Info Section Animation Delay */
-.say-hi-collapsible.active #emailform .skwoop:nth-child(3),
+.say-hi-collapsible.active #emailform .skwoop:nth-child(2),
 .slide-container .slide.active .slide-content .info-paragraph .skwoop:nth-child(2)
 {
     animation-delay: .65s;
@@ -39,6 +39,7 @@
 {
     animation-delay: .8s;
 }
+.say-hi-collapsible.active #emailform .skwoop:nth-child(8),
 .slide-container .slide.active .slide-content .info-paragraph .skwoop:nth-child(4)
 {
     animation-delay: .95s;

@@ -16,7 +16,6 @@ This project is a one-page website that I designed for my personal portfolio and
   * [**Features and App Sections**](#features-and-app-sections)
     + [Features](#features)
     + [Features Left to Implement](#features-left-to-implement)
-    + [Wireframes](#wireframes)
   * [**Graphic Design and Brand Elements**](#graphic-design-and-brand-elements)
     + [Fonts](#fonts)
     + [Colours](#colours)
@@ -52,13 +51,6 @@ This project is a one-page website that I designed for my personal portfolio and
 ### Features
 
 ![Navigation Feature](readme-files/img-features/img-features-navigation.png)
-
-### Wireframes
-
-The wireframes linked below are only some that I've made for this project. They were created with [Figma](https://www.figma.com/).
-
-Desktop wireframes:
-* [homepage](https://raw.githubusercontent.com/valentina-b/ecosio-eco-friendly-cosmetics/master/readme-files/wireframes/dsk/wireframe-dsk-homepage.png)
 
 <div align="right">
     <a href="#table-of-contents"> ⇧ Back To Top </a>
@@ -106,7 +98,13 @@ Additionally, I have also used the following platforms to help me shape the webs
 </div>
 
 ## Testing and Defensive Design
-
+<p>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+    </a>
+</p>
 <div align="right">
     <a href="#table-of-contents"> ⇧ Back To Top </a>
 </div>
