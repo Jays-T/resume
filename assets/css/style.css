@@ -329,7 +329,7 @@ section .call-to-action
 {
     height: 100%;
     width: 100%;
-    padding-top: 15%;
+    padding-top: 5%;
     position: relative;
     display: -ms-grid;
     display: grid;
@@ -379,6 +379,8 @@ section .call-to-action
     -ms-grid-rows: auto;
     grid-template-rows: auto;
         grid-template-areas:
+        "angry-cat angry-cat"
+        "angry-cat-details angry-cat-details"
         "everyday-gourmet everyday-gourmet"
         "everyday-gourmet-details everyday-gourmet-details"
         "band-room band-room"
@@ -387,6 +389,20 @@ section .call-to-action
         "photography-philosophy-details photography-philosophy-details"
         "darwiche darwiche"
         "darwiche-details darwiche-details";
+}
+.angry-cat 
+{
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: angry-cat;
+}
+.scrollable-content-wrap.angry-cat-details 
+{
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: angry-cat-details;
 }
 .everyday-gourmet
 {
@@ -580,6 +596,7 @@ section .call-to-action
 }
 .slide .scrollable-content-wrap .stack-list-wrap
 {
+    display: none;
     margin: 5% 15%;
 }
 .slide .scrollable-content-wrap .projects-has-display-code .stack-list-wrap
@@ -886,6 +903,7 @@ section .call-to-action
     opacity: 1;
     overflow: hidden;
     text-align: start;
+    background: var(--s-dark-purple-fade-6);
     border-right: .02em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
@@ -1801,22 +1819,19 @@ section #is-scrollable .show-slides,
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-}
-.info-paragraph
-{
     -webkit-box-align: start;
         -ms-flex-align: start;
-            align-items: flex-start;
+        align-items: flex-start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+}
+.info-paragraph
+{
     height: 100%;
     width: 100%;
     opacity: 0;
@@ -1899,6 +1914,10 @@ section .close-slide.show-close
 /* Media Queries */
 @media screen and (min-width: 540px) and (min-height: 720px)
 {
+    .slide .scrollable-content-wrap .stack-list-wrap
+    {
+        display: flex;
+    }
     .slide-container .slide.slide-one::after,
     .slide-container .slide.slide-two::after,
     .slide-container .slide.slide-three::after 
@@ -2155,7 +2174,7 @@ section .close-slide.show-close
         }
     }
     /* Slide Stack Lists when Preview Active */
-    .slide-right
+    .slide .scrollable-content-wrap .stack-list-wrap.slide-right
     {
         -webkit-animation: pushStackList .8s forwards;
                 animation: pushStackList .8s forwards;
@@ -2184,7 +2203,7 @@ section .close-slide.show-close
         }
 
     }
-    .slide-left
+    .slide .scrollable-content-wrap .stack-list-wrap.slide-left
     {
         -webkit-animation: reverseStackListPush .8s forwards;
                 animation: reverseStackListPush .8s forwards;

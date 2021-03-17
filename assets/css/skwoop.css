@@ -27,6 +27,10 @@
 {
     animation-delay: .85s;
 }
+.slide-container .slide.active .slide-content .skwoop:nth-child(9)
+{
+    animation-delay: 1s;
+}
 
 /* Email Form and Info Section Animation Delay */
 .say-hi-collapsible.active #emailform .skwoop:nth-child(2),
