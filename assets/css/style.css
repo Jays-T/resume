@@ -596,8 +596,12 @@ section .call-to-action
 }
 .slide .scrollable-content-wrap .stack-list-wrap
 {
-    display: none;
     margin: 5% 15%;
+}
+.slide.slide-three .scrollable-content-wrap .stack-list-wrap
+{
+    /* HIDE PROJECTS STACK ICONS ON MOBILE VIEWS */
+    display: none;
 }
 .slide .scrollable-content-wrap .projects-has-display-code .stack-list-wrap
 {
@@ -1332,7 +1336,6 @@ from, to { border-color: transparent }
         grid-template-areas: 
     "projects-wrap projects-wrap"
     "projects-wrap projects-wrap"
-    "stack-list-wrap stack-list-wrap"
     ;
     width: 100%;
     height: 225px;
@@ -1914,9 +1917,17 @@ section .close-slide.show-close
 /* Media Queries */
 @media screen and (min-width: 540px) and (min-height: 720px)
 {
-    .slide .scrollable-content-wrap .stack-list-wrap
+    .slide.slide-three .scrollable-content-wrap .stack-list-wrap
     {
         display: flex;
+    }
+    .projects-has-display-code
+    {
+            grid-template-areas: 
+        "projects-wrap projects-wrap"
+        "projects-wrap projects-wrap"
+        "stack-list-wrap stack-list-wrap"
+        ;
     }
     .slide-container .slide.slide-one::after,
     .slide-container .slide.slide-two::after,
