@@ -2,7 +2,7 @@
 
 My personal portfolio
 
-This project is a one-page website that I designed for my personal portfolio and freelance web design company.
+This project is the website that I designed for my personal portfolio and freelance web design company.
 <a href="https://jays-t.github.io/Angry-Cat-Design-Portfolio/">View Live Site</a>
 
 ![App Showcase](assets/images/angry_cat.svg)
