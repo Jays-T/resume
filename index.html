@@ -674,19 +674,6 @@
 </body>
 <script>
 includeHTML();
-
-// Handle animation timings
-
-window.addEventListener('load', () => {
-    
-    document.getElementById('loader').classList.add('fade-out-loader');
-    setTimeout(startCat, 2940);
-    setTimeout(revealCat, 1800);
-    setTimeout(startText, 5450);
-    // Commented out due to animation not being in use in current version of the site
-    // setTimeout(greyCat, 10200);
-    setTimeout(revealContent, 8200);
-  });
 </script>
 <!-- Particles Scripts -->
 <script src="assets/js/particles.js"></script>
@@ -708,5 +695,19 @@ window.addEventListener('load', () => {
         emailjs.init("user_uwE1zr6VGq2l3SFfii47C");
       })();
     </script>
+<script>
+  // Handle animation timings
+
+window.addEventListener('load', () => {
+    
+    document.getElementById('loader').classList.add('fade-out-loader');
+    setTimeout(startCat, 2940);
+    setTimeout(revealCat, 1800);
+    setTimeout(startText, 5450);
+    // Commented out due to animation not being in use in current version of the site
+    // setTimeout(greyCat, 10200);
+    setTimeout(revealContent, 8200);
+  });
+</script>
     
 </html>
