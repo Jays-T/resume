@@ -538,11 +538,11 @@
                         </a> 
                       </div>
                       <div class="projects-display-code display-code-live-left">
-                        <a href="https://github.com/Jays-T/everyday-gourmet-development" target="_blank">
+                        <a href="https://github.com/Jays-T/the-band-room" target="_blank">
                           <span class="dim-text"> View</span><span class="outline-text"> Code</span> <span class="dim-text"> Repo</span></a> 
                       </div>
                       <div class="projects-display-code display-code-live-right">
-                        <a href="https://jays-t.github.io/everyday-gourmet-development/" target="_blank"> 
+                        <a href="http://the-band-room.herokuapp.com/the_band_room" target="_blank"> 
                           <span class="dim-text"> Test</span><span class="outline-text"> Live</span> <span class="dim-text"> Site</span></a>
                       </div>
                     </div>
@@ -582,11 +582,11 @@
                         </a> 
                       </div>
                       <div class="projects-display-code display-code-live-left">
-                        <a href="https://github.com/Jays-T/everyday-gourmet-development" target="_blank">
+                        <a href="https://github.com/Jays-T/photography_philosophy_v1" target="_blank">
                           <span class="dim-text"> View</span><span class="outline-text"> Code</span> <span class="dim-text"> Repo</span></a> 
                       </div>
                       <div class="projects-display-code display-code-live-right">
-                        <a href="https://jays-t.github.io/everyday-gourmet-development/" target="_blank"> 
+                        <a href="https://photography-philosophy.herokuapp.com/" target="_blank"> 
                           <span class="dim-text"> Test</span><span class="outline-text"> Live</span> <span class="dim-text"> Site</span></a>
                       </div>
                     </div>
@@ -634,11 +634,11 @@
                         </a> 
                       </div>
                       <div class="projects-display-code display-code-live-left">
-                        <a href="https://github.com/Jays-T/everyday-gourmet-development" target="_blank">
+                        <a href="https://github.com/Jays-T/milestone-one" target="_blank">
                           <span class="dim-text"> View</span><span class="outline-text"> Code</span> <span class="dim-text"> Repo</span></a> 
                       </div>
                       <div class="projects-display-code display-code-live-right">
-                        <a href="https://jays-t.github.io/everyday-gourmet-development/" target="_blank"> 
+                        <a href="https://jays-t.github.io/milestone-one/" target="_blank"> 
                           <span class="dim-text"> Test</span><span class="outline-text"> Live</span> <span class="dim-text"> site</span></a>
                       </div>
                     </div>
@@ -674,9 +674,19 @@
 </body>
 <script>
 includeHTML();
-window.onclick = e => {
-  console.log(e.target);  // to get the element
-}
+
+// Handle animation timings
+
+window.addEventListener('load', () => {
+    
+    document.getElementById('loader').classList.add('fade-out-loader');
+    setTimeout(startCat, 2940);
+    setTimeout(revealCat, 1800);
+    setTimeout(startText, 5450);
+    // Commented out due to animation not being in use in current version of the site
+    // setTimeout(greyCat, 10200);
+    setTimeout(revealContent, 8200);
+  });
 </script>
 <!-- Particles Scripts -->
 <script src="assets/js/particles.js"></script>

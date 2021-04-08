@@ -1,15 +1,3 @@
-// Handle animation timings
-
-window.addEventListener('load', () => {
-    
-  document.getElementById('loader').classList.add('fade-out-loader');
-  setTimeout(startCat, 2940);
-  setTimeout(revealCat, 1800);
-  setTimeout(startText, 5450);
-  // setTimeout(greyCat, 10200);
-  setTimeout(revealContent, 8200);
-});
-
 function startText() {
   const mainTextAnim = document.getElementById('main-text-animation');
 
