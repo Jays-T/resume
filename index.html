@@ -357,7 +357,7 @@
       <div class="slide-content">
         <img class="portrait" src="assets/images/John__Headshot.jpg" alt="portrait of developer John Traas">
         <div class="box-corners info-paragraph">
-            <span class="skwoop info-blurb">Hi there, my name is John but most people call me Jays. I'm a developer, UI designer and musician.</span>
+            <span class="skwoop info-blurb">Hi there, my name is John but most people call me Jays. I'm a developer, UI designer and musician currently working as a Developer and Tutor at Code Institute.</span>
             <span class="skwoop info-blurb">I'm passionate about coding, music and design asthetics.</span>
             <span class="skwoop info-blurb">I have a great affinity for all things UI/UX and design related. The logic of back-end fascinates me.</span>
             <span class="skwoop info-blurb">I love exploring new technologies and learning new things. I am committed and jump in with 110% in everything I do. I have a positive attitude 
@@ -680,23 +680,40 @@ includeHTML();
 <script src="assets/js/app.js"></script>
 <script src="assets/js/secondapp.js"></script>
 <script src="assets/js/thirdapp.js"></script>
-<!-- Animation Triggers -->
-<script src="assets/js/animations_toggles.js"></script>
 <!-- Form Validation -->
 <script src="assets/js/form_validation.js"></script>
+<!-- Font Awesome -->
 <script
-      src="https://kit.fontawesome.com/cb5c413284.js"
-      crossorigin="anonymous"
-    ></script>
+  src="https://kit.fontawesome.com/cb5c413284.js"
+  crossorigin="anonymous"
+></script>
 <!-- EmailJS -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-    <script>
-      (function () {
-        emailjs.init("user_uwE1zr6VGq2l3SFfii47C");
-      })();
-    </script>
 <script>
+  (function () {
+    emailjs.init("user_uwE1zr6VGq2l3SFfii47C");
+  })();
+  </script>
 
+<!-- Animation Triggers -->
+<script src="assets/js/animations_toggles.js"></script>
+
+<script>
+  // Handle animation timings
+const loadIn = window.addEventListener('load', () => {
+  
+  const loader = document.getElementById('loader');
+
+  loader.classList.add('fade-out-loader');
+
+  setTimeout(startCat, 2940);
+  setTimeout(revealCat, 1800);
+  setTimeout(startText, 5450);
+  // Commented out due to animation not being in use in current version of the site
+  // setTimeout(greyCat, 10200);
+  setTimeout(revealContent, 8200);
+});
+
+loadIn;
 </script>
-    
 </html>
