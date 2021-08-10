@@ -33,9 +33,9 @@ html, body {
     .text-type {
     background: var(--s-dark-purple-fade-8);
     padding: 0 14px;
-    height: 58%;
+    height: 50%;
     overflow: hidden;
-    border-right: .02em solid orange; /* The typwriter cursor */
+    border-right: .03em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .12em; /* Adjust as needed */
