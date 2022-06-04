@@ -3374,6 +3374,27 @@ section .close-slide.show-close
                             var(--p-dark-purple) 10%,var(--p-dark-purple) 92%, 
                                     var(--p-purple) 92%, var(--p-purple) 100%);
     }
+    .scrollable-content .projects-icons span .bootstrap {
+        position: relative;
+        width: 3.3250rem;
+        height: 3.8rem;
+        clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+        background: linear-gradient(0deg, var(--p-purple) 0%, var(--p-purple) 10%, 
+                            var(--p-purple) 10%,var(--p-purple) 92%, 
+                                    var(--p-purple) 92%, var(--p-purple) 100%);
+
+    }
+    .scrollable-content .projects-icons span .bootstrap::before {
+        position: absolute;
+        content: 'B';
+        color: var(--p-dark-purple);
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        font-size: 3rem;
+        padding-top: 4px;
+        font-weight: 900;
+    }
 
     /* Screen Right Navigation Slides */
     .slide-container
@@ -3581,6 +3602,14 @@ section .close-slide.show-close
     {
         -ms-grid-row: 1;
         -ms-grid-column: 2;
+    }
+    .scrollable-content-left :nth-child(5)
+    {
+        top: 52.48%;
+    }
+    .scrollable-content-left :nth-child(6)
+    {
+        top: 52.48%;
     }
 }
 
